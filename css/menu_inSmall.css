@@ -1,0 +1,75 @@
+@media (max-width: 992px) {
+  .menu .button__burger.show {
+    top: 35px;
+    z-index: 11;
+    padding: 0;
+    position: absolute;
+  }
+  .menu .button__burger.show ~ .menu__content .logo {
+    padding-right: 105px;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 540px) {
+  .menu .button__burger.show {
+    left: 310px;
+  }
+}
+
+@media (max-width: 992px) and (max-width: 540px) {
+  .menu .button__burger.show {
+    right: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .menu .button__burger.show .button__burger-icon {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .menu .button__burger.show .button__burger-icon:before {
+    top: 0;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .menu .button__burger.show .button__burger-icon:after {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 992px) and (max-width: 540px) {
+  .menu {
+    position: static;
+  }
+  .menu__content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .menu__wrapper {
+    position: static;
+  }
+}
+
+@media (max-width: 992px) and (max-width: 992px) {
+  .menu__wrapper {
+    padding: 15px 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .menu__content {
+    position: absolute;
+    top: 0;
+  }
+  .menu .menu__content {
+    left: 0;
+    z-index: 10;
+  }
+  .menu .menu__content.show {
+    position: fixed;
+  }
+}
+/*# sourceMappingURL=menu_inSmall.css.map */

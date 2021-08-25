@@ -1,0 +1,86 @@
+@import '../scss/variables.scss';
+
+.message__icon-label{
+    &-blue{
+        background: $blue;
+        top: -3px;
+        right: -13px;
+    }
+    height: 20px;
+    top: -10px;
+    right: -10px;
+    padding:3px 6px;
+    border-radius: 10px;
+    background-color: $red;
+    position: absolute;
+    color: $white;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: bold;
+    text-align: center;
+    @media (max-width:$lg) {
+       
+        height: 12px;
+        top: -2px;
+        right: -5px;
+        padding: 2px 4px;
+        font-size: 8px;
+        line-height: 8px;
+    }
+}
+
+
+.messenger__header-title .message__count {
+    @media (min-width: $lg) {
+        top: 0px;
+        right: -30px;
+    }
+    @media (max-width:$lg) {
+        width: 23px;
+        height: 17px;
+        top: 3px;
+        right: -25px;
+        padding: 2px 4px;
+        font-size: 10px;
+        line-height: 13px;
+    }
+}
+.message{
+    &__icon{
+        &-small{
+           
+            width: 20px;
+        height: 20px;
+        }
+        margin:auto 40px;
+
+        &:hover{
+            svg{
+            fill:$blue;
+        }}
+        position: relative;
+        width: 25px;
+        height: 25px;
+        fill:$gray;
+        @media (max-width:$lg) 
+        {margin:auto 20px;
+            width: 20px;
+        height: 20px;
+        }
+        svg{
+            &.small{
+                
+                   width: 20px;
+            height: 20px; 
+                }
+            width: 25px;
+            height: 25px;
+            fill:$gray;
+            @media (max-width:$lg) 
+            {
+                width: 20px;
+            height: 20px;
+            }
+        }
+    }
+}

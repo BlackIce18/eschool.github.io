@@ -1,0 +1,299 @@
+@import "../../variables";
+
+.messenger {
+    &__header {
+        padding: 45px 0 40px 0;
+
+        &-actions {
+            float: right;
+
+            .button__createDialog-plus {
+                outline: none;
+                border: none;
+                background-color: transparent;
+                display: none;
+
+                svg {
+                    width: 15px;
+                    height: 15px;
+                    fill: $blue;
+                }
+            }
+        }
+
+        &-title {
+            margin: 0;
+            position: relative;
+            font-size: 36px;
+            line-height: 36px;
+            font-weight: 500;
+            color: $darkgray;
+            display: inline-block;
+        }
+
+        &-searchIcon {
+            width: 16px;
+            height: 16px;
+            fill: $darkgray;
+            cursor: pointer;
+            margin-right: 35px;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        overflow-y: auto;
+        height: 700px;
+
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        &-item {
+            height: 75px;
+            border: 1px solid $menugray;
+            border-radius: 10px;
+            padding: 12px 95px 12px 25px;
+            margin-bottom: 10px;
+            position: relative;
+
+            &:hover {
+                border: 1px solid $yellow;
+            }
+
+            &.yellow {
+                border: 1px solid $yellow;
+            }
+
+            &.not-read {
+                border: 2px solid $menugray;
+
+                &:hover {
+                    border: 2px solid $yellow;
+                }
+
+                &.yellow {
+                    border: 2px solid $yellow;
+                }
+            }
+
+            .user {
+                float: left;
+            }
+
+            .user__short-photo {
+                width: 50px;
+                height: 50px;
+                float: left;
+                margin-right: 20px;
+                cursor: pointer;
+                position: relative;
+            }
+
+            .messenger__messageBlock {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                //margin: 7px 0; // убрал для ialog
+
+                .messenger__messageSendBy {
+                    margin-top: 3px; // Добавил для messages
+                    margin-bottom: 10px; // было 6, для messages 10
+
+                    @include threeDotsInText;
+                }
+
+                .messenger__username {
+                    $width: 730px;
+                    $parentWidth: 910px;
+
+                    max-width: ($width / $parentWidth) * 100%;
+
+                    font-size: 15px;
+                    line-height: 15px;
+                    font-weight: 500;
+                    text-align: left;
+                    color: $darkgray;
+                    margin-right: 10px;
+                    margin-bottom: 0;
+                    display: inline-block;
+                    cursor: pointer;
+
+                    @include threeDotsInText;
+                }
+
+
+
+                .userMessage {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    margin: 0;
+                    font-size: 15px;
+                    line-height: 15px;
+
+                    a {
+                        text-decoration: none;
+                        color: $darkgray;
+                        display: block;
+                        line-height: 15px;
+
+                        @include threeDotsInText;
+                    }
+
+                    &.blue {
+                        a {
+                            font-weight: 500;
+                            color: $blue;
+                        }
+                    }
+
+                    .smile {
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+
+            .additionalThreePoints {
+                position: absolute;
+                top: 50%;
+                right: 75px;
+                transform: translateY(-50%);
+                cursor: pointer;
+                margin-top: -5px;
+
+                &.hide {
+                    display: none;
+                }
+            }
+
+            .favouriteIcon {
+                position: absolute;
+                top: 50%;
+                right: 5px;
+                transform: translateY(-50%);
+                cursor: pointer;
+            }
+        }
+
+        .favouriteIcon {
+            margin-right: 35px;
+        }
+    }
+
+    .messageDepartureTime {
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 300;
+        color: $gray;
+    }
+
+    .favouriteIcon {
+        margin-right: 35px;
+    }
+}
+
+@media (max-width: $lg) {
+    .messenger {
+        &__header {
+            padding: 15px 0 25px 0;
+
+            &-title {
+                line-height: 24px;
+                font-size: 24px;
+            }
+
+            &-actions {
+                .button__createDialog {
+                    display: none;
+                }
+
+                .button__createDialog-plus {
+                    display: inline-block;
+                }
+
+                .favouriteIcon {
+                    display: none;
+                }
+            }
+
+            &-searchIcon {
+                margin-right: 15px;
+            }
+        }
+
+        &__list-item {
+            padding: 10px 30px 10px 13px;
+
+            .messenger__messageBlock {
+                margin:0;
+                flex-direction: column;
+
+                .messageDepartureTime {
+                    font-size: 10px;
+                    line-height: 10px;
+                    margin-top: 3px;
+                    margin-bottom: 5px;
+                }
+
+                .messenger__messageSendBy {
+                    margin-top: 3px; // Добавил для messages
+                    margin-bottom: 3px;
+                }
+
+                .messenger__username {
+                    font-size: 12px;
+                    line-height: 12px;
+                    /*margin-bottom: 5px;*/
+                }
+
+                .userMessage {
+                    font-size: 12px;
+                    line-height: 12px;
+                    font-weight: 300;
+
+                    a {
+                        .smile {
+                            svg {
+                                width: 14px;
+                                height: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .user__short-photo {
+                width: 34px;
+                height: 34px;
+            }
+
+            .additionalThreePoints {
+                display: none;
+            }
+        }
+
+        .favouriteIcon {
+            width: 10px;
+            height: 10px;
+            margin-right: 15px;
+            top: 20px;
+        }
+    }
+
+    .block-center {
+        padding: 20px;
+    }
+}
+
+@media (max-width: $sm) {
+    .messenger {
+        .messenger__list-item {
+            margin-bottom: 5px;
+        }
+    }
+}

@@ -1,0 +1,166 @@
+@import "../../variables.scss";
+
+.discussion {
+    .messenger__header {
+        .messenger__header-title {
+            margin: 2px 0;
+        }
+
+        .button__back {
+            margin-left: 0;
+            float: left;
+        }
+    }
+
+    .discussion__actions {
+        float: right;
+        margin-top: -10px;
+
+        &-cancel {
+            margin-right: 10px;
+        }
+
+        &-cancel, &-create, &-save {
+            padding: 0 35px;
+            width: 135px;
+            height: 60px;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 18px;
+        }
+
+        &-save {
+            width: auto;
+        }
+    }
+
+    .messenger__header_block {
+        margin-bottom: 25px;
+    }
+
+    &__content {
+        padding: 40px 30px;
+        border: 1px solid $menugray;
+        border-radius: 10px;
+
+        .mr-40 {
+            margin-right: 40px;
+        }
+
+        &_block {
+            width: 50%;
+            margin-bottom: 40px;
+        }
+
+        .inputWrapper {
+            width: 100%;
+            display: block;
+
+            .input__dropdown {
+                width: 100%;
+            }
+        }
+
+        &_editTitle {
+            color: $darkgray;
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 22px;
+            margin-bottom: 30px;
+        }
+
+        .discussion_field-title {
+            margin-bottom: 10px;
+            color: $darkgray;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 12px;
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .discussion {
+        .messenger__header {
+            .discussion__actions {
+                margin-top: 15px;
+                float: none;
+
+                &-cancel, &-create {
+                    padding: 0 25px;
+                    width: 135px;
+                    height: 32px;
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $lg) {
+    .discussion {
+        .messenger__header {
+            .messenger__header-title {
+                font-size: 24px;
+            }
+
+            .discussion__actions {
+                margin-top: 15px;
+                float: none;
+
+                &-cancel, &-create {
+                    padding: 0 25px;
+                    width: 135px;
+                    height: 32px;
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 12px;
+                }
+            }
+        }
+
+        &__content {
+            padding: 25px;
+            margin-bottom: 20px;
+
+            &_block {
+                width: 100%;
+                margin-bottom: 20px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .discussion_field-title {
+                margin-bottom: 5px;
+                font-size: 10px;
+                line-height: 10px;
+            }
+
+            input {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: $sm) {
+    .discussion {
+        .messenger__header {
+            padding: 0;
+            padding-bottom: 20px;
+        }
+
+        .button__svg.button {
+            margin-right: 15px;
+        }
+
+        .messenger__header .messenger__header-title {
+            margin: 0;
+            line-height: 40px;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../styles_elements/user_photo.scss"
+    ],
+    "names": [],
+    "file": "user_photo.css"
+}

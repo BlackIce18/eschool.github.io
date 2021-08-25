@@ -1,0 +1,339 @@
+@import "../../variables.scss";
+.homework {
+    .messenger__header {
+        .messenger__header-title {
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 40px;
+            color: $darkgray;
+        }
+
+        .button__back {
+            margin-left: 0;
+            float: left;
+        }
+    }
+
+    .homework__actions {
+        float: right;
+        margin-top: -10px;
+
+        &-cancel {
+            margin-right: 10px;
+        }
+
+        &-cancel, &-create, &-save {
+            padding: 0 35px;
+            width: 135px;
+            height: 60px;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 18px;
+        }
+
+        &-save {
+            width: auto;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        $parentwidth: 1120px;
+
+        .homework__content-leftBlock {
+            min-width: 320px;
+            margin-right: 50px;
+
+            .lesson__info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-top: 1px solid $menugray;
+                padding: 15px 0;
+
+                p {
+                    margin-bottom: 0;
+                }
+
+                .lesson__info-title {
+                    font-size: 12px;
+                    font-weight: 300;
+                    color: $gray;
+                    line-height: 12px;
+                }
+
+                .lesson__info-content {
+                    font-size: 15px;
+                    font-weight: 300;
+                }
+
+                &.date-block {
+                    .date {
+                        color: $blue;
+                        text-transform: uppercase;
+                    }
+                }
+
+                &.time-block {
+                    .lesson__info-content {
+                        color: $gray;
+
+                        span.lesson {
+                            color: $blue;
+                        }
+                    }
+                }
+
+                &.classlines-block {
+                    .classline {
+                        color: $green;
+                    }
+                }
+
+                &.teacher-block {
+                    .teacher {
+                        color: $gray;
+                    }
+                }
+
+                &.fields {
+                    .individual_note-block {
+                        .individual_note-title {
+                            margin-bottom : 15px;
+                        }
+
+                        .individual-note.add {
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .homework__content-rightBlock {
+            $width: 750px;
+            height: 100%;
+            width: ($width / $parentwidth) * 100%;
+            border: 1px solid $menugray;
+            border-radius: 10px;
+            padding: 40px;
+        }
+
+        .lesson__info.fields {
+            .field-block {
+                margin-top: 15px;
+                height: auto;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                .field-title {
+                    font-size: 12px;
+                    font-weight: 300;
+                    line-height: 12px;
+                    color: $darkgray;
+                    margin-bottom: 10px;
+                }
+
+                textarea {
+                    width: 100%;
+                    resize: none;
+                    outline: none;
+                    border: none;
+                    border-radius: 10px;
+                    padding: 20px;
+                    background: $lightgray;
+                    font-size: 15px;
+                    font-weight: 300;
+                    line-height: 20px;
+                    color: $darkgray;
+                }
+            }
+
+            .lesson__info_topic {
+                input {
+                    border: none;
+                    color: $darkgray;
+                    border-radius: 10px;
+                    padding: 15px 20px;
+                    height: 40px;
+
+                    &:focus {
+                        border: none;
+                    }
+                }
+            }
+
+            .lesson__info_work {
+                height: 135px; // 120(textarea) + 10text+5margin-bottom
+                textarea {
+                    height: 120px;
+                }
+            }
+
+            .lesson__info_note {
+                height: 95px; // 80(textarea) + 10text+5margin-bottom
+                textarea {
+                    height: 80px;
+                }
+            }
+
+            .individual_note-block {
+                margin: 20px 0;
+
+                .individual_note-title {
+                    font-size: 15px;
+                    font-weight: 300;
+                    line-height: 15px;
+                    color: $darkgray;
+                }
+
+                .individual-note {
+                    min-height: 70px;
+                    background: $lightgray;
+                    padding: 10px 15px;
+                    border-radius: 10px;
+                    position: relative;
+
+                    .individual-note-dropdown {
+                        $blockwidth: 250px;
+
+
+                        .individual-note-wrapper {
+                            position: relative;
+                            margin-bottom: 25px;
+
+                            .inputWrapper {
+                                $width: 210px;
+                                width: ($width/$blockwidth)*100%;
+                                min-width: 210px;
+
+                                .input__dropdown {
+                                    width: 100%;
+                                    background: $menugray;
+
+                                    &.withImage {
+                                        padding-left: 60px;
+                                    }
+
+                                    input {
+                                        width: 100%;
+                                        padding: 15px 20px;
+
+                                        &::placeholder {
+                                            font-size: 10px;
+                                            font-weight: 300;
+                                            color: $gray;
+                                        }
+                                    }
+                                }
+
+                                .user_photo {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 20px;
+                                    transform: translateY(-50%);
+
+                                    img {
+                                        width: 32px;
+                                        height: 32px;
+                                    }
+                                }
+
+                                .arrow_down_SVG {
+                                    right: 15px;
+                                }
+                            }
+
+                            button.crossButton {
+                                right: 10px; // 15px padding + 10 = 25px(right)
+
+                                &.disabled {
+                                    svg.icon_cross {
+                                        &.disabled {
+                                            fill: $gray;
+                                        }
+                                    }
+                                }
+                            }
+
+                            button.plusButton {
+                                right: 8px;
+                            }
+                        }
+
+                        .note-block {
+
+                            padding-right: 55px;
+                            position: relative;
+
+                            .note-text {
+                                font-size: 12px;
+                                font-weight: 300;
+                                line-height: 20px;
+                                color: $darkgray;
+                                margin-bottom: 0;
+                            }
+
+                            .button__blue-check {
+                                width: 40px;
+                                height: 40px;
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                            }
+                        }
+                    }
+
+                    &.add {
+                        min-height: 70px;
+                        margin-top: 5px;
+                        height: 70px;
+                    }
+                }
+            }
+
+            .lesson__info.main {
+                .title {
+                    font-size: 15px;
+                    line-height: 16px;
+                    font-weight: 500;
+                    color: $blue;
+                    @include threeDotsInText;
+                }
+
+                .workName {
+                    font-size: 10px;
+                    font-weight: 300;
+                    color: $gray;
+                }
+
+                .main-text {
+                    font-size: 12px;
+                    font-weight: 300;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .homework {
+        &__content {
+            .homework__content-leftBlock {
+                width: 280px;
+                min-width: 280px;
+                margin-right: 30px;
+            }
+
+            .homework__content-rightBlock {
+                padding: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: $lg) {.messenger.homework {display: none;}}

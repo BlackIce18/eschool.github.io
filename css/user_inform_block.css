@@ -1,0 +1,214 @@
+@charset "UTF-8";
+.user-inform-standart .user__top {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.user-inform-standart .user-inform-more .text {
+  font-weight: 500;
+  font-size: 15px;
+  color: #444444;
+}
+
+.user-inform-standart .user-inform-more .icon {
+  top: 2px;
+  width: 6px;
+  height: 8px;
+  position: relative;
+}
+
+.user-inform-standart .user-inform-more .icon:before {
+  content: "";
+  width: 1px;
+  height: 4px;
+  background: #3f59b7;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  bottom: 2px;
+}
+
+.user-inform-standart .user-inform-more .icon:after {
+  content: "";
+  width: 1px;
+  height: 4px;
+  background: #3f59b7;
+  position: absolute;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: 0;
+}
+
+.user-inform-standart .user-inform-city .text.rus::before {
+  content: "город";
+}
+
+.user-inform-standart .user-inform-city .text:before {
+  content: "city";
+  font-size: 12px;
+  color: #c5c5c5;
+  display: block;
+}
+
+.user-inform-standart .user-inform-city .icon:after {
+  content: "";
+  background: url("../resource/icons/placeholder_gray.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 30px;
+  height: 100%;
+  background-position-y: center;
+  margin: auto;
+}
+
+.user-inform-standart .user-inform-workplace .text.rus::before {
+  content: "место работы";
+}
+
+.user-inform-standart .user-inform-workplace .text:before {
+  content: "place of work";
+  font-size: 12px;
+  color: #c5c5c5;
+  display: block;
+}
+
+.user-inform-standart .user-inform-workplace .icon:after {
+  content: "";
+  background: url("../resource/icons/placeholder_gray.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 30px;
+  height: 100%;
+  background-position-y: center;
+  margin: auto;
+}
+
+.user-inform-standart .user-inform-workplace .text:before {
+  content: "place of work";
+  font-size: 12px;
+  color: #c5c5c5;
+  display: block;
+}
+
+.user-inform-standart .user-inform-workplace .icon:after {
+  content: "";
+  background: url("../resource/icons/mortarboard_gray.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 30px;
+  height: 100%;
+  background-position-y: center;
+  margin: auto;
+}
+
+.user-inform-standart .user-inform-birthday .text.rus::before {
+  content: "день рождения";
+}
+
+.user-inform-standart .user-inform-birthday .text:before {
+  content: "birthdate";
+  font-size: 12px;
+  color: #c5c5c5;
+  display: block;
+}
+
+.user-inform-standart .user-inform-birthday .icon:after {
+  content: "";
+  background: url("../resource/icons/balloons_gray.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 30px;
+  height: 100%;
+  background-position-x: center;
+  margin: auto;
+}
+
+.user-inform-standart .user-inform-status li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.user-inform-standart .user-inform-status-title {
+  font-weight: 500;
+  font-size: 15px;
+  color: #444444;
+}
+
+.user-inform-standart .user-inform-status a {
+  color: #444444;
+}
+
+.user-inform-standart .user-inform-status-content {
+  border-radius: 10px;
+  padding: 20px 30px;
+  font-size: 15px;
+}
+
+@media (max-width: 992px) {
+  .user-inform-standart .user-inform-status-content {
+    font-size: 12px;
+  }
+}
+
+.user-inform-standart .user-inform-status-content-item {
+  line-height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user-inform-standart .user-inform-status-content-item.work:before {
+  background-image: url("../resource/icons/check__blue.svg");
+}
+
+.user-inform-standart .user-inform-status-content-item:before {
+  padding-right: 10px;
+  content: "";
+  background: url("../resource/icons/star_yellow.svg");
+  display: inline-block;
+  width: 25px;
+  height: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.user-inform-standart .user-inform-photo {
+  width: 86px;
+  height: 86px;
+}
+
+.user-inform-standart .user-inform-photo.status__label::after {
+  top: 0px;
+  right: 0px;
+}
+
+@media (max-width: 992px) {
+  .user-inform-standart .user-inform-photo.status__label::after {
+    top: 3px;
+    right: 3px;
+  }
+}
+
+.user-inform-standart .user-inform-text {
+  color: #444444;
+  font-size: 22px;
+  line-height: 22px;
+  padding: 0px 20px;
+}
+
+.user-inform-standart .user-inform-text .name {
+  font-weight: 500;
+}
+
+@media (max-width: 992px) {
+  .user-inform-standart .user-inform-text {
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+/*# sourceMappingURL=user_inform_block.css.map */

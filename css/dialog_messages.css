@@ -1,0 +1,76 @@
+.dialog__message {
+  width: auto;
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 300;
+  display: inline-block;
+}
+
+.dialog__message p {
+  margin: 0;
+}
+
+.dialog__message.blue {
+  background-color: #3f59b7;
+  color: #ffffff;
+}
+
+.dialog__message.gray {
+  background-color: #f5f7fb;
+  color: #444444;
+}
+
+.dialog__message.left {
+  margin-left: 20px;
+  margin-right: 100px;
+}
+
+.dialog__message.left.blue:before, .dialog__message.left.gray:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -12px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.dialog__message.left.blue:before {
+  border: 12px solid transparent;
+  border-right: 12px solid #3f59b7;
+}
+
+.dialog__message.left.gray:before {
+  border: 12px solid transparent;
+  border-right: 12px solid #f5f7fb;
+}
+
+.dialog__message.right {
+  margin-right: 20px;
+  margin-left: 100px;
+}
+
+.dialog__message.right.blue:before, .dialog__message.right.gray:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -12px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.dialog__message.right.blue:before {
+  border: 12px solid transparent;
+  border-right: 12px solid #3f59b7;
+}
+
+.dialog__message.right.gray:before {
+  border: 12px solid transparent;
+  border-right: 12px solid #f5f7fb;
+}
+/*# sourceMappingURL=dialog_messages.css.map */

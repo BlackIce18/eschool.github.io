@@ -1,0 +1,58 @@
+@import '../scss/variables.scss';
+
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc( 100vw - 330px );
+    z-index: 5;
+    background: white;
+   padding-right: 80px;
+   padding-left: 50px;
+    @media (max-width:$lg) {
+        width: 100%;
+        padding-right: 24px;
+        padding-left: 50px;
+
+    }
+    .content{
+
+        border-bottom: 1px solid $menugray;
+        height: fit-content;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    
+        @media (max-width:$lg) {
+            padding: 10px 20px;
+            justify-content: flex-end;
+    margin-right: 80px;
+    
+        }
+        width: 100%;
+        display:flex;
+        justify-content: space-between;
+    }
+    .wrapper {
+        @media (min-width:$lg) {
+            justify-content: flex-end;
+
+        }
+
+        .button__yellow {
+            font-weight: 500;
+            @media (max-width:$lg) {
+                font-size: 10px;
+            }
+        }
+    }
+
+    .input__search {
+        &_block {
+            width: 40%;
+        }
+
+        
+    }
+
+   
+}

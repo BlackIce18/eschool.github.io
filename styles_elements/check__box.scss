@@ -1,0 +1,53 @@
+@import '../scss/variables.scss';
+
+.checkbox {
+cursor: pointer;
+    &__custom {
+        width: 26px;
+        height: 26px;
+        position: absolute;
+        opacity: 0;
+
+        &.checkbox {
+            &__gray+label {
+                display: inline-flex;
+                align-items: center;
+
+
+                &::before {
+                    margin-right: 14px;
+                    border: 1px solid $menugray;
+                    content: "";
+                    width: 100%;
+                    min-width: 26px;
+                    max-width: 26px;
+                    height: 26px;
+                    border-radius: 6px;
+                    display: inline-block;
+                }
+            }
+
+
+            &-blue:checked+label {
+                &::after {
+                   
+                    background: $blue;
+                    position: absolute;
+                    left: 8px;
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    display: inline-block;
+                }
+
+                &::before {
+
+                    border-color: $blue;
+                }
+
+
+            }
+        }
+    }
+}

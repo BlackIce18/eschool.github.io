@@ -1,0 +1,120 @@
+@import "../../variables.scss";
+.KPI {
+    .center__header {
+        &__action_buttons {
+            .sort-wrapper {
+                display: inline-block;
+                margin-right: 40px;
+
+                .sort {
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .inputWrapper {
+                margin-right: 10px;
+
+                input {
+                    border-radius: 30px;
+                    padding: 18px 30px;
+                }
+            }
+        }
+    }
+
+    .table__content {
+        position: relative;
+    }
+
+    .KPI__chart-wrapper {
+        width: 100%;
+        height: 500px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        position: relative;
+
+        .KPI__chart {
+            width: 5000px;
+            height: 470px;
+            position: absolute;
+        }
+
+        .lesson__info-block {
+            left: auto;
+            top: auto;
+            bottom: auto;
+            right: auto;
+        }
+    }
+
+    .inputWrapper-sm {
+        display: none;
+    }
+
+    .tabs-block {
+        border-bottom: none;
+
+        &.users .tabs .tabs__item {
+            border: 1px solid $menugray;
+            border-radius: 10px;
+        }
+    }
+}
+
+
+@media (max-width: 1280px) {
+.KPI {
+
+}
+}
+
+@media (max-width: $lg) {
+.KPI {
+
+}
+}
+
+@media (max-width: $sm) {
+.KPI {
+    .table-with-filter .center__header {
+        align-items: flex-start;
+
+        &-title {
+            line-height: 30px;
+        }
+    }
+
+    .table-with-filter .center-header-wrapper .center__header .center__header__action_buttons {
+        margin-top: 10px;
+        .sort-wrapper, &-save, .inputWrapper {
+            display: none;
+        }
+    }
+
+    .inputWrapper-sm {
+        width: 100%;
+        margin-bottom: 30px;
+        display: block;
+
+        input {
+            width: 100%;
+        }
+    }
+
+    .center__header {
+        margin-bottom: 5px;
+        padding-bottom: 0;
+    }
+    .KPI__chart-wrapper {
+        height: 350px;
+        margin-bottom: 20px;
+
+        .KPI__chart {
+            width: 1500px;
+            height: 350px;
+        }
+    }
+}
+}

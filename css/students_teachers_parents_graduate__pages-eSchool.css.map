@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../scss/pages/students_teachers_parents_graduate__pages-eSchool.scss",
+        "../scss/variables.scss"
+    ],
+    "names": [],
+    "file": "students_teachers_parents_graduate__pages-eSchool.css"
+}

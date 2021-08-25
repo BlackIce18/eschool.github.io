@@ -1,0 +1,72 @@
+@import '../scss/variables.scss';
+
+.menu {
+
+    @media (max-width:$lg) {
+        .button__burger{
+            position: fixed;
+            z-index: 10;
+            top:10px
+           
+        }
+        .menu__content {
+            
+                &.show {
+                    position: fixed;
+                }
+                left: 0;
+                z-index: 15;
+            
+            .logo {
+                display: flex;
+                padding-right: 30px;
+                padding-top: 20px;
+            }
+        }
+        .button__burger-small {
+            margin-left: 40px;
+            border: none;
+            top: 35px;
+            z-index: 11;
+            padding: 0;
+
+            .button__burger-icon {
+
+                transform: rotate(45deg);
+
+                &:before {
+                    top: 0;
+                    transform: rotate(90deg);
+
+                }
+
+                &:after {
+                    opacity: 0;
+                }
+            }
+        }
+
+        @media (max-width:$sm) {
+            position: static;
+
+            &__content {
+                width: 100%;
+            }
+        }
+
+        &__wrapper {
+            position: static;
+
+            @media (max-width:$lg) {
+                padding: 15px 10px
+            }
+        }
+
+        &__content {
+            position: absolute;
+            top: 0;
+        }
+
+        
+    }
+}

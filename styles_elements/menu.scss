@@ -1,0 +1,180 @@
+@import '../scss/variables.scss';
+@import 'logo.scss';
+
+.menu {
+    * {
+        transition: all 0.3s;
+    }
+
+    &-max {
+        height: 100%;
+        flex-grow: 2;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__lightgray {
+        @media (min-width:$lg) {
+            padding-top: 10px;
+            margin-bottom: auto;
+        }
+
+        min-height: 100vh;
+        background: $lightgray;
+
+        .menu__item {
+
+            width: 100%;
+            position: relative;
+            cursor: pointer;
+
+            &-icon {
+                svg {
+                    fill: $icongray;
+                    max-width: 18px;
+                    max-height: 18px;
+                }
+
+                padding-right: 20px;
+            }
+
+            @media (max-width:768px) {
+                padding: 10px 35px;
+            }
+            padding:10px 40px;
+            line-height: 40px;
+            &-text {
+                font-size: 15px;
+                color: $darkgray;
+            }
+
+            &.light {
+                &.active,
+                &:active {
+                    background: $menugray;
+
+                    svg {
+                        fill: $blue;
+                    }
+
+                    &:after {
+                        content: "";
+                        width: 3px;
+                        height: 40px;
+                        display: inline-block;
+                        background-color: $blue;
+                        position: absolute;
+                        right: 0px;
+                        border-bottom-left-radius: 3px;
+                        border-top-left-radius: 3px;
+
+                    }
+                }
+
+                &.active,
+                &:active,
+                &:hover {
+                    * {
+
+                        color: $blue;
+                    }
+
+
+                }
+            }
+
+        }
+    }
+
+    &-admin {
+        .button {
+            border-radius: 10px;
+            line-height: 20px;
+            padding: 12px 30px;
+
+        }
+    }
+
+    &-eSchool {
+        flex-grow: 2;
+        height: 100%;
+
+        @media (max-width:$lg) {
+            height: 100%;
+        }
+
+        background: url($image+"menu-eSchool_background.jpg");
+
+        &__top {
+            @media (max-width:768px) {
+                padding: 10px 35px;
+            }
+
+            padding:10px 40px;
+            ;
+
+            &-title {
+                font-size: 15px;
+                color: $white;
+
+
+            }
+        }
+
+        .menu {
+            &__item {
+                &:hover {
+                    background: $blue;
+
+                    .menu__item-icon {
+                        color: $white;
+
+                        svg {
+                            color: $white;
+                        }
+                    }
+
+                    .menu__item-text {
+                        color: $white;
+                        ;
+                    }
+                }
+
+                &:active,
+                &.active {
+                    background: $white;
+
+                    .menu__item-icon {
+                        color: $blue;
+
+                        svg {
+                            fill: $blue;
+                        }
+                    }
+
+                    .menu__item-text {
+                        color: $darkgray;
+                    }
+
+
+
+                }
+
+                &-icon {
+                    color: $white;
+                    fill: $white;
+                }
+
+                &-text {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+
+}
+
+.flex-grow-lg-0 {
+    flex-grow: 0;
+}

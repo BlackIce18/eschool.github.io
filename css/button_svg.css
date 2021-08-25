@@ -1,0 +1,96 @@
+.button__send {
+  position: relative;
+}
+
+.button__send:after {
+  content: "";
+  display: block;
+  background: url("../resource/icons/arrow-right.svg");
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: calc(50% - 10px);
+  top: calc(50% - 10px);
+}
+
+@media (max-width: 992px) {
+  .button__send:after {
+    left: calc(50% - 8px);
+    top: calc(50% - 8px);
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.button__back {
+  position: relative;
+}
+
+.button__back svg.button__back_innerSVG {
+  width: 8px;
+  height: 13px;
+  -webkit-transform: translate(-50%, -50%) rotate(90deg);
+          transform: translate(-50%, -50%) rotate(90deg);
+  fill: #3f59b7;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.button__svg {
+  background: none;
+}
+
+.button__svg.button {
+  padding: 0;
+  margin: 0 20px;
+}
+
+@media (max-width: 992px) {
+  .button__svg.button {
+    padding: 0;
+    margin: 0px 10px;
+  }
+}
+
+.button__svg-yellow svg {
+  width: 60px;
+  height: 60px;
+  fill: #fddf3b;
+}
+
+.button__svg-yellow svg:hover {
+  fill: #fee67c;
+}
+
+@media (max-width: 992px) {
+  .button__svg-yellow svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .button__svg-lightgray.large svg:first-child {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.button__svg-lightgray svg {
+  width: 40px;
+  height: 40px;
+  fill: #f5f7fb;
+}
+
+@media (max-width: 992px) {
+  .button__svg-lightgray svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.button__svg-lightgray svg:first-child:hover {
+  fill: #eef1f8;
+}
+/*# sourceMappingURL=button_svg.css.map */

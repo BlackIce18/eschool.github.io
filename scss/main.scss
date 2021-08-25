@@ -1,0 +1,123 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" );
+@import url("https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" );
+@import url("https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" );
+
+
+@import '../styles_elements/styles_elements.scss';
+@import 'font.scss';
+@import 'variables.scss';
+
+
+@import 'pages/Messages/messages.scss';
+@import 'pages/Messages/dialog.scss';
+@import 'pages/Messages/discussion_create.scss';
+@import 'pages/Messages/discussion_edit.scss';
+@import 'pages/Schedule/table.scss';
+@import 'pages/Gradebook/gradebook.scss';
+@import 'pages/Gradebook/homework.scss';
+@import 'pages/KPI/KPI.scss';
+
+*{
+    font-family: "Gilroy";
+    font-weight: normal;
+    font-style: normal;
+    //line-height: normal;
+}
+
+
+a:hover{
+    text-decoration: none;
+}
+.text__link{
+    &-not__underlune{
+        text-decoration: none;
+    }
+    &-red{
+        color:$red
+    }
+    &-medium{
+        font-weight: 500;
+    }
+    &-blue{color: $blue;}
+
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+}
+.header-title{
+    &-bold{
+        font-weight: 600;
+    }
+    &-small{
+        font-size: 18px;
+        line-height: 18px;
+
+        @media (max-width: $lg){
+            font-size: 15px;
+            line-height: 15px;
+        }
+    }
+
+    &-standart{
+        font-size: 22px;
+        line-height: 22px;
+        &-tosmall{
+            @media (max-width: $lg){
+                font-size: 18px;
+            }
+        }
+        @media (max-width: $lg){
+            font-size: 15px;
+        }
+    }
+    color:$darkgray;
+    font-weight: 500;
+
+    &-large{
+        font-size: 36px;
+        line-height: 36px;
+
+        @media (max-width: $lg){
+            font-size: 24px;
+        }
+
+    }}
+
+
+html,
+body,
+ul,
+ol,
+nav {
+    margin: 0;
+    padding: 0;
+}
+
+.w {
+    @media (max-width: 769px) {
+        &-80 {
+            width: 80%;
+        }
+
+    }
+
+    &-md {
+        @media (min-width: 768px) {
+            &-80 {
+                width: 80%;
+            }
+        }
+
+    }
+
+    &-lg {
+        @media (min-width: 992px) {
+            &-80 {
+                width: 80%;
+            }
+        }
+    }
+}
+
+button {
+    outline: none;
+}

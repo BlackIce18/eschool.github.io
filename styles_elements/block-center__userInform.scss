@@ -1,0 +1,157 @@
+@import '../scss/variables.scss';
+
+.block {
+    
+    &-center {
+        .content {
+
+            &__name {
+                @media (max-width:$lg) {
+                    font-size: 12px;
+                    line-height: 12px;
+                }
+                line-height: 15px;
+                font-size: 15px;
+                color: $darkgray;
+                font-weight: 500;
+            }
+
+            &__title {
+                @media (max-width:$lg) {
+                    font-size: 12px;
+                    line-height: 12px;
+                }
+                &-blue{color: $blue;}
+                line-height: 15px;
+                color:$darkgray;
+                font-size: 15px;
+                font-weight: 500;
+            }
+
+            &__comment {
+                &-largefont{
+                    font-size: 15px;
+                    line-height: 18px;
+                }
+                @media (max-width:$lg) {
+                    line-height: 12px;
+                    font-size: 10px;
+                }
+                line-height: 15px;
+                font-size: 12px;
+                color: $gray;
+                &-blue{color: $blue;
+                fill:$blue}
+                &-green{
+                    color:$green
+                }
+                &-dark{
+                    color:$darkgray
+                }
+            }
+
+            &__text {
+                line-height: 15px;
+                font-size: 15px;
+                color: $darkgray;
+                @media (max-width:$lg) {
+                    font-size: 10px;
+                    line-height: 10px;
+                }
+
+                .popular-count {
+                    &:before {
+                        content: "Популярность:";
+                    }
+
+                    &::after {
+                        content: "баллов";
+                    }
+                }
+            }
+
+        }
+        .image {
+
+            &.user__photo-medium,
+            &.user__photo-medium .image{
+                 width: 80px;
+                    height: 80px;
+                @media (max-width:$lg) {
+                    width: 55px;
+                    height: 55px;
+
+                }
+                
+
+                
+            }
+
+         
+
+        }
+        &__userInform {
+           
+
+            &.note{
+
+                .menu__item {
+                    border-radius: 10px;
+                    background: $menugray;
+                }
+            }
+
+            .title {
+                font-size: 15px;
+                line-height: 15px;
+            }
+
+
+            .menu__more-content {
+                position: relative;
+
+                .notInform {
+
+                    font-size: 12px;
+                    color: $gray;
+                }
+
+                width: 100%;
+                box-shadow: none;
+                border: none;
+                padding: 0;
+
+                .image {
+                    &.user__photo-medium,
+                    &.user__photo-medium .image{
+                        @media (max-width:$lg) {
+                            width: 55px;
+                            height: 55px;
+
+                        }
+                        
+
+                        
+                    }
+
+                    &.user__photo-small,
+                    &.user__photo-small .image {
+                        width: 55px;
+                        height: 55px;
+
+                        @media (max-width:$lg) {
+                            width: 35px;
+                            height: 35px;
+
+                        }
+                    }
+
+                    width: 80px;
+                    height: 80px;
+                }
+
+               
+            }
+        }
+    }
+}

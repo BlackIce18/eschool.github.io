@@ -1,0 +1,1845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+
+	<link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper d-flex">
+        <div class="block-left menu  p-0  ">
+            <nav class="navbar navbar-expand-lg navbar-light  menu__wrapper  p-lg-0 ">
+
+                <button class="navbar-toggler button__burger " id="menu__button__burger" type="button"
+                    data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon button__burger-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse  menu__content" id="navbarSupportedContent">
+                    <ul class="navbar-nav  d-flex flex-column w-100 menu__lightgray">
+                        <li class="menu__item text-center logo">
+                            <a class="d-inline-block  w-100 h-100" href="#">
+                                <span class="logo__main"></span>
+
+                            </a>
+                            <button class="d-lg-none navbar-toggler button__burger-small show" id="menu__button__burger"
+                                type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                                aria-controls="navbarSupportedContent" aria-expanded="true"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon button__burger-icon"></span>
+                            </button>
+                        </li>
+                        <li class="menu__item light active">
+                            <a class=" menu__item-text" href="#">
+                                <span class="menu__item-icon">
+                                    <svg version="1.1" x="0px" y="0px" viewBox="0 0 512 512">
+                                        <g>
+                                            <path d="M256,288.389c-153.837,0-238.56,72.776-238.56,204.925c0,10.321,8.365,18.686,18.686,18.686h439.747
+                        						c10.321,0,18.686-8.365,18.686-18.686C494.56,361.172,409.837,288.389,256,288.389z M55.492,474.628
+                        						c7.35-98.806,74.713-148.866,200.508-148.866s193.159,50.06,200.515,148.866H55.492z" />
+                                        </g>
+                                        <g>
+                                            <path d="M256,0c-70.665,0-123.951,54.358-123.951,126.437c0,74.19,55.604,134.54,123.951,134.54s123.951-60.35,123.951-134.534
+                        						C379.951,54.358,326.665,0,256,0z M256,223.611c-47.743,0-86.579-43.589-86.579-97.168c0-51.611,36.413-89.071,86.579-89.071
+                        						c49.363,0,86.579,38.288,86.579,89.071C342.579,180.022,303.743,223.611,256,223.611z" />
+
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span>My page</span>
+                            </a>
+                        </li>
+                        <li class="menu__item light">
+                            <a class=" menu__item-text" href="#">
+                                <span class="menu__item-icon">
+                                    <svg viewBox="0 0 408.000000 408.000000">
+                                        <g transform="translate(0.000000,408.000000) scale(0.100000,-0.100000)"
+                                            stroke="none">
+                                            <path d="M494 4061 c-192 -57 -336 -173 -423 -341 -76 -146 -71 1 -71 -1901
+												l0 -1706 23 -34 c49 -73 132 -99 210 -65 18 8 190 172 387 370 l355 356 1238
+												0 c1394 0 1319 -4 1485 76 169 81 295 231 356 421 l26 82 0 1096 c0 1090 0
+												1096 -21 1163 -39 122 -97 220 -179 302 -84 84 -154 129 -262 168 l-73 27
+												-1495 2 c-1412 2 -1498 1 -1556 -16z m3019 -341 c75 -23 150 -87 188 -160 l24
+												-45 0 -1100 0 -1100 -23 -43 c-35 -66 -88 -119 -150 -149 l-57 -28 -1315 -5
+												c-1081 -4 -1319 -7 -1340 -19 -14 -7 -132 -120 -263 -250 l-237 -236 2 1465 3
+												1465 24 45 c37 71 113 137 185 159 59 19 103 20 1477 20 1391 1 1418 1 1482
+												-19z" />
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span>Message</span>
+                            </a>
+                        </li>
+                        <li class="menu__item light">
+                            <a class=" menu__item-text" href="#">
+                                <span class="menu__item-icon">
+                                    <svg x="0px" y="0px" viewBox="0 0 512 512"
+                                        style="enable-background:new 0 0 512 512;" xml:space="preserve">
+
+                                        <g>
+                                            <path d="M474.988,49.349H37.012c-17.007,0-30.843,13.836-30.843,30.843v400.964C6.169,498.164,20.005,512,37.012,512h437.976
+												c17.007,0,30.843-13.836,30.843-30.843V80.193C505.831,63.186,491.995,49.349,474.988,49.349z M468.819,474.988H43.181V86.361
+												h425.639V474.988z" />
+                                        </g>
+
+                                        <g>
+                                            <rect x="24.675" y="172.723" width="462.651" height="37.012" />
+                                        </g>
+
+                                        <g>
+                                            <path d="M135.711,0c-10.221,0-18.506,8.285-18.506,18.506v98.699c0,10.221,8.285,18.506,18.506,18.506s18.506-8.285,18.506-18.506
+												V18.506C154.217,8.285,145.932,0,135.711,0z" />
+                                        </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path d="M382.458,0c-10.221,0-18.506,8.285-18.506,18.506v98.699c0,10.221,8.285,18.506,18.506,18.506s18.506-8.285,18.506-18.506
+												V18.506C400.964,8.285,392.679,0,382.458,0z" />
+                                            </g>
+
+                                            <g>
+                                                <path d="M326.94,370.12H191.229c-10.221,0-18.506,8.285-18.506,18.506c0,10.221,8.285,18.506,18.506,18.506H326.94
+												c10.221,0,18.506-8.285,18.506-18.506C345.446,378.405,337.161,370.12,326.94,370.12z" />
+                                            </g>
+
+                                            <g>
+                                                <path d="M326.94,283.759H191.229c-10.221,0-18.506,8.285-18.506,18.506s8.285,18.506,18.506,18.506H326.94
+												c10.221,0,18.506-8.284,18.506-18.506S337.161,283.759,326.94,283.759z" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span>Shedule of lessons</span>
+                            </a>
+                        </li>
+                        <li class="menu__item light ">
+                            <a class=" menu__item-text" href="#">
+                                <span class="menu__item-icon">
+                                    <svg x="0px" y="0px" viewBox="0 0 512 512">
+                                        <g>
+                                            <path d="M256,0C114.842,0,0,114.842,0,256s114.842,256,256,256s256-114.842,256-256S397.158,0,256,0z M256,471.472
+												c-118.814,0-215.472-96.665-215.472-215.472S137.186,40.528,256,40.528c118.807,0,215.472,96.672,215.472,215.479
+												S374.807,471.472,256,471.472z" />
+                                        </g>
+
+                                        <g>
+                                            <path d="M256,301.425c-71.997,0-139.361,36.103-189.67,101.65l32.152,24.668c42.466-55.32,98.408-85.79,157.518-85.79
+												s115.051,30.47,157.511,85.79l32.152-24.668C395.354,337.528,327.997,301.425,256,301.425z" />
+                                        </g>
+
+                                        <g>
+                                            <path d="M256,91.863c-58.103,0-105.372,47.573-105.372,106.047S197.897,303.958,256,303.958s105.372-47.573,105.372-106.047
+												S314.103,91.863,256,91.863z M256,263.43c-35.752,0-64.844-29.389-64.844-65.52s29.092-65.52,64.844-65.52
+												s64.844,29.396,64.844,65.52S291.752,263.43,256,263.43z" />
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span>Pupils</span>
+                            </a>
+                        </li>
+                        <!--!!!-->
+                        <li class="menu__item light ">
+                            <a class=" menu__item-text" href="#">
+                                <span class="menu__item-icon">
+                                    <svg x="0px" y="0px" viewBox="0 0 490 490">
+
+                                        <g>
+                                            <path d="M243.5,250.1c68.4,0,124.5-57.2,124.5-125.6S311.9,0,243.5,0S119,57.2,119,125.6S175.1,250.1,243.5,250.1z M243.5,40.8
+													c45.9,0,83.7,38.8,83.7,84.7s-37.8,83.7-83.7,83.7s-83.7-38.8-83.7-84.7S197.5,40.8,243.5,40.8z" />
+                                            <path d="M333.3,259.3c-11.2-4.1-22.5,0-27.6,10.2c-4.1,11.2,0,22.5,10.2,27.6c61.3,28.6,91.9,69.4,91.9,124.5v28.6H82.2v-28.6
+													c0-55.1,29.6-96,91.9-124.5c10.2-5.1,15.3-17.4,10.2-27.6s-17.4-15.3-27.6-10.2C80.1,294,40.3,350.1,40.3,420.6v49
+													c0,11.2,9.2,20.4,20.4,20.4h365.5c11.2,0,20.4-9.2,23.5-20.4v-49C449.7,350.1,408.8,294,333.3,259.3z" />
+                                            <path d="M223.1,281.8v121.5c0,11.2,9.2,20.4,20.4,20.4s20.4-9.2,20.4-20.4V281.8c0-11.2-9.2-20.4-20.4-20.4
+													C232.2,261.3,223.1,270.5,223.1,281.8z" />
+                                        </g>
+
+                                    </svg>
+                                </span>
+                                <span>Colleagues</span>
+                            </a>
+                        </li>
+                        <li class="menu__item light ">
+                            <a class=" menu__item-text" href="#">
+                                <span class="menu__item-icon">
+                                    <svg viewBox="0 0 512 512">
+                                        <g>
+                                            <path d="M128,174.829c-46.48,0-84.293,37.813-84.293,84.293S81.52,343.415,128,343.415s84.293-37.813,84.293-84.293
+												S174.48,174.829,128,174.829z M128,305.951c-25.825,0-46.829-21.005-46.829-46.829s21.005-46.829,46.829-46.829
+												s46.829,21.005,46.829,46.829S153.825,305.951,128,305.951z" />
+                                        </g>
+                                        <g>
+                                            <path d="M384,0c-46.48,0-84.293,37.813-84.293,84.293c0,46.48,37.813,84.293,84.293,84.293s84.293-37.813,84.293-84.293
+												C468.293,37.813,430.48,0,384,0z M384,131.122c-25.825,0-46.829-21.004-46.829-46.829c0-25.825,21.005-46.829,46.829-46.829
+												s46.829,21.004,46.829,46.829C430.829,110.117,409.825,131.122,384,131.122z" />
+                                        </g>
+
+                                        <g>
+                                            <path d="M384,343.415c-46.48,0-84.293,37.813-84.293,84.293S337.52,512,384,512s84.293-37.813,84.293-84.293
+												S430.48,343.415,384,343.415z M384,474.537c-25.825,0-46.829-21.004-46.829-46.829c0-25.825,21.005-46.829,46.829-46.829
+												s46.829,21.004,46.829,46.829C430.829,453.532,409.825,474.537,384,474.537z" />
+                                        </g>
+
+                                        <g>
+                                            <rect x="165.434" y="156.443"
+                                                transform="matrix(0.8397 -0.5431 0.5431 0.8397 -53.5916 168.8122)"
+                                                width="187.385" height="37.464" />
+                                        </g>
+
+                                        <g>
+                                            <rect x="238.204" y="252.556"
+                                                transform="matrix(0.5444 -0.8388 0.8388 0.5444 -171.2839 372.1291)"
+                                                width="37.463" height="182.38" />
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span>Parents</span>
+                            </a>
+                        </li>
+                        <li class="menu__item light ">
+                            <a class=" menu__item-text" href="#">
+                                <span class="menu__item-icon">
+                                    <svg x="0px" y="0px" viewBox="0 0 512 512">
+                                        <g>
+                                            <path d="M491.574,33.362H346.553c-31.163,0-60.95,9.566-86.026,27.588l-4.534,3.214l-4.419-3.132
+												c-25.185-18.104-54.965-27.67-86.128-27.67H20.426C9.144,33.362,0,42.506,0,53.787v369.021c0,11.282,9.144,20.426,20.426,20.426
+												h145.021c22.557,0,44.092,6.911,62.407,20.071l16.34,11.574c3.534,2.506,7.673,3.758,11.806,3.758
+												c4.14,0,8.272-1.253,11.813-3.751l16.456-11.663c18.185-13.072,39.728-19.99,62.284-19.99h145.021
+												c11.282,0,20.426-9.144,20.426-20.426V53.787C512,42.506,502.856,33.362,491.574,33.362z M471.149,402.383H346.553
+												c-31.163,0-60.95,9.566-86.026,27.581l-4.534,3.214l-4.419-3.132c-25.185-18.097-54.965-27.663-86.128-27.663H40.851V74.213
+												h124.596c22.557,0,44.092,6.911,62.407,20.071l16.34,11.574c7.074,5.011,16.545,5.004,23.619,0l16.456-11.656
+												c18.185-13.079,39.728-19.99,62.284-19.99h124.596V402.383z" />
+                                        </g>
+                                        <g>
+                                            <rect x="235.574" y="89.191" width="40.851" height="369.021" />
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span>Gradebook</span>
+                            </a>
+                        </li>
+                        <li class="menu__item light ">
+                            <a class=" menu__item-text" href="#">
+                                <span class="menu__item-icon">
+                                    <svg x="0px" y="0px" viewBox="0 0 512 512">
+                                        <g transform="translate(1 1)">
+                                            <g>
+                                                <path
+                                                    d="M504.017,217.881L271.571,6.567l-2.221-2.019c-1.526-1.387-3.202-2.514-4.973-3.381c-0.079-0.038-0.161-0.066-0.24-0.104
+													c-5.772-2.738-12.503-2.738-18.276,0c-0.079,0.037-0.161,0.065-0.24,0.104c-1.771,0.867-3.447,1.994-4.973,3.381l-2.189,1.99
+													L5.983,217.881c-8.718,7.925-9.361,21.418-1.435,30.136c7.925,8.718,21.418,9.361,30.136,1.435l6.983-6.348v246.563
+													C41.667,501.449,51.218,511,63,511h106.667h170.667H447c11.782,0,21.333-9.551,21.333-21.333V243.104l6.983,6.348
+													c8.718,7.926,22.21,7.283,30.136-1.435C513.378,239.299,512.735,225.807,504.017,217.881z M212.333,468.334v-128
+													c0-23.567,19.099-42.667,42.667-42.667s42.667,19.099,42.667,42.667v128H212.333z M425.667,468.334h-85.333v-128
+													C340.334,293.202,302.132,255,255,255s-85.333,38.202-85.333,85.333v128H84.333V204.32L255,49.165L425.667,204.32V468.334z" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span>My school</span>
+                            </a>
+                        </li>
+                        <li class="menu__item light ">
+                            <a class=" menu__item-text" href="#">
+                                <span class="menu__item-icon">
+                                    <svg x="0px" y="0px" viewBox="0 0 512 512">
+                                        <g transform="translate(1 1)">
+                                            <g>
+                                                <path d="M365.955,191l77.444-116.166c9.451-14.177-0.712-33.167-17.75-33.167h-320V20.333C105.649,8.551,96.097-1,84.315-1
+												C72.533-1,62.982,8.551,62.982,20.333V63v256v170.667c0,11.782,9.551,21.333,21.333,21.333c11.782,0,21.333-9.551,21.333-21.333
+												V340.333h320c17.039,0,27.202-18.99,17.75-33.167L365.955,191z M105.649,297.667V84.333h280.138l-63.222,94.833
+												c-4.777,7.166-4.777,16.501,0,23.667l63.222,94.833H105.649z" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span>Graduates</span>
+                            </a>
+                        </li>
+                        <!--	<li class="menu-max">
+							<div class="menu-admin py-4">
+								<ul>
+									<li class="menu__item">
+										<button class="button  button__blue w-100">Управление Британский лицей в Москве</button>
+									</li>
+									<li class="menu__item">
+										<button class="button  button__blue w-100">Управление научными работами</button>
+									</li>
+								</ul>
+							</div>
+							<div class="menu-eSchool py-4">
+								<div class="menu-eSchool__top d-flex justify-content-between">
+									<span class="menu-eSchool__top-title ">Вкладки eSchool</span>
+									<div class="menu__more">
+										<button class="menu__more-button">
+											<div class="dot dot__yellow"></div>
+										</button>
+										<div class="menu__more-content top eSchool active">
+											<ul>
+												<li class="menu__item">
+													<span class="menu__item-text">Текстик</span>
+													<span class="menu__item-icon plus"></span></li>
+												<li class="menu__item">
+													<span class="menu__item-text"> Текстик</span>
+													<span class="menu__item-icon plus"></span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<ul>
+									<li class="menu__item ">
+										<span class="  menu__item-icon">
+											<svg x="0px" y="0px" viewBox="0 0 512 512">
+												<g>
+													<path d="M491.574,33.362H346.553c-31.163,0-60.95,9.566-86.026,27.588l-4.534,3.214l-4.419-3.132
+														c-25.185-18.104-54.965-27.67-86.128-27.67H20.426C9.144,33.362,0,42.506,0,53.787v369.021c0,11.282,9.144,20.426,20.426,20.426
+														h145.021c22.557,0,44.092,6.911,62.407,20.071l16.34,11.574c3.534,2.506,7.673,3.758,11.806,3.758
+														c4.14,0,8.272-1.253,11.813-3.751l16.456-11.663c18.185-13.072,39.728-19.99,62.284-19.99h145.021
+														c11.282,0,20.426-9.144,20.426-20.426V53.787C512,42.506,502.856,33.362,491.574,33.362z M471.149,402.383H346.553
+														c-31.163,0-60.95,9.566-86.026,27.581l-4.534,3.214l-4.419-3.132c-25.185-18.097-54.965-27.663-86.128-27.663H40.851V74.213
+														h124.596c22.557,0,44.092,6.911,62.407,20.071l16.34,11.574c7.074,5.011,16.545,5.004,23.619,0l16.456-11.656
+														c18.185-13.079,39.728-19.99,62.284-19.99h124.596V402.383z" />
+												</g>
+												<g>
+													<rect x="235.574" y="89.191" width="40.851" height="369.021" />
+												</g>
+											</svg>
+										</span>
+										<span class=" menu__item-text ">Журнал</span>
+									</li>
+									<li class="menu__item ">
+										<span class=" menu__item-icon">
+											<svg x="0px" y="0px" viewBox="0 0 512 512">
+												<g>
+													<path d="M256,0C114.842,0,0,114.842,0,256s114.842,256,256,256s256-114.842,256-256S397.158,0,256,0z M256,471.472
+													   c-118.814,0-215.472-96.665-215.472-215.472S137.186,40.528,256,40.528c118.807,0,215.472,96.672,215.472,215.479
+													   S374.807,471.472,256,471.472z" />
+												</g>
+
+												<g>
+													<path d="M256,301.425c-71.997,0-139.361,36.103-189.67,101.65l32.152,24.668c42.466-55.32,98.408-85.79,157.518-85.79
+                       									s115.051,30.47,157.511,85.79l32.152-24.668C395.354,337.528,327.997,301.425,256,301.425z" />
+												</g>
+												<g>
+													<path d="M256,91.863c-58.103,0-105.372,47.573-105.372,106.047S197.897,303.958,256,303.958s105.372-47.573,105.372-106.047
+													   S314.103,91.863,256,91.863z M256,263.43c-35.752,0-64.844-29.389-64.844-65.52s29.092-65.52,64.844-65.52
+													   s64.844,29.396,64.844,65.52S291.752,263.43,256,263.43z" />
+												</g>
+											</svg></span>
+										<span class=" menu__item-text">Ученики</span>
+									</li>
+								</ul>
+							</div>
+						</li>-->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+		<div class="block-center ">
+			<div class="header ">
+                <div class="content justify-content-xl-between justify-content-end">
+                    <div class="input__search_block d-none d-lg-block p-0">
+                        <input type="text" class="input input__search w-100  " placeholder="Текст поля">
+                        <div class="input__search_block-icon ">
+                            <svg viewBox="0 0 511.999 511.999">
+                                <g>
+                                    <path
+                                        d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
+              S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
+              c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z" />
+                                </g>
+
+                                <g>
+                                    <path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
+              l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
+              C513.82,498.681,513.789,486.967,506.547,479.756z" />
+                                </g>
+
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="wrapper d-flex ">
+                        <button
+                            class="d-lg-none button button__svg button__svg__search button__svg__search-lightGray my-auto mr-3">
+                            <svg viewBox="0 0 550 550" width="17px">
+                                <g>
+                                    <path
+                                        d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
+										  S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
+										  c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z" />
+                                </g>
+
+                                <g>
+                                    <path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
+										  l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
+										  C513.82,498.681,513.789,486.967,506.547,479.756z" />
+                                </g>
+
+                            </svg>
+                        </button>
+                        <button class="button button__yellow button-standartSize my-auto d-block d-lg-none text-nowrap">Мой
+                            блог</button>
+                        <div class="message__icon ">
+                            <a href="#">
+                                <span class="message__count message__icon-label">25</span>
+                                <svg viewBox="0 0 513.4 511.7">
+                                    <path
+                                        d="M-.3,82.6l-1.5,416a16.1,16.1,0,0,0,4.6,11.1,15.9,15.9,0,0,0,22.6.3l91.7-91,313.4,1.1a80.1,80.1,0,0,0,80.3-79.7l.9-256A80,80,0,0,0,432,4.1L80,2.9A79.9,79.9,0,0,0-.3,82.6Zm32,.1A47.9,47.9,0,0,1,79.9,34.9l351.9,1.2a47.9,47.9,0,0,1,47.9,48.1l-.9,256a48,48,0,0,1-48.2,47.9l-320-1.1a16.5,16.5,0,0,0-11.4,4.7L30.4,460.1Z"
+                                        transform="translate(1.8 -2.9)" /></svg>
+                            </a></div>
+                        <div class="user online">
+                            <div class="user__short ">
+                                <div class="user__short-photo status__label">
+                                    <img class="clip-svg image " src="resource/images/image (1).jpg" alt="">
+                                    <svg width="0" height="0" class="form">
+                                        <defs>
+                                            <clipPath id="myClip" clipPathUnits="objectBoundingBox">
+                                                <path
+                                                    d="M0.894,0.894 C0.842,0.955,0.685,1,0.5,1 C0.315,1,0.158,0.955,0.106,0.894 C0.045,0.842,0,0.685,0,0.5 C0,0.315,0.045,0.158,0.106,0.106 C0.158,0.045,0.315,0,0.5,0 C0.685,0,0.842,0.045,0.894,0.106 C0.955,0.158,1,0.315,1,0.5 C1,0.685,0.955,0.842,0.894,0.894">
+                                                </path>
+                                            </clipPath>
+                                        </defs>
+                                    </svg></div>
+
+                                <div class="user__short-inform my-auto d-none d-lg-block">
+                                    <p class="name p-0 m-0">Дмитрий Попов</p>
+                                    <p class="status__text p-0 m-0"></p>
+                                </div>
+                                <div class="menu__more d-none d-lg-block  mt-2 pt-1">
+                                    <button class="menu__more-button">
+                                        <div class="arrow"></div>
+                                    </button>
+                                    <div class="menu__more-content  menu__more-content-simple hidden">
+                                        <ul>
+                                            <li class="menu__item"><a href="#"> <span class="menu__item-text">
+                                                        Настройки</span></a></li>
+                                            <li class="menu__item"><a href="#"><span class="menu__item-text">
+                                                        Выйти</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="block-center-content gradebook">
+
+            <div class="center-header-wrapper">
+                <div class="center__header">
+                    <h2 class="center__header-title">Diary</h2>
+
+					<div class="center__header__action_buttons d-flex d-lg-block">
+						<button class="button button-standartSize button__yellow center__header__action_buttons-save">
+							Сохранить
+						</button>
+						<button class="button center__header__action_buttons-sm-filter my-auto">
+							<svg viewBox="0 0 511 511.99982" xmlns="http://www.w3.org/2000/svg">
+								<path d="m492.476562 0h-471.976562c-11.046875 0-20 8.953125-20 20 0 55.695312 23.875 108.867188 65.503906 145.871094l87.589844 77.851562c15.1875 13.5 23.898438 32.898438 23.898438 53.222656v195.03125c0 15.9375 17.8125 25.492188 31.089843 16.636719l117.996094-78.660156c5.5625-3.710937 8.90625-9.953125 8.90625-16.640625v-116.367188c0-20.324218 8.710937-39.722656 23.898437-53.222656l87.585938-77.851562c41.628906-37.003906 65.503906-90.175782 65.503906-145.871094 0-11.046875-8.953125-20-19.996094-20zm-72.082031 135.972656-87.585937 77.855469c-23.71875 21.085937-37.324219 51.378906-37.324219 83.113281v105.667969l-77.996094 51.996094v-157.660157c0-31.738281-13.605469-62.03125-37.324219-83.117187l-87.585937-77.851563c-28.070313-24.957031-45.988281-59.152343-50.785156-95.980468h429.386719c-4.796876 36.828125-22.710938 71.023437-50.785157 95.976562zm0 0"/>
+							</svg>
+						</button>
+					</div>
+                </div>
+            </div>
+
+			<div class="sort-sm">
+				<button class="button  button__svg button__svg-lightgray button__navigation button__navigation-previous">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+						<g>
+							<path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+								c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+								c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"></path>
+						</g>
+					</svg>
+				</button>
+				<div class="sort">
+					<span class="sort-item active">progress</span>
+					<span class="sort-switch">
+										<label class="switch">
+										  	<input type="checkbox">
+										  	<span class="slider round"></span>
+										</label>
+									</span>
+					<span class="sort-item active attendance-active">attendance <span class="sort-item-red">(2)</span></span>
+				</div>
+
+				<button class="button  button__svg button__svg-lightgray button__navigation button__navigation-next">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+						<g>
+							<path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+								c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+								c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"></path>
+						</g>
+					</svg>
+				</button>
+			</div>
+
+
+
+			<div class="table__content">
+
+				<div class="table__content-header-filters">
+					<div class="table__content-header-filters-item classlines">
+						<p class="dropdown-title">classlines</p>
+						<span class="inputWrapper">
+							<input type="text" class="input input__dropdown" placeholder="Не выбрано">
+							<svg class="arrow_down_SVG" version="1.1" xmlns="http://www.w3.org/2000/svg"
+								 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847"
+								 style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+								<g>
+									<path
+											d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+											c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+											c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z" />
+								</g>
+							</svg>
+										<!--Выпадающий список-->
+							<ul class="dropdown__itemsBlock w-100 hide">
+								<li><span class="dropdown__itemWithImage_text">Выбор один</span></li>
+								<li><span class="dropdown__itemWithImage_text">Еще один выбор</span></li>
+								<li><span class="dropdown__itemWithImage_text">Наведение</span></li>
+								<li><span class="dropdown__itemWithImage_text">Название пункта</span></li>
+								<li><span class="dropdown__itemWithImage_text">Список пунктов</span></li>
+								<li><span class="dropdown__itemWithImage_text">Список пунктов</span></li>
+							</ul>
+						</span>
+					</div>
+					<div class="table__content-header-filters-item subject">
+						<p class="dropdown-title">subject</p>
+						<span class="inputWrapper">
+							<input type="text" class="input input__dropdown" placeholder="Не выбрано">
+							<svg class="arrow_down_SVG" version="1.1" xmlns="http://www.w3.org/2000/svg"
+								 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847"
+								 style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+								<g>
+									<path
+											d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+											c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+											c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z" />
+								</g>
+							</svg>
+							<!--Выпадающий список-->
+							<ul class="dropdown__itemsBlock w-100 hide">
+								<li><span class="dropdown__itemWithImage_text">Выбор один</span></li>
+								<li><span class="dropdown__itemWithImage_text">Еще один выбор</span></li>
+								<li><span class="dropdown__itemWithImage_text">Наведение</span></li>
+								<li><span class="dropdown__itemWithImage_text">Название пункта</span></li>
+								<li><span class="dropdown__itemWithImage_text">Список пунктов</span></li>
+								<li><span class="dropdown__itemWithImage_text">Список пунктов</span></li>
+							</ul>
+						</span>
+					</div>
+
+					<div class="table__content-header-filters-item pupils">
+						<p class="dropdown-title">pupils</p>
+						<span class="inputWrapper">
+							<input type="text" class="input input__dropdown withImage" placeholder="" value="Студент">
+							<svg class="arrow_down_SVG" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847"  style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+								<g>
+									<path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+										c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+										c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z" />
+								</g>
+							</svg>
+							<span class="user_photo">
+								<img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+							</span>
+							<ul class="dropdown__itemsBlock w-100 dropdown__itemsWithImage hide">
+							<li class="dropdown__itemWithImage">
+								<div class="user_photo">
+									<img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+								</div>
+								<span class="dropdown__itemWithImage_text">Выбор один</span>
+								<span class="dropdown__itemWithImage_icon">
+									<button class="crossButton">
+										<svg class="icon_cross" viewBox="0 0 329.26933 329" xmlns="http://www.w3.org/2000/svg">
+											<path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"></path>
+										</svg>
+									</button>
+								</span>
+							</li>
+
+							<li class="dropdown__itemWithImage">
+								<div class="user_photo">
+									<img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+
+								</div>
+								<span class="dropdown__itemWithImage_text">Еще один выбор</span>
+								<span class="dropdown__itemWithImage_icon">
+									<button class="plusButton">
+										<svg class="icon_plus green" viewBox="0 0 426.66667 426.66667" xmlns="http://www.w3.org/2000/svg"><path d="m405.332031 192h-170.664062v-170.667969c0-11.773437-9.558594-21.332031-21.335938-21.332031-11.773437 0-21.332031 9.558594-21.332031 21.332031v170.667969h-170.667969c-11.773437 0-21.332031 9.558594-21.332031 21.332031 0 11.777344 9.558594 21.335938 21.332031 21.335938h170.667969v170.664062c0 11.777344 9.558594 21.335938 21.332031 21.335938 11.777344 0 21.335938-9.558594 21.335938-21.335938v-170.664062h170.664062c11.777344 0 21.335938-9.558594 21.335938-21.335938 0-11.773437-9.558594-21.332031-21.335938-21.332031zm0 0"/></svg>
+									</button>
+								</span>
+							</li>
+
+							<li class="dropdown__itemWithImage">
+								<div class="user_photo">
+									<img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+
+								</div>
+								<span class="dropdown__itemWithImage_text">Наведение</span>
+								<span class="dropdown__itemWithImage_icon">
+									<button class="crossButton">
+										<svg class="icon_cross" viewBox="0 0 329.26933 329" xmlns="http://www.w3.org/2000/svg">
+											<path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"></path>
+										</svg>
+									</button>
+								</span>
+							</li>
+
+							<li class="dropdown__itemWithImage">
+								<div class="user_photo">
+									<img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+
+								</div>
+								<span class="dropdown__itemWithImage_text">Название пункта</span>
+								<span class="dropdown__itemWithImage_icon">
+									<button class="crossButton">
+										<svg class="icon_cross" viewBox="0 0 329.26933 329" xmlns="http://www.w3.org/2000/svg">
+											<path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"></path>
+										</svg>
+									</button>
+								</span>
+							</li>
+
+							<li class="dropdown__itemWithImage">
+								<div class="user_photo">
+									<img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+
+								</div>
+								<span class="dropdown__itemWithImage_text">Список пунктов</span>
+								<span class="dropdown__itemWithImage_icon">
+									<button class="plusButton">
+										<svg class="icon_plus green" viewBox="0 0 426.66667 426.66667" xmlns="http://www.w3.org/2000/svg"><path d="m405.332031 192h-170.664062v-170.667969c0-11.773437-9.558594-21.332031-21.335938-21.332031-11.773437 0-21.332031 9.558594-21.332031 21.332031v170.667969h-170.667969c-11.773437 0-21.332031 9.558594-21.332031 21.332031 0 11.777344 9.558594 21.335938 21.332031 21.335938h170.667969v170.664062c0 11.777344 9.558594 21.335938 21.332031 21.335938 11.777344 0 21.335938-9.558594 21.335938-21.335938v-170.664062h170.664062c11.777344 0 21.335938-9.558594 21.335938-21.335938 0-11.773437-9.558594-21.332031-21.335938-21.332031zm0 0"/></svg>
+									</button>
+								</span>
+							</li>
+						</ul>
+						</span>
+					</div>
+
+					<div class="table__content-header-filters-item calendar">
+						<p class="dropdown-title">classlines</p>
+						<span class="inputWrapper">
+							<span class="term">2nd term:</span>
+							<input type="text" class="input input__dropdown withTerm" placeholder="Не выбрано">
+							<svg class="arrow_down_SVG" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847"  style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+								<g>
+									<path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+										c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+										c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z" />
+								</g>
+							</svg>
+							<ul class="dropdown__itemsBlock w-100 dropdown__itemsWithImage hide">
+							<li class="dropdown__itemWithImage">
+								<div class="user_photo">
+									<img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+								</div>
+								<span class="dropdown__itemWithImage_text">Выбор один</span>
+								<span class="dropdown__itemWithImage_icon">
+									<button class="crossButton">
+										<svg class="icon_cross" viewBox="0 0 329.26933 329" xmlns="http://www.w3.org/2000/svg">
+											<path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"></path>
+										</svg>
+									</button>
+								</span>
+							</li>
+
+							<li class="dropdown__itemWithImage">
+								<div class="user_photo">
+									<img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+
+								</div>
+								<span class="dropdown__itemWithImage_text">Еще один выбор</span>
+								<span class="dropdown__itemWithImage_icon">
+									<button class="plusButton">
+										<svg class="icon_plus green" viewBox="0 0 426.66667 426.66667" xmlns="http://www.w3.org/2000/svg"><path d="m405.332031 192h-170.664062v-170.667969c0-11.773437-9.558594-21.332031-21.335938-21.332031-11.773437 0-21.332031 9.558594-21.332031 21.332031v170.667969h-170.667969c-11.773437 0-21.332031 9.558594-21.332031 21.332031 0 11.777344 9.558594 21.335938 21.332031 21.335938h170.667969v170.664062c0 11.777344 9.558594 21.335938 21.332031 21.335938 11.777344 0 21.335938-9.558594 21.335938-21.335938v-170.664062h170.664062c11.777344 0 21.335938-9.558594 21.335938-21.335938 0-11.773437-9.558594-21.332031-21.335938-21.332031zm0 0"/></svg>
+									</button>
+								</span>
+							</li>
+
+							<li class="dropdown__itemWithImage">
+								<div class="user_photo">
+									<img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+
+								</div>
+								<span class="dropdown__itemWithImage_text">Наведение</span>
+								<span class="dropdown__itemWithImage_icon">
+									<button class="crossButton">
+										<svg class="icon_cross" viewBox="0 0 329.26933 329" xmlns="http://www.w3.org/2000/svg">
+											<path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"></path>
+										</svg>
+									</button>
+								</span>
+							</li>
+
+							<li class="dropdown__itemWithImage">
+								<div class="user_photo">
+									<img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+
+								</div>
+								<span class="dropdown__itemWithImage_text">Название пункта</span>
+								<span class="dropdown__itemWithImage_icon">
+									<button class="crossButton">
+										<svg class="icon_cross" viewBox="0 0 329.26933 329" xmlns="http://www.w3.org/2000/svg">
+											<path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"></path>
+										</svg>
+									</button>
+								</span>
+							</li>
+
+							<li class="dropdown__itemWithImage">
+								<div class="user_photo">
+									<img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+
+								</div>
+								<span class="dropdown__itemWithImage_text">Список пунктов</span>
+								<span class="dropdown__itemWithImage_icon">
+									<button class="plusButton">
+										<svg class="icon_plus green" viewBox="0 0 426.66667 426.66667" xmlns="http://www.w3.org/2000/svg"><path d="m405.332031 192h-170.664062v-170.667969c0-11.773437-9.558594-21.332031-21.335938-21.332031-11.773437 0-21.332031 9.558594-21.332031 21.332031v170.667969h-170.667969c-11.773437 0-21.332031 9.558594-21.332031 21.332031 0 11.777344 9.558594 21.335938 21.332031 21.335938h170.667969v170.664062c0 11.777344 9.558594 21.335938 21.332031 21.335938 11.777344 0 21.335938-9.558594 21.335938-21.335938v-170.664062h170.664062c11.777344 0 21.335938-9.558594 21.335938-21.335938 0-11.773437-9.558594-21.332031-21.335938-21.332031zm0 0"/></svg>
+									</button>
+								</span>
+							</li>
+						</ul>
+						</span>
+                        <span class="table__content-header-filters-item-calendarIcon">
+							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+								<g>
+									<path d="M474.988,49.349H37.012c-17.007,0-30.843,13.836-30.843,30.843v400.964C6.169,498.164,20.005,512,37.012,512h437.976
+										c17.007,0,30.843-13.836,30.843-30.843V80.193C505.831,63.186,491.995,49.349,474.988,49.349z M468.819,474.988H43.181V86.361
+										h425.639V474.988z"/>
+								</g>
+								<g>
+									<rect x="24.675" y="172.723" width="462.651" height="37.012"/>
+								</g>
+								<g>
+									<path d="M135.711,0c-10.221,0-18.506,8.285-18.506,18.506v98.699c0,10.221,8.285,18.506,18.506,18.506s18.506-8.285,18.506-18.506
+										V18.506C154.217,8.285,145.932,0,135.711,0z"/>
+								</g>
+								<g>
+									<path d="M382.458,0c-10.221,0-18.506,8.285-18.506,18.506v98.699c0,10.221,8.285,18.506,18.506,18.506s18.506-8.285,18.506-18.506
+										V18.506C400.964,8.285,392.679,0,382.458,0z"/>
+								</g>
+								<g>
+									<path d="M326.94,370.12H191.229c-10.221,0-18.506,8.285-18.506,18.506c0,10.221,8.285,18.506,18.506,18.506H326.94
+										c10.221,0,18.506-8.285,18.506-18.506C345.446,378.405,337.161,370.12,326.94,370.12z"/>
+								</g>
+								<g>
+									<path d="M326.94,283.759H191.229c-10.221,0-18.506,8.285-18.506,18.506s8.285,18.506,18.506,18.506H326.94
+										c10.221,0,18.506-8.284,18.506-18.506S337.161,283.759,326.94,283.759z"/>
+								</g>
+							</svg>
+						</span>
+					</div>
+
+					<div class="table__content-header-filters-item">
+						
+						<button class="button button__blue-check">
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 372.09 372.09" style="enable-background:new 0 0 372.09 372.09;" xml:space="preserve">
+								<g>
+									<polygon points="339.719,27.855 120.922,282.666 29.143,196.838 0,228.001 124.293,344.235 372.09,55.65 		"/>
+								</g>
+							</svg>
+						</button>
+
+					</div>
+				</div>
+
+				<div class="tabs-block hide">
+					<ul class="tabs">
+						<li class="tabs__item active">
+							<div class="item_wrapper">
+								<span class="lesson-status active"></span>
+								Mathematics
+							</div>
+						</li>
+						<li class="tabs__item">
+							<div class="item_wrapper">
+								<span class="lesson-status active"></span>
+								Biology
+							</div>
+						</li>
+						<li class="tabs__item">
+							<div class="item_wrapper">
+								<span class="lesson-status"></span>
+								History
+							</div>
+						</li>
+						<li class="tabs__item">
+							<div class="item_wrapper">
+								<span class="lesson-status"></span>
+								Physics
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="table__content-main">
+					<div class="table__content-main-table">
+						<div class="table__content-main-table-col first-col lessons">
+							<div class="table-row">
+								<div class="sort">
+									<span class="sort-item active">progress</span>
+									<span class="sort-switch">
+										<label class="switch">
+										  	<input type="checkbox">
+										  	<span class="slider round"></span>
+										</label>
+									</span>
+									<span class="sort-item">attendance <span class="sort-item-red">(2)</span></span>
+								</div>
+								<div class="filterName-sm">subject</div>
+							</div>
+							<div class="table-row lesson-item active">
+								<div class="lesson-block">
+									<p class="lesson-name">Название предмета</p>
+									<span class="lesson-status active"></span>
+								</div>
+							</div>
+							<div class="table-row lesson-item">
+								<div class="lesson-block">
+									<p class="lesson-name">Название предмета</p>
+								</div>
+							</div>
+							<div class="table-row lesson-item">
+								<div class="lesson-block">
+									<p class="lesson-name">Название предмета</p>
+								</div>
+							</div>
+							<div class="table-row lesson-item">
+								<div class="lesson-block">
+									<p class="lesson-name">Название предмета</p>
+								</div>
+							</div>
+							<div class="table-row lesson-item">
+								<div class="lesson-block">
+									<p class="lesson-name">Название предмета</p>
+								</div>
+							</div>
+							<div class="table-row lesson-item">
+								<div class="lesson-block">
+									<p class="lesson-name">Название предмета</p>
+								</div>
+							</div>
+							<div class="table-row lesson-item">
+								<div class="lesson-block">
+									<p class="lesson-name">Название предмета</p>
+								</div>
+							</div>
+						</div>
+						<div class="table__content-main-table-col central-col">
+
+							<div class="central-col-table">
+
+								<div class="table-center">
+									<div class="table__content-main-table-col central-first-col">
+										<div class="table-row">
+											<button class="button  button__svg button__svg-lightgray button__navigation button__navigation-previous">
+												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+											<g>
+												<path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+													c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+													c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/>
+											</g>
+										</svg>
+											</button>
+										</div>
+										<div class="central-border">
+
+										</div>
+									</div>
+									<div class="table-col">
+										<div class="table-row table-header-row">
+											<div class="header-item-col">
+												<div class="innerCell">
+													<p class="dayOfWeek">tu</p>
+													<span class="date">
+													<span class="date_number">02</span>
+													<span class="date_month">nov</span>
+												</span>
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade preliminary">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson clicked">
+												<div class="grade">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson withNote">
+												<div class="note">
+													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M451.038,60.012H225.994C225.994,26.921,199.073,0,165.982,0s-60.012,26.921-60.012,60.012H60.962
+																c-8.286,0-15.003,6.717-15.003,15.003v422.082c0,8.286,6.717,14.903,15.003,14.903h299.942c0.038,0,0.076,0,0.113,0
+																c4.025,0,7.815-1.494,10.612-4.295l90.018-90.018c0.116-0.116,0.23-0.234,0.342-0.353c2.503-2.672,4.041-6.261,4.053-10.209
+																c0-0.004,0-0.008,0-0.011s0-0.008,0-0.012c0-0.008,0-0.016,0-0.024V75.015C466.041,66.729,459.324,60.012,451.038,60.012z
+																 M165.982,30.006c16.545,0,30.006,13.461,30.006,30.006h-60.012C135.977,43.466,149.437,30.006,165.982,30.006z M376.023,460.877
+																v-38.795h38.795L376.023,460.877z M436.035,392.077H361.02c-8.286,0-15.003,6.717-15.003,15.003v75.015H75.965V90.018h120.023
+																v77.015c0,8.273-6.73,15.003-15.003,15.003s-15.003-6.73-15.003-15.003v-30.006c0-8.286-6.717-15.003-15.003-15.003
+																c-8.286,0-15.003,6.717-15.003,15.003v30.006c0,24.818,20.191,45.009,45.009,45.009s45.009-20.191,45.009-45.009V90.018h210.041
+																V392.077z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M301.009,362.071H150.979c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003h150.029
+																c8.286,0,15.003-6.717,15.003-15.003C316.012,368.788,309.294,362.071,301.009,362.071z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M361.02,272.053H150.979c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003H361.02
+																c8.286,0,15.003-6.717,15.003-15.003C376.023,278.77,369.306,272.053,361.02,272.053z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M361.02,182.036h-90.018c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003h90.018
+																c8.286,0,15.003-6.717,15.003-15.003C376.023,188.753,369.306,182.036,361.02,182.036z"/>
+														</g>
+													</g>
+												</svg>
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+									</div>
+									<div class="table-col">
+										<div class="table-row table-header-row">
+											<div class="header-item-col">
+												<div class="innerCell">
+													<p class="dayOfWeek">we</p>
+													<span class="date">
+													<span class="date_number">03</span>
+													<span class="date_month">nov</span>
+												</span>
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade preliminary">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson withNote">
+												<div class="note">
+													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M451.038,60.012H225.994C225.994,26.921,199.073,0,165.982,0s-60.012,26.921-60.012,60.012H60.962
+																c-8.286,0-15.003,6.717-15.003,15.003v422.082c0,8.286,6.717,14.903,15.003,14.903h299.942c0.038,0,0.076,0,0.113,0
+																c4.025,0,7.815-1.494,10.612-4.295l90.018-90.018c0.116-0.116,0.23-0.234,0.342-0.353c2.503-2.672,4.041-6.261,4.053-10.209
+																c0-0.004,0-0.008,0-0.011s0-0.008,0-0.012c0-0.008,0-0.016,0-0.024V75.015C466.041,66.729,459.324,60.012,451.038,60.012z
+																 M165.982,30.006c16.545,0,30.006,13.461,30.006,30.006h-60.012C135.977,43.466,149.437,30.006,165.982,30.006z M376.023,460.877
+																v-38.795h38.795L376.023,460.877z M436.035,392.077H361.02c-8.286,0-15.003,6.717-15.003,15.003v75.015H75.965V90.018h120.023
+																v77.015c0,8.273-6.73,15.003-15.003,15.003s-15.003-6.73-15.003-15.003v-30.006c0-8.286-6.717-15.003-15.003-15.003
+																c-8.286,0-15.003,6.717-15.003,15.003v30.006c0,24.818,20.191,45.009,45.009,45.009s45.009-20.191,45.009-45.009V90.018h210.041
+																V392.077z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M301.009,362.071H150.979c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003h150.029
+																c8.286,0,15.003-6.717,15.003-15.003C316.012,368.788,309.294,362.071,301.009,362.071z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M361.02,272.053H150.979c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003H361.02
+																c8.286,0,15.003-6.717,15.003-15.003C376.023,278.77,369.306,272.053,361.02,272.053z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M361.02,182.036h-90.018c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003h90.018
+																c8.286,0,15.003-6.717,15.003-15.003C376.023,188.753,369.306,182.036,361.02,182.036z"/>
+														</g>
+													</g>
+												</svg>
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+									</div>
+									<div class="table-col">
+										<div class="table-row table-header-row">
+											<div class="header-item-col active hovered">
+												<div class="innerCell">
+													<p class="dayOfWeek active">we</p>
+													<span class="date">
+													<span class="date_number">03</span>
+													<span class="date_month">nov</span>
+												</span>
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade preliminary">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson withNote">
+												<div class="note">
+													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M451.038,60.012H225.994C225.994,26.921,199.073,0,165.982,0s-60.012,26.921-60.012,60.012H60.962
+																c-8.286,0-15.003,6.717-15.003,15.003v422.082c0,8.286,6.717,14.903,15.003,14.903h299.942c0.038,0,0.076,0,0.113,0
+																c4.025,0,7.815-1.494,10.612-4.295l90.018-90.018c0.116-0.116,0.23-0.234,0.342-0.353c2.503-2.672,4.041-6.261,4.053-10.209
+																c0-0.004,0-0.008,0-0.011s0-0.008,0-0.012c0-0.008,0-0.016,0-0.024V75.015C466.041,66.729,459.324,60.012,451.038,60.012z
+																 M165.982,30.006c16.545,0,30.006,13.461,30.006,30.006h-60.012C135.977,43.466,149.437,30.006,165.982,30.006z M376.023,460.877
+																v-38.795h38.795L376.023,460.877z M436.035,392.077H361.02c-8.286,0-15.003,6.717-15.003,15.003v75.015H75.965V90.018h120.023
+																v77.015c0,8.273-6.73,15.003-15.003,15.003s-15.003-6.73-15.003-15.003v-30.006c0-8.286-6.717-15.003-15.003-15.003
+																c-8.286,0-15.003,6.717-15.003,15.003v30.006c0,24.818,20.191,45.009,45.009,45.009s45.009-20.191,45.009-45.009V90.018h210.041
+																V392.077z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M301.009,362.071H150.979c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003h150.029
+																c8.286,0,15.003-6.717,15.003-15.003C316.012,368.788,309.294,362.071,301.009,362.071z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M361.02,272.053H150.979c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003H361.02
+																c8.286,0,15.003-6.717,15.003-15.003C376.023,278.77,369.306,272.053,361.02,272.053z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M361.02,182.036h-90.018c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003h90.018
+																c8.286,0,15.003-6.717,15.003-15.003C376.023,188.753,369.306,182.036,361.02,182.036z"/>
+														</g>
+													</g>
+												</svg>
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+									</div>
+									<div class="table-col">
+										<div class="table-row table-header-row">
+											<div class="header-item-col hovered">
+												<div class="innerCell">
+													<p class="dayOfWeek future">we</p>
+													<span class="date">
+													<span class="date_number">03</span>
+													<span class="date_month">nov</span>
+												</span>
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade preliminary">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson withNote">
+												<div class="note">
+													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M451.038,60.012H225.994C225.994,26.921,199.073,0,165.982,0s-60.012,26.921-60.012,60.012H60.962
+																c-8.286,0-15.003,6.717-15.003,15.003v422.082c0,8.286,6.717,14.903,15.003,14.903h299.942c0.038,0,0.076,0,0.113,0
+																c4.025,0,7.815-1.494,10.612-4.295l90.018-90.018c0.116-0.116,0.23-0.234,0.342-0.353c2.503-2.672,4.041-6.261,4.053-10.209
+																c0-0.004,0-0.008,0-0.011s0-0.008,0-0.012c0-0.008,0-0.016,0-0.024V75.015C466.041,66.729,459.324,60.012,451.038,60.012z
+																 M165.982,30.006c16.545,0,30.006,13.461,30.006,30.006h-60.012C135.977,43.466,149.437,30.006,165.982,30.006z M376.023,460.877
+																v-38.795h38.795L376.023,460.877z M436.035,392.077H361.02c-8.286,0-15.003,6.717-15.003,15.003v75.015H75.965V90.018h120.023
+																v77.015c0,8.273-6.73,15.003-15.003,15.003s-15.003-6.73-15.003-15.003v-30.006c0-8.286-6.717-15.003-15.003-15.003
+																c-8.286,0-15.003,6.717-15.003,15.003v30.006c0,24.818,20.191,45.009,45.009,45.009s45.009-20.191,45.009-45.009V90.018h210.041
+																V392.077z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M301.009,362.071H150.979c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003h150.029
+																c8.286,0,15.003-6.717,15.003-15.003C316.012,368.788,309.294,362.071,301.009,362.071z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M361.02,272.053H150.979c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003H361.02
+																c8.286,0,15.003-6.717,15.003-15.003C376.023,278.77,369.306,272.053,361.02,272.053z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M361.02,182.036h-90.018c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003h90.018
+																c8.286,0,15.003-6.717,15.003-15.003C376.023,188.753,369.306,182.036,361.02,182.036z"/>
+														</g>
+													</g>
+												</svg>
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+									</div>
+									<div class="table-col">
+										<div class="table-row table-header-row">
+											<div class="header-item-col future">
+												<div class="innerCell">
+													<p class="dayOfWeek future">we</p>
+													<span class="date">
+													<span class="date_number">03</span>
+													<span class="date_month">nov</span>
+												</span>
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade preliminary">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson withNote">
+												<div class="note">
+													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M451.038,60.012H225.994C225.994,26.921,199.073,0,165.982,0s-60.012,26.921-60.012,60.012H60.962
+																c-8.286,0-15.003,6.717-15.003,15.003v422.082c0,8.286,6.717,14.903,15.003,14.903h299.942c0.038,0,0.076,0,0.113,0
+																c4.025,0,7.815-1.494,10.612-4.295l90.018-90.018c0.116-0.116,0.23-0.234,0.342-0.353c2.503-2.672,4.041-6.261,4.053-10.209
+																c0-0.004,0-0.008,0-0.011s0-0.008,0-0.012c0-0.008,0-0.016,0-0.024V75.015C466.041,66.729,459.324,60.012,451.038,60.012z
+																 M165.982,30.006c16.545,0,30.006,13.461,30.006,30.006h-60.012C135.977,43.466,149.437,30.006,165.982,30.006z M376.023,460.877
+																v-38.795h38.795L376.023,460.877z M436.035,392.077H361.02c-8.286,0-15.003,6.717-15.003,15.003v75.015H75.965V90.018h120.023
+																v77.015c0,8.273-6.73,15.003-15.003,15.003s-15.003-6.73-15.003-15.003v-30.006c0-8.286-6.717-15.003-15.003-15.003
+																c-8.286,0-15.003,6.717-15.003,15.003v30.006c0,24.818,20.191,45.009,45.009,45.009s45.009-20.191,45.009-45.009V90.018h210.041
+																V392.077z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M301.009,362.071H150.979c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003h150.029
+																c8.286,0,15.003-6.717,15.003-15.003C316.012,368.788,309.294,362.071,301.009,362.071z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M361.02,272.053H150.979c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003H361.02
+																c8.286,0,15.003-6.717,15.003-15.003C376.023,278.77,369.306,272.053,361.02,272.053z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M361.02,182.036h-90.018c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003h90.018
+																c8.286,0,15.003-6.717,15.003-15.003C376.023,188.753,369.306,182.036,361.02,182.036z"/>
+														</g>
+													</g>
+												</svg>
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+									</div>
+									<div class="table-col">
+										<div class="table-row table-header-row">
+											<div class="header-item-col">
+												<div class="innerCell">
+													<p class="dayOfWeek future">tu</p>
+													<span class="date">
+													<span class="date_number">02</span>
+													<span class="date_month">nov</span>
+												</span>
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade preliminary">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson withNote">
+												<div class="note">
+													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M451.038,60.012H225.994C225.994,26.921,199.073,0,165.982,0s-60.012,26.921-60.012,60.012H60.962
+																c-8.286,0-15.003,6.717-15.003,15.003v422.082c0,8.286,6.717,14.903,15.003,14.903h299.942c0.038,0,0.076,0,0.113,0
+																c4.025,0,7.815-1.494,10.612-4.295l90.018-90.018c0.116-0.116,0.23-0.234,0.342-0.353c2.503-2.672,4.041-6.261,4.053-10.209
+																c0-0.004,0-0.008,0-0.011s0-0.008,0-0.012c0-0.008,0-0.016,0-0.024V75.015C466.041,66.729,459.324,60.012,451.038,60.012z
+																 M165.982,30.006c16.545,0,30.006,13.461,30.006,30.006h-60.012C135.977,43.466,149.437,30.006,165.982,30.006z M376.023,460.877
+																v-38.795h38.795L376.023,460.877z M436.035,392.077H361.02c-8.286,0-15.003,6.717-15.003,15.003v75.015H75.965V90.018h120.023
+																v77.015c0,8.273-6.73,15.003-15.003,15.003s-15.003-6.73-15.003-15.003v-30.006c0-8.286-6.717-15.003-15.003-15.003
+																c-8.286,0-15.003,6.717-15.003,15.003v30.006c0,24.818,20.191,45.009,45.009,45.009s45.009-20.191,45.009-45.009V90.018h210.041
+																V392.077z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M301.009,362.071H150.979c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003h150.029
+																c8.286,0,15.003-6.717,15.003-15.003C316.012,368.788,309.294,362.071,301.009,362.071z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M361.02,272.053H150.979c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003H361.02
+																c8.286,0,15.003-6.717,15.003-15.003C376.023,278.77,369.306,272.053,361.02,272.053z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M361.02,182.036h-90.018c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003h90.018
+																c8.286,0,15.003-6.717,15.003-15.003C376.023,188.753,369.306,182.036,361.02,182.036z"/>
+														</g>
+													</g>
+												</svg>
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+									</div>
+									<div class="table-col">
+										<div class="table-row table-header-row">
+											<div class="header-item-col">
+												<div class="innerCell">
+													<p class="dayOfWeek future">we</p>
+													<span class="date">
+													<span class="date_number">03</span>
+													<span class="date_month">nov</span>
+												</span>
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade preliminary">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson withNote">
+												<div class="note">
+													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M451.038,60.012H225.994C225.994,26.921,199.073,0,165.982,0s-60.012,26.921-60.012,60.012H60.962
+																c-8.286,0-15.003,6.717-15.003,15.003v422.082c0,8.286,6.717,14.903,15.003,14.903h299.942c0.038,0,0.076,0,0.113,0
+																c4.025,0,7.815-1.494,10.612-4.295l90.018-90.018c0.116-0.116,0.23-0.234,0.342-0.353c2.503-2.672,4.041-6.261,4.053-10.209
+																c0-0.004,0-0.008,0-0.011s0-0.008,0-0.012c0-0.008,0-0.016,0-0.024V75.015C466.041,66.729,459.324,60.012,451.038,60.012z
+																 M165.982,30.006c16.545,0,30.006,13.461,30.006,30.006h-60.012C135.977,43.466,149.437,30.006,165.982,30.006z M376.023,460.877
+																v-38.795h38.795L376.023,460.877z M436.035,392.077H361.02c-8.286,0-15.003,6.717-15.003,15.003v75.015H75.965V90.018h120.023
+																v77.015c0,8.273-6.73,15.003-15.003,15.003s-15.003-6.73-15.003-15.003v-30.006c0-8.286-6.717-15.003-15.003-15.003
+																c-8.286,0-15.003,6.717-15.003,15.003v30.006c0,24.818,20.191,45.009,45.009,45.009s45.009-20.191,45.009-45.009V90.018h210.041
+																V392.077z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M301.009,362.071H150.979c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003h150.029
+																c8.286,0,15.003-6.717,15.003-15.003C316.012,368.788,309.294,362.071,301.009,362.071z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M361.02,272.053H150.979c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003H361.02
+																c8.286,0,15.003-6.717,15.003-15.003C376.023,278.77,369.306,272.053,361.02,272.053z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M361.02,182.036h-90.018c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003h90.018
+																c8.286,0,15.003-6.717,15.003-15.003C376.023,188.753,369.306,182.036,361.02,182.036z"/>
+														</g>
+													</g>
+												</svg>
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+									</div>
+									<div class="table-col">
+										<div class="table-row table-header-row">
+											<div class="header-item-col">
+												<div class="innerCell">
+													<p class="dayOfWeek future">tu</p>
+													<span class="date">
+													<span class="date_number">02</span>
+													<span class="date_month">nov</span>
+												</span>
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade preliminary">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson withNote">
+												<div class="note">
+													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M451.038,60.012H225.994C225.994,26.921,199.073,0,165.982,0s-60.012,26.921-60.012,60.012H60.962
+																c-8.286,0-15.003,6.717-15.003,15.003v422.082c0,8.286,6.717,14.903,15.003,14.903h299.942c0.038,0,0.076,0,0.113,0
+																c4.025,0,7.815-1.494,10.612-4.295l90.018-90.018c0.116-0.116,0.23-0.234,0.342-0.353c2.503-2.672,4.041-6.261,4.053-10.209
+																c0-0.004,0-0.008,0-0.011s0-0.008,0-0.012c0-0.008,0-0.016,0-0.024V75.015C466.041,66.729,459.324,60.012,451.038,60.012z
+																 M165.982,30.006c16.545,0,30.006,13.461,30.006,30.006h-60.012C135.977,43.466,149.437,30.006,165.982,30.006z M376.023,460.877
+																v-38.795h38.795L376.023,460.877z M436.035,392.077H361.02c-8.286,0-15.003,6.717-15.003,15.003v75.015H75.965V90.018h120.023
+																v77.015c0,8.273-6.73,15.003-15.003,15.003s-15.003-6.73-15.003-15.003v-30.006c0-8.286-6.717-15.003-15.003-15.003
+																c-8.286,0-15.003,6.717-15.003,15.003v30.006c0,24.818,20.191,45.009,45.009,45.009s45.009-20.191,45.009-45.009V90.018h210.041
+																V392.077z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M301.009,362.071H150.979c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003h150.029
+																c8.286,0,15.003-6.717,15.003-15.003C316.012,368.788,309.294,362.071,301.009,362.071z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M361.02,272.053H150.979c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003H361.02
+																c8.286,0,15.003-6.717,15.003-15.003C376.023,278.77,369.306,272.053,361.02,272.053z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M361.02,182.036h-90.018c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003h90.018
+																c8.286,0,15.003-6.717,15.003-15.003C376.023,188.753,369.306,182.036,361.02,182.036z"/>
+														</g>
+													</g>
+												</svg>
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+									</div>
+									<div class="table-col">
+										<div class="table-row table-header-row">
+											<div class="header-item-col">
+												<div class="innerCell">
+													<p class="dayOfWeek future">we</p>
+													<span class="date">
+													<span class="date_number">03</span>
+													<span class="date_month">nov</span>
+												</span>
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade preliminary">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson withNote">
+												<div class="note">
+													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M451.038,60.012H225.994C225.994,26.921,199.073,0,165.982,0s-60.012,26.921-60.012,60.012H60.962
+																c-8.286,0-15.003,6.717-15.003,15.003v422.082c0,8.286,6.717,14.903,15.003,14.903h299.942c0.038,0,0.076,0,0.113,0
+																c4.025,0,7.815-1.494,10.612-4.295l90.018-90.018c0.116-0.116,0.23-0.234,0.342-0.353c2.503-2.672,4.041-6.261,4.053-10.209
+																c0-0.004,0-0.008,0-0.011s0-0.008,0-0.012c0-0.008,0-0.016,0-0.024V75.015C466.041,66.729,459.324,60.012,451.038,60.012z
+																 M165.982,30.006c16.545,0,30.006,13.461,30.006,30.006h-60.012C135.977,43.466,149.437,30.006,165.982,30.006z M376.023,460.877
+																v-38.795h38.795L376.023,460.877z M436.035,392.077H361.02c-8.286,0-15.003,6.717-15.003,15.003v75.015H75.965V90.018h120.023
+																v77.015c0,8.273-6.73,15.003-15.003,15.003s-15.003-6.73-15.003-15.003v-30.006c0-8.286-6.717-15.003-15.003-15.003
+																c-8.286,0-15.003,6.717-15.003,15.003v30.006c0,24.818,20.191,45.009,45.009,45.009s45.009-20.191,45.009-45.009V90.018h210.041
+																V392.077z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M301.009,362.071H150.979c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003h150.029
+																c8.286,0,15.003-6.717,15.003-15.003C316.012,368.788,309.294,362.071,301.009,362.071z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M361.02,272.053H150.979c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003H361.02
+																c8.286,0,15.003-6.717,15.003-15.003C376.023,278.77,369.306,272.053,361.02,272.053z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M361.02,182.036h-90.018c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003h90.018
+																c8.286,0,15.003-6.717,15.003-15.003C376.023,188.753,369.306,182.036,361.02,182.036z"/>
+														</g>
+													</g>
+												</svg>
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+									</div>
+									<div class="table-col">
+										<div class="table-row table-header-row">
+											<div class="header-item-col">
+												<div class="innerCell">
+													<p class="dayOfWeek future">fr</p>
+													<span class="date">
+													<span class="date_number">03</span>
+													<span class="date_month">nov</span>
+												</span>
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade preliminary">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+												<div class="grade">
+													321
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson withNote">
+												<div class="note">
+													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M451.038,60.012H225.994C225.994,26.921,199.073,0,165.982,0s-60.012,26.921-60.012,60.012H60.962
+																c-8.286,0-15.003,6.717-15.003,15.003v422.082c0,8.286,6.717,14.903,15.003,14.903h299.942c0.038,0,0.076,0,0.113,0
+																c4.025,0,7.815-1.494,10.612-4.295l90.018-90.018c0.116-0.116,0.23-0.234,0.342-0.353c2.503-2.672,4.041-6.261,4.053-10.209
+																c0-0.004,0-0.008,0-0.011s0-0.008,0-0.012c0-0.008,0-0.016,0-0.024V75.015C466.041,66.729,459.324,60.012,451.038,60.012z
+																 M165.982,30.006c16.545,0,30.006,13.461,30.006,30.006h-60.012C135.977,43.466,149.437,30.006,165.982,30.006z M376.023,460.877
+																v-38.795h38.795L376.023,460.877z M436.035,392.077H361.02c-8.286,0-15.003,6.717-15.003,15.003v75.015H75.965V90.018h120.023
+																v77.015c0,8.273-6.73,15.003-15.003,15.003s-15.003-6.73-15.003-15.003v-30.006c0-8.286-6.717-15.003-15.003-15.003
+																c-8.286,0-15.003,6.717-15.003,15.003v30.006c0,24.818,20.191,45.009,45.009,45.009s45.009-20.191,45.009-45.009V90.018h210.041
+																V392.077z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M301.009,362.071H150.979c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003h150.029
+																c8.286,0,15.003-6.717,15.003-15.003C316.012,368.788,309.294,362.071,301.009,362.071z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M361.02,272.053H150.979c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003H361.02
+																c8.286,0,15.003-6.717,15.003-15.003C376.023,278.77,369.306,272.053,361.02,272.053z"/>
+														</g>
+													</g>
+														<g>
+														<g>
+															<path d="M361.02,182.036h-90.018c-8.286,0-15.003,6.717-15.003,15.003c0,8.286,6.717,15.003,15.003,15.003h90.018
+																c8.286,0,15.003-6.717,15.003-15.003C376.023,188.753,369.306,182.036,361.02,182.036z"/>
+														</g>
+													</g>
+												</svg>
+												</div>
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+										<div class="table-row">
+											<div class="lesson">
+
+											</div>
+										</div>
+									</div>
+									<div class="table__content-main-table-col  central-last-col">
+										<div class="table-row">
+											<button class="button  button__svg button__svg-lightgray button__navigation button__navigation-next">
+												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+											<g>
+												<path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+													c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+													c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/>
+											</g>
+										</svg>
+											</button>
+										</div>
+										<div class="central-border">
+
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+						<div class="table__content-main-table-col last-col">
+							<div class="table-row">
+								<div class="lesson">
+									<div class="grade">
+										<span>av rate</span>
+									</div>
+								</div>
+							</div>
+							<div class="table-row">
+								<div class="lesson">
+									<div class="grade">
+										321
+									</div>
+								</div>
+							</div>
+							<div class="table-row">
+								<div class="lesson">
+									<div class="grade">
+										321
+									</div>
+								</div>
+							</div>
+							<div class="table-row">
+								<div class="lesson">
+									<div class="grade">
+										321
+									</div>
+								</div>
+							</div>
+							<div class="table-row">
+								<div class="lesson">
+									<div class="grade">
+										321
+									</div>
+								</div>
+							</div>
+							<div class="table-row">
+								<div class="lesson">
+									<div class="grade">
+										321
+									</div>
+								</div>
+							</div>
+							<div class="table-row">
+								<div class="lesson">
+									<div class="grade">
+										321
+									</div>
+								</div>
+							</div>
+							<div class="table-row">
+								<div class="lesson">
+									<div class="grade">
+										321
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="nothingSelected-block hide">
+						<div class="nothingSelected">
+							<div class="nothingSelected-image">
+								<svg enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><path d="m310.757 192.697h-14.511c-4.661.038-10.446 3.949-10.5 10.528.036 12.146.014 17.1.077 30.101.027 5.773 4.732 10.451 10.5 10.451 3.913-.018 10.217-.044 14.434-.046 14.188 0 26.175-11.685 26.175-25.517s-11.986-25.517-26.175-25.517zm0 36.033c-2.499 0-6.07.011-9.954.027-.034-7.767-.023-11.307-.046-21.06h10c5.953 0 11.175 4.914 11.175 10.517s-5.222 10.516-11.175 10.516z"/><path d="m403.31 208.225c5.343-1.986 16.032 1.834 20.261 4.196 11.103 6.298 25.292 2.407 31.632-8.672 6.365-11.122 2.496-25.349-8.625-31.715-3.196-1.83-32.021-17.579-59.463-7.378-12.19 4.532-21.803 12.681-27.652 23.117-10.232-15.944-28.233-26.557-48.706-26.557h-33.304c-11.538-.23-23.717 10.195-23.239 23.241v50.296c-10.017-10.611-24.195-17.254-39.904-17.254-2.718 0-5.42.204-8.09.6-10.989-33.007-42.146-56.883-78.795-56.883-18.404 0-35.851 5.921-50.454 17.124-3.287 2.521-3.907 7.229-1.386 10.516 2.522 3.287 7.229 3.908 10.516 1.386 11.961-9.175 26.25-14.025 41.324-14.025 37.519 0 68.042 30.527 68.042 68.051s-30.524 68.051-68.042 68.051-68.042-30.527-68.042-68.051c0-10.352 2.274-20.296 6.759-29.556 1.806-3.728.247-8.214-3.48-10.02-3.727-1.805-8.214-.247-10.02 3.481-5.48 11.315-8.259 23.459-8.259 36.095 0 45.794 37.252 83.051 83.042 83.051 18.094 0 34.842-5.835 48.498-15.698 10.213 10.044 23.835 15.698 38.387 15.698 16.034 0 30.482-6.911 40.529-17.908 2.417 10.253 11.635 17.908 22.615 17.908 12.813 0 23.238-10.425 23.238-23.24v-28.838c3.932-.017 7.555-.028 10.065-.028 23.249 0 43.313-13.683 52.424-33.325.632.828 1.288 1.638 1.977 2.422 14.265 16.242 33.235 21.121 51.61 23.973 1.165.181 4.711.731 4.339 5.777-.344 4.449-4.224 6.83-11.22 6.884-6.188.065-14.729-1.935-19.905-7.647-7.53-8.603-23.129-10.624-32.826-1.615-9.495 8.605-10.219 23.332-1.614 32.827 13.27 14.644 32.575 22.782 54.358 22.916h.046c36.869 0 55.652-25.81 57.502-49.791 2.142-27.785-16.174-51.035-43.552-55.284-13.992-2.171-20.002-4.371-23.816-8.714-.258-.308-.596-1.449-.323-2.533.108-.426.434-1.719 3.553-2.878zm-188.999 55.943c4.543 0 8.239 3.697 8.239 8.241 0 4.543-3.696 8.24-8.239 8.24s-8.239-3.697-8.239-8.24c0-4.545 3.696-8.241 8.239-8.241zm0 48.15c-10.161 0-19.707-3.792-27.029-10.573 3.871-4.03 7.338-8.445 10.34-13.187 4.228 4.368 10.144 7.092 16.689 7.092 12.814 0 23.239-10.425 23.239-23.24s-10.425-23.241-23.239-23.241c-1.374 0-2.717.127-4.026.356.109-1.74.184-3.49.184-5.257 0-3.895-.29-7.721-.811-11.475 1.54-.18 3.092-.293 4.654-.293 22.003 0 39.904 17.903 39.904 39.91-.001 22.004-17.902 39.908-39.905 39.908zm96.446-52.107c-4.081 0-11.088.03-17.603.063-4.127.021-7.462 3.373-7.462 7.5v36.304c0 4.543-3.696 8.24-8.238 8.24-4.543 0-8.239-3.697-8.239-8.24v-119.479c-.05-4.211 3.389-8.464 8.239-8.383h33.304c23.519 0 42.653 18.84 42.653 41.998s-19.135 41.997-42.654 41.997zm78.052-36.679c7.271 8.28 17.528 11.271 32.787 13.639 19.426 3.015 32.42 19.547 30.897 39.309-1.335 17.306-15.209 35.933-42.52 35.944-17.522-.112-32.905-6.5-43.315-17.988-3.051-3.367-2.794-8.589.572-11.641 2.663-2.294 7.653-3.339 11.637.573 10.701 11.808 26.526 12.592 31.138 12.575 18.064-.142 25.327-11.255 26.059-20.731.7-9.098-4.319-19.786-16.994-21.752-15.18-2.356-30.977-5.768-42.64-19.049-7.194-8.191-9.951-20.073-7.193-31.007 2.847-11.287 11.269-20.285 23.105-24.687 21.406-7.956 45.759 5.75 46.784 6.337 3.943 2.257 5.315 7.302 3.059 11.246-2.247 3.929-7.277 5.308-11.256 3.052-.187-.105-18.862-10.381-32.845-5.186-8.685 3.229-11.792 8.998-12.87 13.27-1.429 5.665-.018 11.984 3.595 16.096z"/><path d="m127.426 295.837c28.433 0 51.565-23.134 51.565-51.57s-23.132-51.57-51.565-51.57-51.564 23.134-51.564 51.57 23.131 51.57 51.564 51.57zm0-88.14c20.162 0 36.565 16.405 36.565 36.57s-16.403 36.57-36.565 36.57-36.564-16.405-36.564-36.57 16.402-36.57 36.564-36.57z"/><path d="m283.662 372.712c0-15.254-12.409-27.665-27.662-27.665s-27.662 12.41-27.662 27.665 12.409 27.665 27.662 27.665 27.662-12.411 27.662-27.665zm-40.324 0c0-6.983 5.68-12.665 12.662-12.665s12.662 5.681 12.662 12.665-5.68 12.665-12.662 12.665-12.662-5.682-12.662-12.665z"/><path d="m157.77 372.712c0 15.254 12.409 27.665 27.662 27.665s27.662-12.41 27.662-27.665-12.409-27.665-27.662-27.665-27.662 12.41-27.662 27.665zm40.324 0c0 6.983-5.68 12.665-12.662 12.665s-12.662-5.681-12.662-12.665 5.68-12.665 12.662-12.665 12.662 5.681 12.662 12.665z"/><path d="m326.568 345.047c-15.253 0-27.662 12.41-27.662 27.665s12.409 27.665 27.662 27.665 27.662-12.41 27.662-27.665-12.409-27.665-27.662-27.665zm0 40.329c-6.982 0-12.662-5.681-12.662-12.665s5.68-12.665 12.662-12.665 12.662 5.681 12.662 12.665-5.68 12.665-12.662 12.665z"/><path d="m512 252.746c0-65.708-43.101-126.491-115.295-162.595-3.704-1.853-8.209-.351-10.063 3.354-1.853 3.705-.351 8.21 3.354 10.063 67.003 33.506 107.004 89.274 107.004 149.178 0 98.991-108.112 179.526-241 179.526h-.191c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h.191c67.993 0 131.999-19.99 180.226-56.287 48.864-36.775 75.774-85.87 75.774-138.239z"/><path d="m221.792 430.473c-22.788-2.418-44.948-7.263-65.866-14.401-8.781-2.996-18.449-2.082-26.524 2.509l-68.857 39.15c-3.385 1.924-6.359.615-7.479-.038-1.122-.652-3.729-2.591-3.728-6.485l.032-95.201c.002-6.835-2.093-13.371-6.062-18.9-18.519-25.807-28.308-54.978-28.308-84.361 0-98.992 108.112-179.527 241-179.527 35.804 0 70.266 5.724 102.426 17.012 3.91 1.373 8.189-.684 9.561-4.593 1.372-3.908-.685-8.189-4.593-9.561-33.761-11.85-69.894-17.858-107.394-17.858-67.993 0-131.999 19.99-180.226 56.287-48.864 36.775-75.774 85.87-75.774 138.24 0 32.54 10.762 64.736 31.122 93.106 2.126 2.963 3.25 6.473 3.248 10.15l-.032 95.201c-.003 8.104 4.177 15.377 11.182 19.454 5.944 3.287 14.432 4.6 22.439.113l68.857-39.15c4.345-2.471 9.545-2.964 14.266-1.353 21.974 7.498 45.231 12.586 69.127 15.121 4.112.437 7.813-2.548 8.25-6.667.436-4.118-2.549-7.811-6.667-8.248z"/><path d="m469.675 423.65c-23.976 19.167-51.51 34.758-81.839 46.343-3.87 1.478-5.808 5.813-4.33 9.683 1.142 2.989 3.988 4.826 7.008 4.826.89 0 1.794-.159 2.675-.496 31.779-12.139 60.665-28.503 85.853-48.639 3.235-2.586 3.762-7.306 1.175-10.542-2.588-3.235-7.307-3.762-10.542-1.175z"/><path d="m44.935 77.925c1.563 0 3.14-.487 4.488-1.496 18-13.472 38.002-25.103 59.451-34.567 3.79-1.672 5.506-6.1 3.834-9.89s-6.1-5.504-9.89-3.834c-22.487 9.923-43.476 22.13-62.383 36.282-3.316 2.482-3.992 7.182-1.51 10.499 1.473 1.968 3.727 3.006 6.01 3.006z"/><path d="m17.763 140.569c1.67 1.551 7.016 2.812 10.542-1.165 34.238-42.738 86.264-73.927 146.495-87.822 4.036-.931 6.553-4.958 5.622-8.994-.932-4.036-4.961-6.555-8.994-5.622-63.505 14.65-118.491 47.7-154.829 93.061-2.59 3.232-2.069 7.952 1.164 10.542z"/><path d="m495.159 367.389c-3.185-2.648-7.914-2.214-10.562.97-41.587 50.001-107.742 82.926-181.501 90.332-4.122.414-7.127 4.09-6.713 8.211.388 3.867 3.648 6.751 7.454 6.751.25 0 .503-.013.758-.038 77.642-7.795 147.454-42.664 191.536-95.665 2.647-3.184 2.213-7.913-.972-10.561z"/></g></svg>
+							</div>
+							<p class="nothingSelected-text">Nothing selected</p>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+</script>
+<script src="./js/main.js"></script>
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,153 @@
+@import "../../variables.scss";
+.discussion__edit {
+    .discussion__actions {
+        float: none;
+        margin-top: 0;
+    }
+    .discussion__content {
+        padding: 40px;
+        margin-bottom: 20px;
+    }
+
+    .messenger__header_block_additional .favouriteIcon {
+        right: 45px;
+    }
+
+    .discussion__more, .discussion__actions-mobile  {
+        display: none;
+    }
+
+    .discussion__actions-mobile {
+        margin-bottom: 20px;
+    }
+
+    .selected_item_with_photo {
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+
+
+}
+
+@media (max-width: 1280px) {
+    .discussion__content_block {
+        width: 100%;
+    }
+}
+
+@media (max-width: $lg) {
+    .discussion__edit {
+        .discussion__content {
+            .discussion__content_block {
+                &:last-child {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $sm) {
+    .discussion__edit {
+        .discussion__more {
+            width: 100%;
+            display: block;
+            text-align: center;
+            margin-bottom: 0;
+
+            a {
+                color: $blue;
+                font-size: 10px;
+                font-weight: 300;
+                line-height: 10px;
+                text-decoration: underline;
+            }
+        }
+
+        .messenger__header {
+            display: none;
+        }
+
+        .messenger__header_block {
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            button.button__back {
+                margin-right: 10px;
+            }
+
+            &_userInfo {
+                margin-right: 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space:nowrap;
+            }
+        }
+
+        .selected_item_with_photo {
+            width: 100%;
+            font-size: 10px;
+            font-weight: 300;
+            line-height: 30px;
+            margin-top: 5px;
+            margin-right: 0;
+
+            .user_photo {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .messenger__header_block_additional .favouriteIcon {
+            right: 25px;
+        }
+
+        .messenger__header_block_additional .additionalThreePoints {
+            //font-size: 15px;
+        }
+
+        .discussion__actions {
+            display: none;
+
+            &-cancel, &-create, &-save {
+                padding: 0 25px;
+                width: 50%;
+                height: 32px;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 12px;
+            }
+        }
+
+        .messenger__header_block_userInfo .user__status {
+            font-size: 10px;
+            line-height: 10px;
+        }
+
+        .discussion__content {
+            padding: 20px;
+            margin-bottom: 20px;
+
+            .discussion__content_block:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .discussion__content_editTitle {
+            font-size: 15px;
+            line-height: 15px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .discussion__actions-mobile {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+
+}

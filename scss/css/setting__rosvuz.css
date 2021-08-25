@@ -1,0 +1,10 @@
+.setting__page .input:not(.small) {
+  min-width: 370px;
+}
+@media (max-width: 767px) {
+  .setting__page .input:not(.small) {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=setting__rosvuz.css.map */

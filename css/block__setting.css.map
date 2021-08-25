@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEK,AAAD,cAAS,CAAA;EACL,OAAO,EAAC,MAAM;CAIjB;;AAHG,MAAM,EAAE,SAAS,EAAE,KAAK;EAF3B,AAAD,cAAS,CAAA;IAGD,OAAO,EAAE,CAAC;GAEjB",
+    "sources": [
+        "../styles_elements/block__setting.scss",
+        "../scss/variables.scss"
+    ],
+    "names": [],
+    "file": "block__setting.css"
+}

@@ -1,0 +1,127 @@
+.discussion .messenger__header .messenger__header-title {
+  margin: 2px 0;
+}
+
+.discussion .messenger__header .button__back {
+  margin-left: 0;
+  float: left;
+}
+
+.discussion .discussion__actions {
+  float: right;
+  margin-top: -10px;
+}
+
+.discussion .discussion__actions-cancel {
+  margin-right: 10px;
+}
+
+.discussion .discussion__actions-cancel, .discussion .discussion__actions-create, .discussion .discussion__actions-save {
+  padding: 0 35px;
+  width: 135px;
+  height: 60px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.discussion .discussion__actions-save {
+  width: auto;
+}
+
+.discussion .messenger__header_block {
+  margin-bottom: 25px;
+}
+
+.discussion__content {
+  padding: 40px 30px;
+  border: 1px solid #eef1f8;
+  border-radius: 10px;
+}
+
+.discussion__content .mr-40 {
+  margin-right: 40px;
+}
+
+.discussion__content_block {
+  width: 50%;
+  margin-bottom: 40px;
+}
+
+.discussion__content .inputWrapper {
+  width: 100%;
+  display: block;
+}
+
+.discussion__content .inputWrapper .input__dropdown {
+  width: 100%;
+}
+
+.discussion__content_editTitle {
+  color: #444444;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-bottom: 30px;
+}
+
+.discussion__content .discussion_field-title {
+  margin-bottom: 10px;
+  color: #444444;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 12px;
+}
+
+@media (max-width: 1280px) {
+  .discussion .messenger__header .discussion__actions {
+    margin-top: 15px;
+    float: none;
+  }
+  .discussion .messenger__header .discussion__actions-cancel, .discussion .messenger__header .discussion__actions-create {
+    padding: 0 25px;
+    width: 135px;
+    height: 32px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+  }
+}
+
+@media (max-width: 992px) {
+  .discussion .messenger__header .messenger__header-title {
+    font-size: 24px;
+  }
+  .discussion .messenger__header .discussion__actions {
+    margin-top: 15px;
+    float: none;
+  }
+  .discussion .messenger__header .discussion__actions-cancel, .discussion .messenger__header .discussion__actions-create {
+    padding: 0 25px;
+    width: 135px;
+    height: 32px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+  }
+  .discussion__content {
+    padding: 25px;
+  }
+  .discussion__content_block {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .discussion__content_block:last-child {
+    margin-bottom: 0;
+  }
+  .discussion__content .discussion_field-title {
+    margin-bottom: 5px;
+    font-size: 10px;
+    line-height: 10px;
+  }
+  .discussion__content input {
+    font-size: 12px;
+    color: #c5c5c5;
+  }
+}
+/*# sourceMappingURL=discussion_create.css.map */

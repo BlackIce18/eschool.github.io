@@ -1,0 +1,31 @@
+@import '../scss/variables.scss';
+
+.button__burger{
+    border:none;
+    background: transparent;
+    &-icon{
+position: relative;
+        width: 30px;
+        height: 2px;
+        background: $blue;
+        &:before{
+            left: 0;
+top: -6px;
+position: absolute;
+            content: "";
+            width: 30px;
+        height: 2px;
+        background: $blue;
+        }
+        &:after{
+            left: 0;
+bottom: -6px;
+position: absolute;
+            content: "";
+            width: 25px;
+        height: 2px;
+        background: $blue;
+        }
+
+    }
+}

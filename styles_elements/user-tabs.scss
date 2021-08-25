@@ -1,0 +1,200 @@
+@import '../scss/variables.scss';
+
+.tabs-block {
+    border-bottom: 1px solid $menugray;
+    margin-bottom: 30px;
+
+    &.hide {
+        display: none;
+    }
+
+    .tabs {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+
+        &__item {
+            border: 1px solid $menugray;
+            border-bottom: none;
+            padding: 16px 35px;
+            margin-right: 10px;
+            cursor: pointer;
+            background: $lightgray;
+            border-radius: 10px 10px 0 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .item_wrapper {
+                position: relative;
+                font-size: 18px;
+                font-weight: 500;
+                color: $darkgray;
+
+                .lesson-status {
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: -10px;
+                }
+            }
+
+            &.active {
+                background: $blue;
+                color: $white;
+
+                .item_wrapper {
+                    color: $white;
+                }
+            }
+
+        }
+    }
+
+    &.users {
+        .tabs {
+            .tabs__item {
+                //width: ( 220px / 1130px) *100%;
+                padding: 0;
+
+                .item_wrapper {
+                    display: flex;
+                    align-items: center;
+                    padding: 13px 0px 13px 0px;
+
+                    .user_photo {
+                        margin-left: 30px;
+                        margin-right: 10px;
+
+                        img {
+                            width: 34px;
+                            height: 34px;
+                        }
+                    }
+
+                    .user_name {
+                        margin-bottom: 0;
+                        color: $darkgray;
+                        font-size: 15px;
+                        font-weight: 300;
+                        line-height: 15px;
+                        margin-right: 50px;
+
+                        @include threeDotsInText;
+
+                        .year {
+                            display: block;
+                            color: $green;
+                            font-size: 12px;
+                            font-weight: 300;
+                            line-height: 12px;
+                        }
+                    }
+                }
+
+                &.active {
+                    background: $lightgray;
+                    border: 1px solid $darkyellow;
+                    border-bottom: none;
+
+                    .user_name {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $lg) {
+    .tabs-block {
+        margin-bottom: 15px;
+
+        .tabs {
+            .tabs__item {
+                margin-right: 5px;
+                padding: 17px 30px;
+
+                .item_wrapper {
+                    font-size: 15px;
+                    line-height: 15px;
+                    height: 15px;
+                }
+            }
+        }
+
+        &.users {
+            .tabs {
+                .tabs__item {
+                    padding: 0;
+
+                    .item_wrapper {
+                        padding: 8px 0;
+                        height: auto;
+
+                        .user_photo {
+                            margin-left: 13px;
+                        }
+
+                        .user_name {
+                            font-size: 12px;
+                            font-weight: 300;
+                            line-height: 12px;
+                            color: $darkgray;
+                            margin-right: 35px;
+                        }
+
+                        .crossButton {
+                            right: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $sm) {
+    .tabs-block {
+        margin-bottom: 15px;
+
+        .tabs {
+            .tabs__item  {
+                padding: 12px 20px;
+                margin-right: 5px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                .item_wrapper {
+                    position: relative;
+                    font-size: 15px;
+                    line-height: 15px;
+                    font-weight: 500;
+                    color: $darkgray;
+
+                    .lesson-status {
+                        width: 6px;
+                        height: 6px;
+
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: -10px;
+                    }
+                }
+
+                &.active {
+                    background: $blue;
+                    color: $white;
+
+                    .item_wrapper {
+                        color: $white;
+                    }
+                }
+
+            }
+        }
+    }
+}

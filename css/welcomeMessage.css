@@ -1,0 +1,32 @@
+.welcomeMessage {
+  border-radius: 10px;
+  background: #37aa50;
+  text-align: center;
+  padding: 30px 40px;
+}
+
+.welcomeMessage .title {
+  font-weight: 500;
+  font-size: 22px;
+  color: #fddf3b;
+}
+
+.welcomeMessage .text {
+  font-size: 12px;
+  color: #ffffff;
+}
+
+@media (max-width: 992px) {
+  .welcomeMessage {
+    padding: 15px 20px;
+    max-width: 500px;
+    margin: auto;
+  }
+  .welcomeMessage .title {
+    font-size: 15px;
+  }
+  .welcomeMessage .text {
+    font-size: 10px;
+  }
+}
+/*# sourceMappingURL=welcomeMessage.css.map */

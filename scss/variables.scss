@@ -1,0 +1,34 @@
+$icon:'../resource/icons/';
+$image:'../resource/images/';
+
+$white:#ffffff;
+
+$menugray:#eef1f8;
+$lightgray:#f5f7fb;
+$gray:#c5c5c5;
+$darkgray:#444444;
+$icongray:#cdd7ed;
+
+$red:#ce1818;
+$darkyellow:#fddf3b;
+$yellow:#fee67c;
+$green:#37aa50;
+$blue:#3f59b7;
+$lightblue:#5c72c2;
+$lightpurple:#9ea8d6;
+
+$xxl:1400px;
+$xl:1199px;
+$lg:991px;
+$md:767px;
+$sm:539px;
+
+$leftblock:330px;
+$rightblock:390px;
+$rightblock_small:300px;
+
+@mixin threeDotsInText {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

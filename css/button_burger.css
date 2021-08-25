@@ -1,0 +1,32 @@
+.button__burger {
+  border: none;
+  background: transparent;
+}
+
+.button__burger-icon {
+  position: relative;
+  width: 30px;
+  height: 2px;
+  background: #3f59b7;
+}
+
+.button__burger-icon:before {
+  left: 0;
+  top: -6px;
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 2px;
+  background: #3f59b7;
+}
+
+.button__burger-icon:after {
+  left: 0;
+  bottom: -6px;
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 2px;
+  background: #3f59b7;
+}
+/*# sourceMappingURL=button_burger.css.map */

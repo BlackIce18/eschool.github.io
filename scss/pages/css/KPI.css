@@ -1,0 +1,84 @@
+.KPI .center__header__action_buttons .sort-wrapper {
+  display: inline-block;
+  margin-right: 40px;
+}
+.KPI .center__header__action_buttons .sort-wrapper .sort {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.KPI .center__header__action_buttons .inputWrapper {
+  margin-right: 10px;
+}
+.KPI .center__header__action_buttons .inputWrapper input {
+  border-radius: 30px;
+  padding: 18px 30px;
+}
+.KPI .table__content {
+  position: relative;
+}
+.KPI .KPI__chart-wrapper {
+  width: 100%;
+  height: 500px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  position: relative;
+}
+.KPI .KPI__chart-wrapper .KPI__chart {
+  width: 5000px;
+  height: 470px;
+  position: absolute;
+}
+.KPI .KPI__chart-wrapper .lesson__info-block {
+  left: auto;
+  top: auto;
+  bottom: auto;
+  right: auto;
+}
+.KPI .inputWrapper-sm {
+  display: none;
+}
+.KPI .tabs-block {
+  border-bottom: none;
+}
+.KPI .tabs-block.users .tabs .tabs__item {
+  border: 1px solid #eef1f8;
+  border-radius: 10px;
+}
+
+@media (max-width: 539px) {
+  .KPI .table-with-filter .center__header {
+    align-items: flex-start;
+  }
+  .KPI .table-with-filter .center__header-title {
+    line-height: 30px;
+  }
+  .KPI .table-with-filter .center-header-wrapper .center__header .center__header__action_buttons {
+    margin-top: 10px;
+  }
+  .KPI .table-with-filter .center-header-wrapper .center__header .center__header__action_buttons .sort-wrapper, .KPI .table-with-filter .center-header-wrapper .center__header .center__header__action_buttons-save, .KPI .table-with-filter .center-header-wrapper .center__header .center__header__action_buttons .inputWrapper {
+    display: none;
+  }
+  .KPI .inputWrapper-sm {
+    width: 100%;
+    margin-bottom: 30px;
+    display: block;
+  }
+  .KPI .inputWrapper-sm input {
+    width: 100%;
+  }
+  .KPI .center__header {
+    margin-bottom: 5px;
+    padding-bottom: 0;
+  }
+  .KPI .KPI__chart-wrapper {
+    height: 350px;
+    margin-bottom: 20px;
+  }
+  .KPI .KPI__chart-wrapper .KPI__chart {
+    width: 1500px;
+    height: 350px;
+  }
+}
+
+/*# sourceMappingURL=KPI.css.map */

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAEI,cAFU,CAEV,MAAM,AAAA,IAAK,CAAA,MAAM,EAAC;EACd,SAAS,EAAE,KAAK;CAInB;;AAHG,MAAM,EAAE,SAAS,EAAE,KAAK;EAJhC,AAEI,cAFU,CAEV,MAAM,AAAA,IAAK,CAAA,MAAM,EAAC;IAGX,KAAK,EAAE,IAAI;GAEjB",
+    "sources": [
+        "../scss/pages/setting__rosvuz.scss",
+        "../scss/variables.scss"
+    ],
+    "names": [],
+    "file": "setting__rosvuz.css"
+}

@@ -1,0 +1,109 @@
+.tabs{
+
+&__content{
+    .content.resume{
+        border-top-left-radius: 0px;
+    }
+}
+&__menu {
+border: none;
+    .tabs__menu-item {
+        &-title,&-title.active{
+            &:hover{
+                background: $menugray;
+            }
+            margin-right: 10px;
+            border:$menugray 1px solid;
+            border-bottom:none;
+            height: 100%;
+            padding: 20px 30px;
+            background-color: $lightgray;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            @media (max-width:$lg) {
+                padding:12px 16px;
+                margin-right: 5px;
+            }
+        }
+        
+        &:not(:last-child) {
+
+            .tabs__menu-item-title {
+                .icon {
+                    display: inline-block;
+                    height: 16px;
+                    width: 16px;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    position: relative;
+                    transform-origin: 50% 50%;
+                    transform: rotate(45deg);
+                    vertical-align: middle;
+                    margin-left:10px;
+                    &:after {
+                        position: absolute;
+                    content: "";
+                    height: 2px;
+                    width: 16px;
+                    top: 7px;
+                    left: 0;
+                        background-color: $red;
+                    }
+
+                    &:before {
+                        position: absolute;
+                        content: "";
+                        height: 16px;
+                        width: 2px;
+                        left: 7px;
+                        background-color: $red;
+                    }
+                }
+            }
+        }
+    
+
+    &:last-child {
+
+        .tabs__menu-item-title {
+            padding-right: 20px;
+            padding-left: 20px;
+            @media (max-width:$lg) {
+                padding-right: 10px;
+                padding-left: 10px;
+                
+            }
+            .icon {
+display: inline-block;
+                height: 16px;
+                width: 16px;
+                margin-top: auto;
+                margin-bottom: auto;
+                position: relative;
+                vertical-align: middle;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    background: $blue;
+                    height: 16px;
+                    width: 2px;
+                    left: 7px;
+                }
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    background: $blue;
+                    height: 2px;
+                    width: 16px;
+                    top: 7px;
+                    left: 0;
+                }
+
+
+            }
+
+        }
+
+    }
+}}}

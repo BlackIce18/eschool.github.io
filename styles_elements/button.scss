@@ -1,0 +1,133 @@
+@import '../scss/variables.scss';
+@import 'button_svg.scss';
+.button {
+    &__gray{
+background: $lightgray;
+color:$red;
+&:hover{
+    background: $menugray;
+}
+    }
+    &__disable{
+        background: $menugray;
+        cursor: default;
+    }
+    &__maxSize350{
+        max-width: 350px;
+    }
+    &__system{
+        font-size: 18px;
+        font-weight: 500;
+        @media(max-width:$lg){
+            padding:0px 10px;
+            font-size: 15px;
+        }
+    }
+    cursor: pointer;
+    border: none;
+    padding:0px 20px;
+    transition: 0.5s all;
+    border-radius: 30px;
+font-size: 15px;
+font-weight: 500;
+color: $darkgray;
+    @media(max-width:$lg){
+        padding:0px 10px;
+        font-size: 12px;
+    }
+    
+    &-standartSize {
+        height: 40px;
+        line-height: 40px;
+        @media(max-width:$lg) {
+            height: 32px;
+            line-height: 32px;
+        }
+    }
+&-XlargeSize{
+    line-height: 70px;
+    height: 70px;
+
+    @media(max-width:$lg) {
+        line-height: 50px;
+        height: 50px
+    }
+}
+    &-largeSize {
+        padding-left: 35px;
+        padding-right: 35px;
+        
+        line-height: 60px;
+        height: 60px;
+        font-size: 18px;
+
+        @media(max-width:$lg) {
+            line-height: 50px;
+            
+            height: 50px
+        }
+        &-toStandart{
+            @media(max-width:$lg) {
+                height: 32px;
+                line-height: 32px;
+                font-size: 12px;
+            }
+        }
+    }
+    &__yellow {
+        color: $darkgray;
+        background: $darkyellow;
+
+        &:hover {
+            background: $yellow;
+        }
+
+    }
+
+    &__blue {
+        color: $white;
+        background: $blue;
+
+        &:hover {
+            background: $lightblue;
+        }
+
+        &-light {
+
+            color: $blue;
+            background: $lightgray;
+
+            &:hover {
+                background: $menugray;
+            }
+        }
+
+
+    }
+
+    &.disable {
+        background-color: $lightgray;
+        color: $gray;
+    }
+
+    &__blue-check {
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        background: $blue;
+        border-radius: 50%;
+
+        svg {
+            width: 18px;
+            height: 15px;
+            fill: $white;
+        }
+
+        &.disabled {
+            background: $lightgray;
+            svg {
+                fill: $gray;
+            }
+        }
+    }
+}

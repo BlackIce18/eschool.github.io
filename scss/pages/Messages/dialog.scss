@@ -1,0 +1,517 @@
+.messenger {
+    width: 100%;
+
+    &__header {
+        &_block {
+            padding-bottom: 20px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+
+
+            button.button__back {
+                padding: 0;
+                margin: 0;
+                margin-right: 15px;
+            }
+
+            &_userInfo {
+                padding: 5px 0;
+                height: 40px;
+                display: inline-block;
+                white-space: nowrap;
+
+                .messenger__username {
+                    margin-bottom: 5px;
+                    font-size: 15px;
+                    font-weight: 500;
+                    line-height: 15px;
+                    text-align: left;
+                    color: $darkgray;
+                    cursor: pointer;
+                }
+
+                .user__status {
+                    font-size: 12px;
+                    line-height: 12px;
+                    font-weight: 300;
+                    color: $gray;
+                    margin-bottom: 0;
+                }
+            }
+
+            &_additional {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+                .favouriteIcon {
+                    margin: 0;
+                    position: absolute;
+                    right: 30px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                .additionalThreePoints {
+                    line-height: 20px;
+                    right: 0;
+                    top: calc(50% - 5px);
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+
+    .border_bottom {
+        border-bottom: 1px solid $menugray;
+    }
+
+    .messenger__dialog_pinned_message {
+        padding: 15px 0;
+
+        .messenger__list-item {
+            height: 100%;
+            border: none;
+            padding: 0;
+            margin: 0;
+
+            .user-sm-show {
+                display: none;
+            }
+
+            .user-sm-hide {
+                display: block;
+            }
+
+            .messenger__messageBlock {
+                .userMessage {
+                    white-space: normal;
+                    text-overflow: inherit;
+                }
+            }
+
+            .messageDepartureTime {
+                display: inline-block;
+                margin: 0;
+            }
+        }
+
+        &_wrapper {
+            position: relative;
+            cursor: pointer;
+            height: 25px;
+        }
+
+        .pinned_message_text {
+            font-size: 12px;
+            line-height: 12px;
+            font-weight: 300;
+            color: $blue;
+            margin-bottom: 10px;
+        }
+
+        &.pin_overflow {
+            overflow: hidden;
+            .messenger__list-item {
+                .user {
+                    height: 25px;
+                    overflow: hidden;
+                }
+            }
+            .messenger__messageBlock {
+                display: none;
+
+                .messenger__username, .messageDepartureTime, .userMessage {
+                    display: none;
+                }
+            }
+        }
+
+        &.hide {
+            display: none;
+        }
+    }
+
+    &__dialog {
+        margin-top: 20px;
+
+        &_messages {
+
+
+            ul {
+                height: 550px; // 550px без закрепа (для 1080 высоты экрана)
+                overflow-y: auto;
+                overflow-x: hidden;
+                list-style: none;
+
+                &.withPin {
+                    height: 500px;
+                }
+
+                li {
+                    margin: 20px 0;
+
+                    .dialog__message {
+                        .forwarded_message {
+                            display: block;
+                            font-size: 12px;
+                            line-height: 12px;
+                            font-weight: 300;
+                            margin-bottom: 25px;
+                        }
+
+                        &.left {
+                            &.blue {
+                                .attachment {
+                                    .attachment__file {
+                                        color: $white;
+                                    }
+                                    .attachment__file-size {
+                                        color: $lightpurple;
+                                    }
+                                }
+
+                                .forwarded_message {
+                                    color: $lightpurple;
+                                }
+
+                                .messenger__messageBlock {
+                                    .messenger__username {
+                                        color: $white;
+                                    }
+
+                                    .userMessage {
+                                        color: $white;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.right {
+                            &.gray {
+                                .forwarded_message {
+                                    color: $gray;
+                                }
+
+                                .messenger__messageBlock {
+                                    .userMessage {
+                                        color: $darkgray;
+                                    }
+                                }
+                            }
+                        }
+
+                        .attachment {
+                            padding: 0;
+                            border: 0;
+
+                            .attachment__file {
+                                font-weight: 500;
+                            }
+                        }
+
+                        &.image {
+                            width: 325px;
+                            padding: 0;
+
+                            img {
+                                max-width: 100%;
+                                border-radius: 10px;
+                            }
+
+                            &:before {
+                                border: none;
+                            }
+                        }
+
+                        .messenger__list-item {
+                            border: none;
+                            padding: 0;
+                            margin: 0;
+
+                            &.reply-message {
+                                height: auto;
+                            }
+
+                            .messenger__messageBlock {
+                                overflow: auto;
+
+                                .user {
+                                    &.online .status__label:after {
+                                        top: 0px;
+                                        right: 0px;
+                                    }
+                                }
+
+                                .userMessage {
+                                    white-space: normal;
+                                    text-overflow: inherit;
+                                    line-height: 25px;
+                                }
+                            }
+                            .messageDepartureTime {
+                                display: inline-block;
+                                margin: 0;
+                            }
+                        }
+                    }
+
+                    .messenger__username__hidden {
+                        position: absolute;
+                        left: -99999px;
+                        top: 0;
+                        display: none;
+                    }
+
+                    .messageDepartureTime {
+                        display: block;
+                        line-height: 12px;
+                        margin: 10px 90px 0 90px;
+                        text-align: left;
+                    }
+                }
+
+                &::-webkit-scrollbar {
+                    width: 0px;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: $blue;
+                    background-clip: content-box;
+                }
+            }
+
+        }
+
+        &_message_wrapper {
+            display: flex;
+
+            &.own_message {
+                justify-content: flex-end;
+                padding-right: 2px;
+
+                &~.messageDepartureTime {
+                    text-align: right;
+                    margin: 10px 90px 0 0;
+                }
+            }
+        }
+    }
+
+
+    .inputMessageBlock {
+        position: sticky;
+        bottom: 0px;
+        padding: 10px 0;
+        background-color: $white;
+    }
+}
+
+@media (max-width: $lg) {
+    .messenger {
+        &__dialog {
+            padding: 0;
+            padding-bottom: 15px;
+
+            .inputMessageBlock {
+                align-items: center;
+            }
+
+            &_messages ul li {
+                margin: 15px 0;
+
+                .dialog__message {
+                    font-weight: 300;
+                    font-size: 12px;
+                    line-height: 20px;
+                    padding: 15px;
+
+                    .attachment {
+                        font-size: 12px;
+                        padding: 0;
+                    }
+
+                    &.left {
+                        margin-right: 15px;
+                    }
+
+                    &.right {
+                        margin-left: 15px;
+                    }
+
+                    .messenger__list-item  {
+
+                        .messenger__messageBlock {
+                            .user {
+
+                            }
+
+                            .userMessage {
+                                margin-top: 10px;
+                                width: 100%;
+                                line-height: 18px;
+
+                                .smile {
+                                    svg {
+                                        width: 14px;
+                                        height: 14px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .messageDepartureTime {
+                            margin-bottom: 5px;
+                        }
+                    }
+
+                    .forwarded_message {
+                        font-size: 10px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            &_pinned_message {
+                .messenger__list-item {
+                    .messenger__messageBlock {
+                        .userMessage{
+                            font-size: 12px;
+                            line-height: 20px;
+                        }
+
+                        .messageDepartureTime {
+                            font-size: 10px;
+                            line-height: 10px;
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .inputMessageBlock__textAreaBlock {
+        height: 50px;
+    }
+
+    .inputMessageBlock__textArea {
+        min-height: 50px;
+        height: 50px;
+        padding: 15px 50px 15px 20px;
+
+        &:hover {
+            padding: 14px 50px 14px 20px;
+        }
+    }
+}
+
+@media (max-width: $sm) {
+    .messenger__header_block_additional {
+        width: 50px;
+        right: 0;
+
+        .favouriteIcon {
+            width: 15px;
+            height: 15px;
+            right: 25px;
+        }
+    }
+    .button__svg-lightgray svg {
+        width: 40px;
+        height: 40px;
+    }
+    .messenger__header-sm-hide {
+        display: none;
+    }
+
+    .dialog {
+        .messenger__dialog {
+            margin-top: 0;
+        }
+
+        .messenger__header_block_userInfo {
+            margin-right: 10px;
+            overflow: hidden;
+        }
+    }
+
+    .messenger .messenger__dialog_pinned_message.pin_overflow .messenger__list-item .user {
+        display: none;
+    }
+
+    .messenger .messenger__dialog_pinned_message {
+        min-height: 30px;
+        padding: 10px 0;
+
+        .messenger__list-item {
+            .user-sm-hide {
+                display: none;
+            }
+            .user-sm-show {
+                display: inline-block;
+            }
+
+            .messenger__messageBlock {
+                margin-top: 10px;
+
+                .userMessage {
+                    white-space: normal;
+                    text-overflow: inherit;
+                    font-size: 12px;
+                    line-height: 20px;
+                    font-weight: 300;
+                    margin-top: 5px;
+                }
+            }
+            .messenger__messageDepartureTime {
+                font-size: 10px;
+                line-height: 10px;
+                margin-bottom: 5px;
+            }
+
+            .messenger__username {
+                font-size: 12px;
+                line-height: 12px;
+                margin-bottom: 5px;
+            }
+
+            .messageDepartureTime {
+                font-size: 10px;
+                line-height: 10px;
+                margin-top: 3px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .dialog {
+        .messenger__header_block {
+            padding-bottom: 15px;
+        }
+    }
+
+    .messenger .messenger__dialog_pinned_message_wrapper {
+        display: flex;
+        height: 10px;
+    }
+
+    .messenger .messenger__dialog_pinned_message.pin_overflow .messenger__list-item .messenger__messageBlock {
+        margin-top: 0;
+    }
+
+    .messenger .messenger__dialog_pinned_message.pin_overflow .messenger__list-item .user {
+        display: none !important;
+    }
+
+    .messenger__dialog_messages ul li .messageDepartureTime {
+        font-size: 10px;
+        line-height: 10px;
+        margin: 5px 90px 0 70px;
+    }
+    .messenger__dialog_message_wrapper.own_message ~ .messageDepartureTime {
+        margin: 5px 70px 0 90px;
+    }
+}

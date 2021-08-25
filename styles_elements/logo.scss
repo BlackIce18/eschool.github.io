@@ -1,0 +1,22 @@
+@import '../scss/variables.scss';
+
+.logo{
+    &__main{
+        margin: auto;
+        max-width: 305px;
+        width: 100%;
+        border-radius: 25px;
+        background: $blue;
+        padding:  10px 0px;
+        display: block;
+        &:after{
+            content: "";
+            background: url($icon+"logo.png") no-repeat center;
+            width: 100%;
+            height: 30px;
+            display: block;
+        }
+        }
+    
+    
+}

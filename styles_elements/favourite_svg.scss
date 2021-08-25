@@ -1,0 +1,12 @@
+@import '../scss/variables.scss';
+
+.favouriteIcon {
+    width: 16px;
+    height: 16px;
+    fill: $menugray;
+    cursor: pointer;
+
+    &.active {
+        fill: $blue;
+    }
+}

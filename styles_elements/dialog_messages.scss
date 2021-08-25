@@ -1,0 +1,113 @@
+@import '../scss/variables.scss';
+
+.dialog__message {
+    width: auto;
+    max-width: calc(100% - 100px - 20px - 50px); //margin-left,right, user-photo
+    height: auto;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 300;
+    display: inline-block;
+
+    @media (max-width: $lg) {
+        max-width: calc(100% - 15px - 20px - 30px);
+    }
+
+    p {
+        margin: 0;
+    }
+
+    &.blue {
+        background-color: $blue;
+        color: $white;
+    }
+
+    &.gray {
+        background-color: $lightgray;
+        color: $darkgray;
+    }
+
+    &.left, &.right {
+        .additionalThreePoints {
+            top: 50%;
+            transform: translateY(-50%);
+            height: 20px;
+
+            &.hide {
+                display: none;
+            }
+        }
+    }
+
+    &.left {
+        margin-left: 20px;
+        margin-right: 100px;
+
+        &.blue, &.gray {
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: -12px;
+                transform: rotate(-90deg);
+            }
+        }
+
+        &.blue {
+            &:before {
+                border: 12px solid transparent;
+                border-right: 12px solid $blue;
+            }
+        }
+
+        &.gray {
+            &:before {
+                border: 12px solid transparent;
+                border-right: 12px solid $lightgray;
+            }
+        }
+
+        .additionalThreePoints {
+            right: -30px;
+        }
+    }
+
+    &.right {
+        margin-right: 20px;
+        margin-left: 100px;
+
+        &.blue, &.gray {
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                right: -12px;
+                transform: rotate(-90deg);
+            }
+        }
+
+        &.blue {
+            &:before {
+                border: 12px solid transparent;
+                border-right: 12px solid $blue;
+            }
+        }
+
+        &.gray {
+            &:before {
+                border: 12px solid transparent;
+                border-right: 12px solid $lightgray;
+            }
+        }
+
+        .additionalThreePoints {
+            right: auto;
+            left: -30px;
+        }
+    }
+}

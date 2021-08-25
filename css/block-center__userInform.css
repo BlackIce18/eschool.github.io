@@ -1,0 +1,140 @@
+@charset "UTF-8";
+.block-center .content__name {
+  line-height: 15px;
+  font-size: 15px;
+  color: #444444;
+  font-weight: 500;
+}
+
+@media (max-width: 992px) {
+  .block-center .content__name {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
+.block-center .content__title {
+  line-height: 15px;
+  color: #444444;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+@media (max-width: 992px) {
+  .block-center .content__title {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
+.block-center .content__title-blue {
+  color: #3f59b7;
+}
+
+.block-center .content__comment {
+  line-height: 12px;
+  font-size: 12px;
+  color: #c5c5c5;
+}
+
+@media (max-width: 992px) {
+  .block-center .content__comment {
+    line-height: 10px;
+    font-size: 10px;
+  }
+}
+
+.block-center .content__comment-blue {
+  color: #3f59b7;
+  fill: #3f59b7;
+}
+
+.block-center .content__comment-green {
+  color: #37aa50;
+}
+
+.block-center .content__text {
+  line-height: 15px;
+  font-size: 15px;
+  color: #444444;
+}
+
+@media (max-width: 992px) {
+  .block-center .content__text {
+    font-size: 10px;
+    line-height: 10px;
+  }
+}
+
+.block-center .content__text .popular-count:before {
+  content: "Популярность:";
+}
+
+.block-center .content__text .popular-count::after {
+  content: "баллов";
+}
+
+.block-center .image.user__photo-medium,
+.block-center .image.user__photo-medium .image {
+  width: 80px;
+  height: 80px;
+}
+
+@media (max-width: 992px) {
+  .block-center .image.user__photo-medium,
+  .block-center .image.user__photo-medium .image {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+.block-center__userInform.note .menu__item {
+  border-radius: 10px;
+  background: #eef1f8;
+}
+
+.block-center__userInform .title {
+  font-size: 15px;
+}
+
+.block-center__userInform .menu__more-content {
+  position: relative;
+  width: 100%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  padding: 0;
+}
+
+.block-center__userInform .menu__more-content .notInform {
+  font-size: 12px;
+  color: #c5c5c5;
+}
+
+.block-center__userInform .menu__more-content .image {
+  width: 80px;
+  height: 80px;
+}
+
+@media (max-width: 992px) {
+  .block-center__userInform .menu__more-content .image.user__photo-medium,
+  .block-center__userInform .menu__more-content .image.user__photo-medium .image {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+.block-center__userInform .menu__more-content .image.user__photo-small,
+.block-center__userInform .menu__more-content .image.user__photo-small .image {
+  width: 55px;
+  height: 55px;
+}
+
+@media (max-width: 992px) {
+  .block-center__userInform .menu__more-content .image.user__photo-small,
+  .block-center__userInform .menu__more-content .image.user__photo-small .image {
+    width: 35px;
+    height: 35px;
+  }
+}
+/*# sourceMappingURL=block-center__userInform.css.map */

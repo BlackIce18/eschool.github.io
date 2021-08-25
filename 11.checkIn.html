@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+	<link rel="stylesheet" href="./css/main.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<div class="block-wrapper__allBackground py-3 py-lg-5 ">
+		<form action=""
+			class="container-white p-0  my-1 my-lg-4 container-rounded container   container-system container-recovery w-100">
+			<div class="wrapper  p-lg-5 p-4">
+				<div class="top d-flex ">
+					<button class="button button__svg button__svg-lightgray button__back m-0 mr-3">
+
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+							viewBox="0 0 60 60">
+							<path fill-rule="evenodd"
+								d="M54.219,54.219 C51.525,58.114 41.942,61.000 30.500,61.000 C19.057,61.000 9.475,58.114 6.781,54.219 C2.886,51.525 -0.000,41.943 -0.000,30.500 C-0.000,19.057 2.886,9.475 6.781,6.781 C9.475,2.886 19.057,-0.000 30.500,-0.000 C41.942,-0.000 51.525,2.886 54.219,6.781 C58.114,9.475 61.000,19.057 61.000,30.500 C61.000,41.943 58.114,51.525 54.219,54.219 Z" />
+						</svg>
+
+						<svg class="button__back_innerSVG" version="1.1" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847"
+							style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+							<g>
+								<path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+					c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+					c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z" />
+							</g>
+						</svg>
+
+					</button>
+					<p class="title m-0 d-flex align-items-center">Подать заявку на регистрацию</p>
+				</div>
+<div class="school">
+				<label class="label__comment label__comment__largeFont school top pt-4 d-block" for="select__my_school">Ваше учебное
+					заведение</label>
+				<span class="inputWrapper w-100">
+					<input type="text" class="input input__dropdown w-100" placeholder="Не выбрано"
+                                            id="select__my_schooll">
+                                        <svg class="arrow_down_SVG" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 451.847 451.847"
+                                            style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                            <g>
+                                                <path
+                                                    d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                                        c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                                        c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z" />
+                                            </g>
+                                        </svg>
+                                        <!--Выпадающий список-->
+                                        <ul class="dropdown__itemsBlock hide w-100">
+                                            <li><span class="dropdown__itemWithImage_text">Выбор один</span></li>
+                                            <li><span class="dropdown__itemWithImage_text">Еще один выбор</span></li>
+                                            <li><span class="dropdown__itemWithImage_text">Наведение</span></li>
+                                            <li><span class="dropdown__itemWithImage_text">Название пункта</span></li>
+                                            <li><span class="dropdown__itemWithImage_text">Список пунктов</span></li>
+                                            <li><span class="dropdown__itemWithImage_text">Список пунктов</span></li>
+                                        </ul>
+				</span>
+			</div>
+				<div class="wrapper  pt-2 pt-lg-5 ">
+					
+					<div class="d-block d-lg-flex flex-wrap flex-column flex-lg-row row-cols-lg-2 name">
+					
+					
+					<label class="label__comment label__comment__largeFont name top  mt-3 col-lg-5 p-0" for="input__name">Имя</label>
+					<span class="inputWrapper d-block  p-0 col-lg-7 mb-lg-2 mb-0" id="input__name">
+						<!--Без input__danger обычное поле для ввода-->
+						<input type="text" class="input  w-100" placeholder="Текст поля" value="Введен неверный текст">
+						<svg class="input__infoSVG label__error" version="1.1" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 328 328"
+							style="enable-background:new 0 0 328 328;" xml:space="preserve">
+							<g>
+								<path d="M164,0C73.425,0,0,73.425,0,164s73.425,164,164,164c90.574,0,164-73.425,164-164S254.574,0,164,0z M192.258,166.965
+                            c-1.595,19.083-7.367,37.419-10.235,56.287c-0.408,3.604-1.255,9.354,0.525,11.191c4.896,5.055,10.007,12.635,7.509,21.716
+                            c-2.303,8.368-10.912,15.118-19.748,15.118c-14.274,0-24.958-13.498-27.754-25.399c-1.987-8.458-1.872-16.961-0.734-25.499
+                            c2.281-17.133,7.011-33.788,9.625-50.839c-7.714-1.192-14.605-7.1-16.714-14.764c-3.015-10.962,3.635-21.609,14.162-24.943
+                            c11.198-3.545,26.408-3.078,34.701,6.775C193.797,148.735,192.682,161.885,192.258,166.965z M165.957,112.809
+                            c-15.489,0-28.043-12.554-28.043-28.043c0-15.488,12.555-28.042,28.043-28.042S194,69.277,194,84.766
+                            C194,100.255,181.445,112.809,165.957,112.809z" />
+							</g>
+						</svg>
+						<div class="error__text"></div>
+					</span></div>
+					<div class="d-block d-lg-flex flex-wrap flex-column flex-lg-row row-cols-lg-2 password">
+					<label class="label__comment label__comment__largeFont password   mt-3 col-lg-5 p-0" for="input__fatherName">Отчество (если
+						есть)</label>
+					<span class="inputWrapper d-block  p-0 col-lg-7 mb-lg-2 mb-0" id="input__fatherName">
+						<!--Без input__danger обычное поле для ввода-->
+						<input type="text" class="input input__danger w-100" placeholder="Текст поля"
+							value="Введен неверный текст">
+						<svg class="input__infoSVG label__error" version="1.1" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 328 328"
+							style="enable-background:new 0 0 328 328;" xml:space="preserve">
+							<g>
+								<path d="M164,0C73.425,0,0,73.425,0,164s73.425,164,164,164c90.574,0,164-73.425,164-164S254.574,0,164,0z M192.258,166.965
+                            c-1.595,19.083-7.367,37.419-10.235,56.287c-0.408,3.604-1.255,9.354,0.525,11.191c4.896,5.055,10.007,12.635,7.509,21.716
+                            c-2.303,8.368-10.912,15.118-19.748,15.118c-14.274,0-24.958-13.498-27.754-25.399c-1.987-8.458-1.872-16.961-0.734-25.499
+                            c2.281-17.133,7.011-33.788,9.625-50.839c-7.714-1.192-14.605-7.1-16.714-14.764c-3.015-10.962,3.635-21.609,14.162-24.943
+                            c11.198-3.545,26.408-3.078,34.701,6.775C193.797,148.735,192.682,161.885,192.258,166.965z M165.957,112.809
+                            c-15.489,0-28.043-12.554-28.043-28.043c0-15.488,12.555-28.042,28.043-28.042S194,69.277,194,84.766
+                            C194,100.255,181.445,112.809,165.957,112.809z" />
+							</g>
+						</svg>
+						<div class="error__text"></div>
+					</span></div>
+
+					<div class="d-block d-lg-flex flex-wrap flex-column flex-lg-row row-cols-lg-2 sername">
+					<label class="label__comment label__comment__largeFont sername   mt-3 col-lg-5 p-0" for="input__sername">Фамилия</label>
+					<span class="inputWrapper d-block  p-0 col-lg-7 mb-lg-2 mb-0" id="input__sername">
+						<!--Без input__danger обычное поле для ввода-->
+						<input type="text" class="input  w-100" placeholder="Текст поля" value="Введен неверный текст">
+						<svg class="input__infoSVG label__error" version="1.1" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 328 328"
+							style="enable-background:new 0 0 328 328;" xml:space="preserve">
+							<g>
+								<path d="M164,0C73.425,0,0,73.425,0,164s73.425,164,164,164c90.574,0,164-73.425,164-164S254.574,0,164,0z M192.258,166.965
+                            c-1.595,19.083-7.367,37.419-10.235,56.287c-0.408,3.604-1.255,9.354,0.525,11.191c4.896,5.055,10.007,12.635,7.509,21.716
+                            c-2.303,8.368-10.912,15.118-19.748,15.118c-14.274,0-24.958-13.498-27.754-25.399c-1.987-8.458-1.872-16.961-0.734-25.499
+                            c2.281-17.133,7.011-33.788,9.625-50.839c-7.714-1.192-14.605-7.1-16.714-14.764c-3.015-10.962,3.635-21.609,14.162-24.943
+                            c11.198-3.545,26.408-3.078,34.701,6.775C193.797,148.735,192.682,161.885,192.258,166.965z M165.957,112.809
+                            c-15.489,0-28.043-12.554-28.043-28.043c0-15.488,12.555-28.042,28.043-28.042S194,69.277,194,84.766
+                            C194,100.255,181.445,112.809,165.957,112.809z" />
+							</g>
+						</svg>
+						<div class="error__text"></div>
+					</span></div>
+
+					<div class="d-block d-lg-flex flex-wrap flex-column flex-lg-row row-cols-lg-2 e-mail">
+					<label class="label__comment label__comment__largeFont e-mail   mt-3 col-lg-5 p-0" for="input__e-mail">E-mail</label>
+					<span class="inputWrapper d-block  p-0 col-lg-7 mb-lg-2 mb-0" id="input__e-mail">
+						<!--Без input__danger обычное поле для ввода-->
+						<input type="text" class="input  w-100" placeholder="Текст поля" value="Введен неверный текст">
+						<svg class="input__infoSVG label__error" version="1.1" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 328 328"
+							style="enable-background:new 0 0 328 328;" xml:space="preserve">
+							<g>
+								<path d="M164,0C73.425,0,0,73.425,0,164s73.425,164,164,164c90.574,0,164-73.425,164-164S254.574,0,164,0z M192.258,166.965
+                            c-1.595,19.083-7.367,37.419-10.235,56.287c-0.408,3.604-1.255,9.354,0.525,11.191c4.896,5.055,10.007,12.635,7.509,21.716
+                            c-2.303,8.368-10.912,15.118-19.748,15.118c-14.274,0-24.958-13.498-27.754-25.399c-1.987-8.458-1.872-16.961-0.734-25.499
+                            c2.281-17.133,7.011-33.788,9.625-50.839c-7.714-1.192-14.605-7.1-16.714-14.764c-3.015-10.962,3.635-21.609,14.162-24.943
+                            c11.198-3.545,26.408-3.078,34.701,6.775C193.797,148.735,192.682,161.885,192.258,166.965z M165.957,112.809
+                            c-15.489,0-28.043-12.554-28.043-28.043c0-15.488,12.555-28.042,28.043-28.042S194,69.277,194,84.766
+                            C194,100.255,181.445,112.809,165.957,112.809z" />
+							</g>
+						</svg>
+						<div class="error__text"></div>
+					</span></div>
+
+					<div class="d-block d-lg-flex flex-wrap flex-column flex-lg-row row-cols-lg-2 phone">
+					<label class="label__comment label__comment__largeFont phone  mt-3 col-lg-5 p-0" for="input__phone">Телефон</label>
+					<span class="inputWrapper d-block  p-0 col-lg-7 mb-lg-2 mb-0" id="input__phone">
+						<!--Без input__danger обычное поле для ввода-->
+						<input type="text" class="input  w-100" placeholder="Текст поля" value="Введен неверный текст">
+						<svg class="input__infoSVG label__error" version="1.1" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 328 328"
+							style="enable-background:new 0 0 328 328;" xml:space="preserve">
+							<g>
+								<path d="M164,0C73.425,0,0,73.425,0,164s73.425,164,164,164c90.574,0,164-73.425,164-164S254.574,0,164,0z M192.258,166.965
+                            c-1.595,19.083-7.367,37.419-10.235,56.287c-0.408,3.604-1.255,9.354,0.525,11.191c4.896,5.055,10.007,12.635,7.509,21.716
+                            c-2.303,8.368-10.912,15.118-19.748,15.118c-14.274,0-24.958-13.498-27.754-25.399c-1.987-8.458-1.872-16.961-0.734-25.499
+                            c2.281-17.133,7.011-33.788,9.625-50.839c-7.714-1.192-14.605-7.1-16.714-14.764c-3.015-10.962,3.635-21.609,14.162-24.943
+                            c11.198-3.545,26.408-3.078,34.701,6.775C193.797,148.735,192.682,161.885,192.258,166.965z M165.957,112.809
+                            c-15.489,0-28.043-12.554-28.043-28.043c0-15.488,12.555-28.042,28.043-28.042S194,69.277,194,84.766
+                            C194,100.255,181.445,112.809,165.957,112.809z" />
+							</g>
+						</svg>
+						<div class="error__text"></div>
+					</span></div>
+
+					<div class="d-block d-lg-flex flex-wrap flex-column flex-lg-row row-cols-lg-2 birthday">
+					<label class="label__comment label__comment__largeFont birthrday  mt-3 col-lg-5 p-0" for="select__birthday">Дата
+						рождения</label>
+					<!--Стандартный Dropdown-->
+					<span class="inputWrapper d-block  p-0 col-lg-7 mb-lg-2 mb-0 " id="select__birthday">
+						<input type="text" class="input input__dropdown w-100" placeholder="Не выбрано"
+						id="select__birthday">
+					<svg class="arrow_down_SVG" version="1.1" xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						viewBox="0 0 451.847 451.847"
+						style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+						<g>
+							<path
+								d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+									c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+									c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z" />
+						</g>
+					</svg>
+					<!--Выпадающий список-->
+					<ul class="dropdown__itemsBlock hide w-100">
+						<li><span class="dropdown__itemWithImage_text">Выбор один</span></li>
+						<li><span class="dropdown__itemWithImage_text">Еще один выбор</span></li>
+						<li><span class="dropdown__itemWithImage_text">Наведение</span></li>
+						<li><span class="dropdown__itemWithImage_text">Название пункта</span></li>
+						<li><span class="dropdown__itemWithImage_text">Список пунктов</span></li>
+						<li><span class="dropdown__itemWithImage_text">Список пунктов</span></li>
+					</ul>
+					</span>
+				</div>
+
+					<div class="d-block d-lg-flex flex-wrap flex-column flex-lg-row row-cols-lg-2 gender">		
+			  <label for="select__gender" class="label__comment label__comment__largeFont mt-3 col-lg-5 p-0">Пол</label>
+					<span class="inputWrapper d-flex  p-0 col-lg-7 mb-lg-2 mb-0 " id="select__gender">
+						<div>
+							<input type="radio" name="gender"
+								class="checkbox checkbox__custom checkbox__gray checkbox-blue" id="men">
+							<label for="men" class="label__comment men my-auto position-relative p-0">Мужской</label>
+						</div>
+						<div class="ml-3">
+							<input type="radio" name="gender"
+								class="checkbox checkbox__custom checkbox__gray checkbox-blue" id="women">
+							<label class="label__comment women  my-auto position-relative p-0"
+								for="women">Женский</label>
+						</div>
+					</span>
+				</div>
+					<div class="d-block d-lg-flex flex-wrap flex-column flex-lg-row row-cols-lg-2 country">
+					<label class="label__comment country mt-3 col-lg-5 p-0" for="select__region">Страна</label>
+					<span class="inputWrapper d-block  p-0 col-lg-7 mb-lg-2 mb-0 " id="select__country">
+						<input type="text" class="input input__dropdown w-100" placeholder="Не выбрано"
+                                            id="select__coutry">
+                                        <svg class="arrow_down_SVG" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 451.847 451.847"
+                                            style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                            <g>
+                                                <path
+                                                    d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                                        c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                                        c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z" />
+                                            </g>
+                                        </svg>
+                                        <!--Выпадающий список-->
+                                        <ul class="dropdown__itemsBlock hide w-100">
+                                            <li><span class="dropdown__itemWithImage_text">Выбор один</span></li>
+                                            <li><span class="dropdown__itemWithImage_text">Еще один выбор</span></li>
+                                            <li><span class="dropdown__itemWithImage_text">Наведение</span></li>
+                                            <li><span class="dropdown__itemWithImage_text">Название пункта</span></li>
+                                            <li><span class="dropdown__itemWithImage_text">Список пунктов</span></li>
+                                            <li><span class="dropdown__itemWithImage_text">Список пунктов</span></li>
+                                        </ul>
+					</span>
+			</div>
+					<div class="d-block d-lg-flex flex-wrap flex-column flex-lg-row row-cols-lg-2 region">		
+			  <label class="label__comment region  mt-3 col-lg-5 p-0" for="select__region">Регион</label>
+					<!--Стандартный Dropdown-->
+					<span class="inputWrapper d-block  p-0 col-lg-7 mb-lg-2 mb-0 " id="select__region">
+						<input type="text" class="input input__dropdown w-100" placeholder="Не выбрано"
+						id="select__region">
+					<svg class="arrow_down_SVG" version="1.1" xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						viewBox="0 0 451.847 451.847"
+						style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+						<g>
+							<path
+								d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+									c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+									c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z" />
+						</g>
+					</svg>
+					<!--Выпадающий список-->
+					<ul class="dropdown__itemsBlock hide w-100">
+						<li><span class="dropdown__itemWithImage_text">Выбор один</span></li>
+						<li><span class="dropdown__itemWithImage_text">Еще один выбор</span></li>
+						<li><span class="dropdown__itemWithImage_text">Наведение</span></li>
+						<li><span class="dropdown__itemWithImage_text">Название пункта</span></li>
+						<li><span class="dropdown__itemWithImage_text">Список пунктов</span></li>
+						<li><span class="dropdown__itemWithImage_text">Список пунктов</span></li>
+					</ul>
+					</span>
+				</div>
+			  <div class="d-block d-lg-flex flex-wrap flex-column flex-lg-row row-cols-lg-2 city">	
+			  <label class="label__comment city  mt-3 col-lg-5 p-0" for="select__city">Город</label>
+					<!--Стандартный Dropdown-->
+					<span class="inputWrapper d-block  p-0 col-lg-7 mb-lg-2 mb-0 " id="select__city">
+						<input type="text" class="input input__dropdown w-100" placeholder="Не выбрано"
+						id="select__city">
+					<svg class="arrow_down_SVG" version="1.1" xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						viewBox="0 0 451.847 451.847"
+						style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+						<g>
+							<path
+								d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+									c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+									c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z" />
+						</g>
+					</svg>
+					<!--Выпадающий список-->
+					<ul class="dropdown__itemsBlock hide w-100">
+						<li><span class="dropdown__itemWithImage_text">Выбор один</span></li>
+						<li><span class="dropdown__itemWithImage_text">Еще один выбор</span></li>
+						<li><span class="dropdown__itemWithImage_text">Наведение</span></li>
+						<li><span class="dropdown__itemWithImage_text">Название пункта</span></li>
+						<li><span class="dropdown__itemWithImage_text">Список пунктов</span></li>
+						<li><span class="dropdown__itemWithImage_text">Список пунктов</span></li>
+					</ul>
+					</span>
+					
+		</div>
+			<div class="d-block d-lg-flex flex-wrap flex-column flex-lg-row row-cols-lg-2 adress">		
+			<label class="label__comment adress   mt-3 col-lg-5 p-0" for="input__address">Адресс</label>
+					<span class="inputWrapper d-block  p-0 col-lg-7 mb-lg-2 mb-0" id="input__address">
+						<!--Без input__danger обычное поле для ввода-->
+						<textarea  class="input  w-100 text__area container-rounded" placeholder="Текст поля" ></textarea>
+						
+						<div class="error__text"></div>
+					</span>
+				</div>
+					<div class="d-block d-lg-flex flex-wrap flex-column flex-lg-row row-cols-lg-2 about">
+					<label class="label__comment about   mt-3 col-lg-5 p-0" for="input__about">Расскажите о
+						себе</label>
+					<span class="inputWrapper d-block  p-0 col-lg-7 mb-lg-2 mb-0" id="input__about">
+						<!--Без input__danger обычное поле для ввода-->
+						<textarea  class="input  w-100 text__area container-rounded" placeholder="Текст поля" ></textarea>
+						
+						<div class="error__text"></div>
+					</span>
+				</div>
+				</div>
+
+				<div class="wrapper d-lg-flex pt-3  d-block">
+					<div class="col-lg-7 col-12 my-auto p-0">
+					<input type="checkbox" class="checkbox checkbox__custom checkbox__gray checkbox-blue" id="remember">
+					<label for="remember" class="label__comment my-auto position-relative"><span> Я согласен с &nbsp;<a href="" class=" text__link text__link-blue"> правилами использования</a></span></label>
+				</div>
+				<button class="button button-XlargeSize button__yellow  button__system col-lg-5 mt-4 mt-lg-0 col-12">
+					Подать заявку
+				</button>
+			</div>
+				
+				
+			
+			</div>
+
+			<div class="wrapper d-flex   pb-lg-5 pb-4 block-wrapper__border-top  px-lg-5 px-4">
+
+				
+<a href="" class="w-100 m-0 text-center  label__comment label__comment__largeFont text__link text__link-blue"> У меня уже есть аккаунт</a>
+			</div>
+
+		</form>
+
+	</div>
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+	</script>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

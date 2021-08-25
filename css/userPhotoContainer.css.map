@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,SAAS,CAAC;EACN,UAAU,EAAE,GAAG,CAAC,IAAI,CAAC,IAAI,CAAC,uBAAuB;EACjD,SAAS,EAAE,YAAY;EAC3B,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;CACT",
+    "sources": [
+        "../styles_elements/userPhotoContainer.scss"
+    ],
+    "names": [],
+    "file": "userPhotoContainer.css"
+}

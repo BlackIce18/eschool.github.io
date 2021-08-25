@@ -1,0 +1,7 @@
+@import '../scss/variables.scss';
+.line{
+    &-gray{
+        border: none;
+        border-top: 1px solid $menugray;
+    }
+}

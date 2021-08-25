@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,cAAc,CAAC;EACX,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,IAAI,ECAE,OAAO;EDCb,MAAM,EAAE,OAAO;CAKlB;;AATD,AAMI,cANU,AAMT,OAAO,CAAC;EACL,IAAI,ECMN,OAAO;CDLR",
+    "sources": [
+        "../styles_elements/favourite_svg.scss",
+        "../scss/variables.scss"
+    ],
+    "names": [],
+    "file": "favourite_svg.css"
+}

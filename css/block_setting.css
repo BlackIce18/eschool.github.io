@@ -1,0 +1,280 @@
+.block-noscroll-always {
+  overflow-y: hidden;
+}
+
+.block-noscroll-always .block-scroll {
+  overflow: scroll;
+}
+
+.block-noscroll-always .block-scroll:hover::-webkit-scrollbar-thumb {
+  width: 2px;
+  border-radius: 2px;
+  background-color: #3f59b7;
+}
+
+.block-noscroll-always .block-scroll::-webkit-scrollbar {
+  width: 2px;
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+.block-noscroll-always .block-scroll-screenHeight {
+  height: 100vh;
+}
+
+.block-noscroll-always .block-scroll-screenHeight__findPage {
+  height: calc(100vh - 265px);
+}
+
+@media (max-width: 992px) {
+  .block-noscroll-always .block-scroll-screenHeight__findPage {
+    height: calc(100vh - 290px);
+  }
+}
+
+@media (max-width: 768px) {
+  .block-noscroll-always .block-scroll-screenHeight__findPage {
+    height: calc(100vh - 276px);
+  }
+}
+
+.block-noscroll-always .block-scroll-screenHeight__withoutHeader {
+  height: calc(100vh - 91px);
+}
+
+@media (min-width: 992px) {
+  .block-noscroll {
+    overflow-y: hidden;
+  }
+  .block-noscroll .block-scroll {
+    overflow-y: scroll;
+  }
+  .block-noscroll .block-scroll:hover::-webkit-scrollbar-thumb {
+    width: 2px;
+    border-radius: 2px;
+    background-color: #3f59b7;
+  }
+  .block-noscroll .block-scroll::-webkit-scrollbar {
+    width: 2px;
+    border-radius: 2px;
+    background-color: transparent;
+  }
+  .block-noscroll .block-scroll-screenHeight {
+    height: 100vh;
+  }
+  .block-noscroll .block-scroll-screenHeight__withoutHeader {
+    height: calc(100vh - 100px);
+  }
+}
+
+.block-wrapper__border-top {
+  padding-top: 30px;
+  border-top: 1px solid #eef1f8;
+}
+
+@media (max-width: 992px) {
+  .block-wrapper__border-top {
+    padding-top: 20px;
+  }
+}
+
+.block-wrapper__allBackground {
+  min-height: 100vh;
+  height: 100%;
+  background: url("../resource/images/menu-eSchool_background.jpg");
+}
+
+@media (min-width: 992px) {
+  .block-center {
+    max-width: calc(100% - 300px);
+    width: 80%;
+  }
+  .block-center-content__right {
+    width: 400px;
+    padding-top: 50px;
+    padding-left: 50px;
+  }
+  .block-center-content__center {
+    width: calc(100% - 400px);
+  }
+}
+
+@media (min-width: 540px) {
+  .block-left {
+    width: 20%;
+    min-width: 300px;
+  }
+  .block-left.block-scroll, .block-left .menu__content {
+    overflow-y: scroll;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 992px) {
+  .block-left.block-scroll, .block-left .menu__content {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 540px) {
+  .block-left.block-scroll:hover::-webkit-scrollbar-thumb, .block-left .menu__content:hover::-webkit-scrollbar-thumb {
+    width: 2px;
+    border-radius: 2px;
+    background-color: #3f59b7;
+  }
+  .block-left.block-scroll::-webkit-scrollbar, .block-left .menu__content::-webkit-scrollbar {
+    width: 2px;
+    border-radius: 2px;
+    background-color: transparent;
+  }
+}
+
+.block-center {
+  padding: 0 80px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {
+  .block-center-content.adapt__setting {
+    height: calc( 100vh - 100px);
+    overflow: scroll;
+    padding: 0px 20px;
+    padding-top: 15px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    left: 0;
+    top: 62px;
+    border-top: solid 1px #eef1f8;
+  }
+  .block-center-content.adapt__setting:hover::-webkit-scrollbar-thumb {
+    width: 2px;
+    border-radius: 2px;
+    background-color: #3f59b7;
+  }
+  .block-center-content.adapt__setting::-webkit-scrollbar {
+    width: 2px;
+    border-radius: 2px;
+    background-color: transparent;
+  }
+  .block-center-content.adapt__setting .block-center-content__right {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    padding: 0;
+  }
+  .block-center-content.adapt__setting .block-center-content__right.block-scroll {
+    overflow: visible;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .block-center-content.adapt__setting .block-center-content__center {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding: 0;
+    width: 100%;
+  }
+  .block-center-content.adapt__setting .block-center-content__center.block-scroll {
+    overflow: visible;
+    height: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+@media (max-width: 992px) {
+  .block-center {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding: 15px 0;
+    padding-right: 20px;
+  }
+  .block-center-content {
+    padding: 0px 20px;
+    padding-top: 15px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 62px;
+    border-top: solid 1px #eef1f8;
+  }
+  .block-center-content__right {
+    width: 100%;
+  }
+  .block-center-content__center {
+    width: 100%;
+  }
+  .block-center .header {
+    padding: 0;
+    border: none;
+  }
+}
+
+.container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.container-recovery {
+  max-width: 700px;
+}
+
+@media (min-width: 768px) {
+  .container-recovery {
+    min-width: 440px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-recovery {
+    min-width: 280px;
+  }
+}
+
+.container-rounded, .container-rounded.text__area {
+  border-radius: 10px;
+}
+
+.container-white {
+  background: #ffffff;
+}
+
+.container-centerScreen {
+  -webkit-transform: translateY(calc(50vh - 50%));
+          transform: translateY(calc(50vh - 50%));
+}
+
+.container-system .title {
+  font-size: 22px;
+  font-weight: 500;
+  color: #444444;
+}
+
+@media (max-width: 992px) {
+  .container-system .title {
+    font-size: 15px;
+  }
+}
+/*# sourceMappingURL=block_setting.css.map */

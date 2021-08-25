@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+
+	<link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper d-flex">
+        <div class="block-left menu  p-0  ">
+            <nav class="navbar navbar-expand-lg navbar-light  menu__wrapper  p-lg-0 ">
+
+                <button class="navbar-toggler button__burger " id="menu__button__burger" type="button"
+                    data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon button__burger-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse  menu__content" id="navbarSupportedContent">
+                    <ul class="navbar-nav  d-flex flex-column w-100 menu__lightgray">
+                        <li class="menu__item text-center logo">
+                            <a class="d-inline-block  w-100 h-100" href="#">
+                                <span class="logo__main"></span>
+
+                            </a>
+                            <button class="d-lg-none navbar-toggler button__burger-small show" id="menu__button__burger"
+                                type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                                aria-controls="navbarSupportedContent" aria-expanded="true"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon button__burger-icon"></span>
+                            </button>
+                        </li>
+                        <li class="menu__item light active">
+                            <a class=" menu__item-text" href="#">
+                                <span class="menu__item-icon">
+                                    <svg version="1.1" x="0px" y="0px" viewBox="0 0 512 512">
+                                        <g>
+                                            <path d="M256,288.389c-153.837,0-238.56,72.776-238.56,204.925c0,10.321,8.365,18.686,18.686,18.686h439.747
+                        						c10.321,0,18.686-8.365,18.686-18.686C494.56,361.172,409.837,288.389,256,288.389z M55.492,474.628
+                        						c7.35-98.806,74.713-148.866,200.508-148.866s193.159,50.06,200.515,148.866H55.492z" />
+                                        </g>
+                                        <g>
+                                            <path d="M256,0c-70.665,0-123.951,54.358-123.951,126.437c0,74.19,55.604,134.54,123.951,134.54s123.951-60.35,123.951-134.534
+                        						C379.951,54.358,326.665,0,256,0z M256,223.611c-47.743,0-86.579-43.589-86.579-97.168c0-51.611,36.413-89.071,86.579-89.071
+                        						c49.363,0,86.579,38.288,86.579,89.071C342.579,180.022,303.743,223.611,256,223.611z" />
+
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span>My page</span>
+                            </a>
+                        </li>
+                        <li class="menu__item light">
+                            <a class=" menu__item-text" href="#">
+                                <span class="menu__item-icon">
+                                    <svg viewBox="0 0 408.000000 408.000000">
+                                        <g transform="translate(0.000000,408.000000) scale(0.100000,-0.100000)"
+                                            stroke="none">
+                                            <path d="M494 4061 c-192 -57 -336 -173 -423 -341 -76 -146 -71 1 -71 -1901
+												l0 -1706 23 -34 c49 -73 132 -99 210 -65 18 8 190 172 387 370 l355 356 1238
+												0 c1394 0 1319 -4 1485 76 169 81 295 231 356 421 l26 82 0 1096 c0 1090 0
+												1096 -21 1163 -39 122 -97 220 -179 302 -84 84 -154 129 -262 168 l-73 27
+												-1495 2 c-1412 2 -1498 1 -1556 -16z m3019 -341 c75 -23 150 -87 188 -160 l24
+												-45 0 -1100 0 -1100 -23 -43 c-35 -66 -88 -119 -150 -149 l-57 -28 -1315 -5
+												c-1081 -4 -1319 -7 -1340 -19 -14 -7 -132 -120 -263 -250 l-237 -236 2 1465 3
+												1465 24 45 c37 71 113 137 185 159 59 19 103 20 1477 20 1391 1 1418 1 1482
+												-19z" />
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span>Message</span>
+                            </a>
+                        </li>
+                        <li class="menu__item light">
+                            <a class=" menu__item-text" href="#">
+                                <span class="menu__item-icon">
+                                    <svg x="0px" y="0px" viewBox="0 0 512 512"
+                                        style="enable-background:new 0 0 512 512;" xml:space="preserve">
+
+                                        <g>
+                                            <path d="M474.988,49.349H37.012c-17.007,0-30.843,13.836-30.843,30.843v400.964C6.169,498.164,20.005,512,37.012,512h437.976
+												c17.007,0,30.843-13.836,30.843-30.843V80.193C505.831,63.186,491.995,49.349,474.988,49.349z M468.819,474.988H43.181V86.361
+												h425.639V474.988z" />
+                                        </g>
+
+                                        <g>
+                                            <rect x="24.675" y="172.723" width="462.651" height="37.012" />
+                                        </g>
+
+                                        <g>
+                                            <path d="M135.711,0c-10.221,0-18.506,8.285-18.506,18.506v98.699c0,10.221,8.285,18.506,18.506,18.506s18.506-8.285,18.506-18.506
+												V18.506C154.217,8.285,145.932,0,135.711,0z" />
+                                        </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path d="M382.458,0c-10.221,0-18.506,8.285-18.506,18.506v98.699c0,10.221,8.285,18.506,18.506,18.506s18.506-8.285,18.506-18.506
+												V18.506C400.964,8.285,392.679,0,382.458,0z" />
+                                            </g>
+
+                                            <g>
+                                                <path d="M326.94,370.12H191.229c-10.221,0-18.506,8.285-18.506,18.506c0,10.221,8.285,18.506,18.506,18.506H326.94
+												c10.221,0,18.506-8.285,18.506-18.506C345.446,378.405,337.161,370.12,326.94,370.12z" />
+                                            </g>
+
+                                            <g>
+                                                <path d="M326.94,283.759H191.229c-10.221,0-18.506,8.285-18.506,18.506s8.285,18.506,18.506,18.506H326.94
+												c10.221,0,18.506-8.284,18.506-18.506S337.161,283.759,326.94,283.759z" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span>Shedule of lessons</span>
+                            </a>
+                        </li>
+                        <li class="menu__item light ">
+                            <a class=" menu__item-text" href="#">
+                                <span class="menu__item-icon">
+                                    <svg x="0px" y="0px" viewBox="0 0 512 512">
+                                        <g>
+                                            <path d="M256,0C114.842,0,0,114.842,0,256s114.842,256,256,256s256-114.842,256-256S397.158,0,256,0z M256,471.472
+												c-118.814,0-215.472-96.665-215.472-215.472S137.186,40.528,256,40.528c118.807,0,215.472,96.672,215.472,215.479
+												S374.807,471.472,256,471.472z" />
+                                        </g>
+
+                                        <g>
+                                            <path d="M256,301.425c-71.997,0-139.361,36.103-189.67,101.65l32.152,24.668c42.466-55.32,98.408-85.79,157.518-85.79
+												s115.051,30.47,157.511,85.79l32.152-24.668C395.354,337.528,327.997,301.425,256,301.425z" />
+                                        </g>
+
+                                        <g>
+                                            <path d="M256,91.863c-58.103,0-105.372,47.573-105.372,106.047S197.897,303.958,256,303.958s105.372-47.573,105.372-106.047
+												S314.103,91.863,256,91.863z M256,263.43c-35.752,0-64.844-29.389-64.844-65.52s29.092-65.52,64.844-65.52
+												s64.844,29.396,64.844,65.52S291.752,263.43,256,263.43z" />
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span>Pupils</span>
+                            </a>
+                        </li>
+                        <!--!!!-->
+                        <li class="menu__item light ">
+                            <a class=" menu__item-text" href="#">
+                                <span class="menu__item-icon">
+                                    <svg x="0px" y="0px" viewBox="0 0 490 490">
+
+                                        <g>
+                                            <path d="M243.5,250.1c68.4,0,124.5-57.2,124.5-125.6S311.9,0,243.5,0S119,57.2,119,125.6S175.1,250.1,243.5,250.1z M243.5,40.8
+													c45.9,0,83.7,38.8,83.7,84.7s-37.8,83.7-83.7,83.7s-83.7-38.8-83.7-84.7S197.5,40.8,243.5,40.8z" />
+                                            <path d="M333.3,259.3c-11.2-4.1-22.5,0-27.6,10.2c-4.1,11.2,0,22.5,10.2,27.6c61.3,28.6,91.9,69.4,91.9,124.5v28.6H82.2v-28.6
+													c0-55.1,29.6-96,91.9-124.5c10.2-5.1,15.3-17.4,10.2-27.6s-17.4-15.3-27.6-10.2C80.1,294,40.3,350.1,40.3,420.6v49
+													c0,11.2,9.2,20.4,20.4,20.4h365.5c11.2,0,20.4-9.2,23.5-20.4v-49C449.7,350.1,408.8,294,333.3,259.3z" />
+                                            <path d="M223.1,281.8v121.5c0,11.2,9.2,20.4,20.4,20.4s20.4-9.2,20.4-20.4V281.8c0-11.2-9.2-20.4-20.4-20.4
+													C232.2,261.3,223.1,270.5,223.1,281.8z" />
+                                        </g>
+
+                                    </svg>
+                                </span>
+                                <span>Colleagues</span>
+                            </a>
+                        </li>
+                        <li class="menu__item light ">
+                            <a class=" menu__item-text" href="#">
+                                <span class="menu__item-icon">
+                                    <svg viewBox="0 0 512 512">
+                                        <g>
+                                            <path d="M128,174.829c-46.48,0-84.293,37.813-84.293,84.293S81.52,343.415,128,343.415s84.293-37.813,84.293-84.293
+												S174.48,174.829,128,174.829z M128,305.951c-25.825,0-46.829-21.005-46.829-46.829s21.005-46.829,46.829-46.829
+												s46.829,21.005,46.829,46.829S153.825,305.951,128,305.951z" />
+                                        </g>
+                                        <g>
+                                            <path d="M384,0c-46.48,0-84.293,37.813-84.293,84.293c0,46.48,37.813,84.293,84.293,84.293s84.293-37.813,84.293-84.293
+												C468.293,37.813,430.48,0,384,0z M384,131.122c-25.825,0-46.829-21.004-46.829-46.829c0-25.825,21.005-46.829,46.829-46.829
+												s46.829,21.004,46.829,46.829C430.829,110.117,409.825,131.122,384,131.122z" />
+                                        </g>
+
+                                        <g>
+                                            <path d="M384,343.415c-46.48,0-84.293,37.813-84.293,84.293S337.52,512,384,512s84.293-37.813,84.293-84.293
+												S430.48,343.415,384,343.415z M384,474.537c-25.825,0-46.829-21.004-46.829-46.829c0-25.825,21.005-46.829,46.829-46.829
+												s46.829,21.004,46.829,46.829C430.829,453.532,409.825,474.537,384,474.537z" />
+                                        </g>
+
+                                        <g>
+                                            <rect x="165.434" y="156.443"
+                                                transform="matrix(0.8397 -0.5431 0.5431 0.8397 -53.5916 168.8122)"
+                                                width="187.385" height="37.464" />
+                                        </g>
+
+                                        <g>
+                                            <rect x="238.204" y="252.556"
+                                                transform="matrix(0.5444 -0.8388 0.8388 0.5444 -171.2839 372.1291)"
+                                                width="37.463" height="182.38" />
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span>Parents</span>
+                            </a>
+                        </li>
+                        <li class="menu__item light ">
+                            <a class=" menu__item-text" href="#">
+                                <span class="menu__item-icon">
+                                    <svg x="0px" y="0px" viewBox="0 0 512 512">
+                                        <g>
+                                            <path d="M491.574,33.362H346.553c-31.163,0-60.95,9.566-86.026,27.588l-4.534,3.214l-4.419-3.132
+												c-25.185-18.104-54.965-27.67-86.128-27.67H20.426C9.144,33.362,0,42.506,0,53.787v369.021c0,11.282,9.144,20.426,20.426,20.426
+												h145.021c22.557,0,44.092,6.911,62.407,20.071l16.34,11.574c3.534,2.506,7.673,3.758,11.806,3.758
+												c4.14,0,8.272-1.253,11.813-3.751l16.456-11.663c18.185-13.072,39.728-19.99,62.284-19.99h145.021
+												c11.282,0,20.426-9.144,20.426-20.426V53.787C512,42.506,502.856,33.362,491.574,33.362z M471.149,402.383H346.553
+												c-31.163,0-60.95,9.566-86.026,27.581l-4.534,3.214l-4.419-3.132c-25.185-18.097-54.965-27.663-86.128-27.663H40.851V74.213
+												h124.596c22.557,0,44.092,6.911,62.407,20.071l16.34,11.574c7.074,5.011,16.545,5.004,23.619,0l16.456-11.656
+												c18.185-13.079,39.728-19.99,62.284-19.99h124.596V402.383z" />
+                                        </g>
+                                        <g>
+                                            <rect x="235.574" y="89.191" width="40.851" height="369.021" />
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span>Gradebook</span>
+                            </a>
+                        </li>
+                        <li class="menu__item light ">
+                            <a class=" menu__item-text" href="#">
+                                <span class="menu__item-icon">
+                                    <svg x="0px" y="0px" viewBox="0 0 512 512">
+                                        <g transform="translate(1 1)">
+                                            <g>
+                                                <path
+                                                    d="M504.017,217.881L271.571,6.567l-2.221-2.019c-1.526-1.387-3.202-2.514-4.973-3.381c-0.079-0.038-0.161-0.066-0.24-0.104
+													c-5.772-2.738-12.503-2.738-18.276,0c-0.079,0.037-0.161,0.065-0.24,0.104c-1.771,0.867-3.447,1.994-4.973,3.381l-2.189,1.99
+													L5.983,217.881c-8.718,7.925-9.361,21.418-1.435,30.136c7.925,8.718,21.418,9.361,30.136,1.435l6.983-6.348v246.563
+													C41.667,501.449,51.218,511,63,511h106.667h170.667H447c11.782,0,21.333-9.551,21.333-21.333V243.104l6.983,6.348
+													c8.718,7.926,22.21,7.283,30.136-1.435C513.378,239.299,512.735,225.807,504.017,217.881z M212.333,468.334v-128
+													c0-23.567,19.099-42.667,42.667-42.667s42.667,19.099,42.667,42.667v128H212.333z M425.667,468.334h-85.333v-128
+													C340.334,293.202,302.132,255,255,255s-85.333,38.202-85.333,85.333v128H84.333V204.32L255,49.165L425.667,204.32V468.334z" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span>My school</span>
+                            </a>
+                        </li>
+                        <li class="menu__item light ">
+                            <a class=" menu__item-text" href="#">
+                                <span class="menu__item-icon">
+                                    <svg x="0px" y="0px" viewBox="0 0 512 512">
+                                        <g transform="translate(1 1)">
+                                            <g>
+                                                <path d="M365.955,191l77.444-116.166c9.451-14.177-0.712-33.167-17.75-33.167h-320V20.333C105.649,8.551,96.097-1,84.315-1
+												C72.533-1,62.982,8.551,62.982,20.333V63v256v170.667c0,11.782,9.551,21.333,21.333,21.333c11.782,0,21.333-9.551,21.333-21.333
+												V340.333h320c17.039,0,27.202-18.99,17.75-33.167L365.955,191z M105.649,297.667V84.333h280.138l-63.222,94.833
+												c-4.777,7.166-4.777,16.501,0,23.667l63.222,94.833H105.649z" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span>Graduates</span>
+                            </a>
+                        </li>
+                        <!--	<li class="menu-max">
+							<div class="menu-admin py-4">
+								<ul>
+									<li class="menu__item">
+										<button class="button  button__blue w-100">Управление Британский лицей в Москве</button>
+									</li>
+									<li class="menu__item">
+										<button class="button  button__blue w-100">Управление научными работами</button>
+									</li>
+								</ul>
+							</div>
+							<div class="menu-eSchool py-4">
+								<div class="menu-eSchool__top d-flex justify-content-between">
+									<span class="menu-eSchool__top-title ">Вкладки eSchool</span>
+									<div class="menu__more">
+										<button class="menu__more-button">
+											<div class="dot dot__yellow"></div>
+										</button>
+										<div class="menu__more-content top eSchool active">
+											<ul>
+												<li class="menu__item">
+													<span class="menu__item-text">Текстик</span>
+													<span class="menu__item-icon plus"></span></li>
+												<li class="menu__item">
+													<span class="menu__item-text"> Текстик</span>
+													<span class="menu__item-icon plus"></span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<ul>
+									<li class="menu__item ">
+										<span class="  menu__item-icon">
+											<svg x="0px" y="0px" viewBox="0 0 512 512">
+												<g>
+													<path d="M491.574,33.362H346.553c-31.163,0-60.95,9.566-86.026,27.588l-4.534,3.214l-4.419-3.132
+														c-25.185-18.104-54.965-27.67-86.128-27.67H20.426C9.144,33.362,0,42.506,0,53.787v369.021c0,11.282,9.144,20.426,20.426,20.426
+														h145.021c22.557,0,44.092,6.911,62.407,20.071l16.34,11.574c3.534,2.506,7.673,3.758,11.806,3.758
+														c4.14,0,8.272-1.253,11.813-3.751l16.456-11.663c18.185-13.072,39.728-19.99,62.284-19.99h145.021
+														c11.282,0,20.426-9.144,20.426-20.426V53.787C512,42.506,502.856,33.362,491.574,33.362z M471.149,402.383H346.553
+														c-31.163,0-60.95,9.566-86.026,27.581l-4.534,3.214l-4.419-3.132c-25.185-18.097-54.965-27.663-86.128-27.663H40.851V74.213
+														h124.596c22.557,0,44.092,6.911,62.407,20.071l16.34,11.574c7.074,5.011,16.545,5.004,23.619,0l16.456-11.656
+														c18.185-13.079,39.728-19.99,62.284-19.99h124.596V402.383z" />
+												</g>
+												<g>
+													<rect x="235.574" y="89.191" width="40.851" height="369.021" />
+												</g>
+											</svg>
+										</span>
+										<span class=" menu__item-text ">Журнал</span>
+									</li>
+									<li class="menu__item ">
+										<span class=" menu__item-icon">
+											<svg x="0px" y="0px" viewBox="0 0 512 512">
+												<g>
+													<path d="M256,0C114.842,0,0,114.842,0,256s114.842,256,256,256s256-114.842,256-256S397.158,0,256,0z M256,471.472
+													   c-118.814,0-215.472-96.665-215.472-215.472S137.186,40.528,256,40.528c118.807,0,215.472,96.672,215.472,215.479
+													   S374.807,471.472,256,471.472z" />
+												</g>
+
+												<g>
+													<path d="M256,301.425c-71.997,0-139.361,36.103-189.67,101.65l32.152,24.668c42.466-55.32,98.408-85.79,157.518-85.79
+                       									s115.051,30.47,157.511,85.79l32.152-24.668C395.354,337.528,327.997,301.425,256,301.425z" />
+												</g>
+												<g>
+													<path d="M256,91.863c-58.103,0-105.372,47.573-105.372,106.047S197.897,303.958,256,303.958s105.372-47.573,105.372-106.047
+													   S314.103,91.863,256,91.863z M256,263.43c-35.752,0-64.844-29.389-64.844-65.52s29.092-65.52,64.844-65.52
+													   s64.844,29.396,64.844,65.52S291.752,263.43,256,263.43z" />
+												</g>
+											</svg></span>
+										<span class=" menu__item-text">Ученики</span>
+									</li>
+								</ul>
+							</div>
+						</li>-->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+		<div class="block-center ">
+			<div class="header ">
+                <div class="content justify-content-xl-between justify-content-end">
+                    <div class="input__search_block d-none d-lg-block p-0">
+                        <input type="text" class="input input__search w-100  " placeholder="Текст поля">
+                        <div class="input__search_block-icon ">
+                            <svg viewBox="0 0 511.999 511.999">
+                                <g>
+                                    <path
+                                        d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
+              S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
+              c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z" />
+                                </g>
+
+                                <g>
+                                    <path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
+              l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
+              C513.82,498.681,513.789,486.967,506.547,479.756z" />
+                                </g>
+
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="wrapper d-flex ">
+                        <button
+                            class="d-lg-none button button__svg button__svg__search button__svg__search-lightGray my-auto mr-3">
+                            <svg viewBox="0 0 550 550" width="17px">
+                                <g>
+                                    <path
+                                        d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
+										  S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
+										  c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z" />
+                                </g>
+
+                                <g>
+                                    <path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
+										  l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
+										  C513.82,498.681,513.789,486.967,506.547,479.756z" />
+                                </g>
+
+                            </svg>
+                        </button>
+                        <button class="button button__yellow button-standartSize my-auto d-block d-lg-none text-nowrap">Мой
+                            блог</button>
+                        <div class="message__icon ">
+                            <a href="#">
+                                <span class="message__count message__icon-label">25</span>
+                                <svg viewBox="0 0 513.4 511.7">
+                                    <path
+                                        d="M-.3,82.6l-1.5,416a16.1,16.1,0,0,0,4.6,11.1,15.9,15.9,0,0,0,22.6.3l91.7-91,313.4,1.1a80.1,80.1,0,0,0,80.3-79.7l.9-256A80,80,0,0,0,432,4.1L80,2.9A79.9,79.9,0,0,0-.3,82.6Zm32,.1A47.9,47.9,0,0,1,79.9,34.9l351.9,1.2a47.9,47.9,0,0,1,47.9,48.1l-.9,256a48,48,0,0,1-48.2,47.9l-320-1.1a16.5,16.5,0,0,0-11.4,4.7L30.4,460.1Z"
+                                        transform="translate(1.8 -2.9)" /></svg>
+                            </a></div>
+                        <div class="user online">
+                            <div class="user__short ">
+                                <div class="user__short-photo status__label">
+                                    <img class="clip-svg image " src="resource/images/image (1).jpg" alt="">
+                                    <svg width="0" height="0" class="form">
+                                        <defs>
+                                            <clipPath id="myClip" clipPathUnits="objectBoundingBox">
+                                                <path
+                                                    d="M0.894,0.894 C0.842,0.955,0.685,1,0.5,1 C0.315,1,0.158,0.955,0.106,0.894 C0.045,0.842,0,0.685,0,0.5 C0,0.315,0.045,0.158,0.106,0.106 C0.158,0.045,0.315,0,0.5,0 C0.685,0,0.842,0.045,0.894,0.106 C0.955,0.158,1,0.315,1,0.5 C1,0.685,0.955,0.842,0.894,0.894">
+                                                </path>
+                                            </clipPath>
+                                        </defs>
+                                    </svg></div>
+
+                                <div class="user__short-inform my-auto d-none d-lg-block">
+                                    <p class="name p-0 m-0">Дмитрий Попов</p>
+                                    <p class="status__text p-0 m-0"></p>
+                                </div>
+                                <div class="menu__more d-none d-lg-block  mt-2 pt-1">
+                                    <button class="menu__more-button">
+                                        <div class="arrow"></div>
+                                    </button>
+                                    <div class="menu__more-content  menu__more-content-simple hidden">
+                                        <ul>
+                                            <li class="menu__item"><a href="#"> <span class="menu__item-text">
+                                                        Настройки</span></a></li>
+                                            <li class="menu__item"><a href="#"><span class="menu__item-text">
+                                                        Выйти</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="block-center-content table-with-filter">
+
+			<div class="lesson__info-block-sm passed-lesson student">
+				<div class="center__header border_bottom">
+
+					<button class="button button__svg button__svg-lightgray button__back">
+
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60">
+							<path fill-rule="evenodd" d="M54.219,54.219 C51.525,58.114 41.942,61.000 30.500,61.000 C19.057,61.000 9.475,58.114 6.781,54.219 C2.886,51.525 -0.000,41.943 -0.000,30.500 C-0.000,19.057 2.886,9.475 6.781,6.781 C9.475,2.886 19.057,-0.000 30.500,-0.000 C41.942,-0.000 51.525,2.886 54.219,6.781 C58.114,9.475 61.000,19.057 61.000,30.500 C61.000,41.943 58.114,51.525 54.219,54.219 Z" />
+						</svg>
+
+						<svg class="button__back_innerSVG" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+								<g>
+									<path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+										c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+										c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/>
+								</g>
+							</svg>
+
+					</button>
+
+					<h3 class="center__header-title">Lesson</h3>
+				</div>
+
+				<div class="lesson__info-block">
+
+					<div class="lesson__info visit">
+						<p class="status">attended</p>
+						<p class="assessment">325</p>
+					</div>
+
+					<div class="lesson__info title border_bottom">
+						<p class="date">09 nov <span class="year">Year 9</span></p>
+						<p class="time">lesson 5 12:00 - 12:45</p>
+						<p class="lesson__info-name">Mathematics<span class="teacher">teacher <span class="teacher-name">Melnik K.L.</span></span></p>
+					</div>
+
+					<div class="lesson__info-sm fields">
+						<div class="lesson__info main">
+							<p class="title">Title of the lesson topic</p>
+							<p class="workName">home work</p>
+							<p class="main-text">Lorem ipsum dolor sit amet, conse ctetuer adipiscing elit. Aenean commodo ligula </p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+</script>
+<script src="./js/main.js"></script>
+</body>
+</html>
+</body>
+</html>

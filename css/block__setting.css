@@ -1,0 +1,10 @@
+.block__center {
+  padding: 0 80px;
+}
+
+@media (max-width: 992px) {
+  .block__center {
+    padding: 0;
+  }
+}
+/*# sourceMappingURL=block__setting.css.map */

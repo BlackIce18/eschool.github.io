@@ -1,0 +1,11 @@
+.favouriteIcon {
+  width: 16px;
+  height: 16px;
+  fill: #eef1f8;
+  cursor: pointer;
+}
+
+.favouriteIcon.active {
+  fill: #3f59b7;
+}
+/*# sourceMappingURL=favourite_svg.css.map */

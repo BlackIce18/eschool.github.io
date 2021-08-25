@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"discussion_create.css"}
+=======
+{"version":3,"sourceRoot":"","sources":["../Messages/discussion_create.scss"],"names":[],"mappings":"AAGI;EACI","file":"discussion_create.css"}
+>>>>>>> 1fbe8fe55023c63b6cc088346364e22a4b632aac

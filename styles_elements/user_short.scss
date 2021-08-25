@@ -1,0 +1,39 @@
+@import 'userPhoto_container.scss';
+@import '../scss/variables.scss';
+.user{
+   &__short{
+      width: fit-content;
+      display: flex;
+      &-photo{
+         p{
+            width: inherit;
+            line-height: 50px;
+            @media (max-width:$lg){
+               line-height: 30px;
+            }
+            font-size: 18px;
+            color:$blue
+         }
+         width: 50px;
+            height: 50px;
+         
+            @media (max-width:$lg) {
+            width: 30px;
+            height: 30px;
+            }
+
+
+      }
+      &-inform{
+p{
+   
+line-height: 15px;
+}
+         padding-left: 20px;
+         padding-right: 5px;
+         .name{
+         font-size: 15px;
+         color:$darkgray}
+      }
+   }
+}

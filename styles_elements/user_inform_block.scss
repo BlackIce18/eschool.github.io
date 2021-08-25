@@ -1,0 +1,299 @@
+@import '../scss/variables.scss';
+
+
+.icon.arrow {
+    top: 2px;
+    width: 6px;
+    height: 8px;
+    position: relative;
+
+    &:before {
+        content: "";
+        width: 1px;
+        height: 4px;
+        background: $blue;
+        position: absolute;
+        transform: rotate(45deg);
+        bottom: 2px;
+    }
+
+    &:after {
+        content: "";
+        width: 1px;
+        height: 4px;
+        background: $blue;
+        position: absolute;
+        transform: rotate(-45deg);
+        left: 0;
+    }
+}
+
+.user-inform-standart {
+    .user {
+        &__top {
+            flex-wrap: wrap;
+            .menu__more{
+                @media (max-width:$xl){
+                   margin-top: 13px;
+                }
+            }
+        }
+&__photo{
+    @media (max-width:$xl){
+        transform: translateX(-50%);
+        left: 50%;
+        position: relative;
+    }
+}
+        &-inform {
+            &-more {
+                .text {
+                    font-weight: 500;
+                    font-size: 15px;
+                    color: $darkgray
+                }
+
+                .icon {
+                    top: 2px;
+                    width: 6px;
+                    height: 8px;
+                    position: relative;
+
+                    &:before {
+                        content: "";
+                        width: 1px;
+                        height: 4px;
+                        background: $blue;
+                        position: absolute;
+                        transform: rotate(45deg);
+                        bottom: 2px;
+                    }
+
+                    &:after {
+                        content: "";
+                        width: 1px;
+                        height: 4px;
+                        background: $blue;
+                        position: absolute;
+                        transform: rotate(-45deg);
+                        left: 0;
+                    }
+                }
+            }
+
+            &-city {
+                .text {
+                    &.rus {
+                        &::before {
+                            content: "город";
+                        }
+                    }
+
+                    &:before {
+                        content: "city";
+                        font-size: 12px;
+                        color: $gray;
+                        display: block;
+                    }
+                }
+
+                .icon {
+                    &:after {
+                        content: "";
+                        background: url($icon+"placeholder_gray.svg");
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        display: block;
+                        width: 30px;
+                        height: 100%;
+                        background-position-y: center;
+                        margin: auto;
+                    }
+                }
+            }
+
+            &-workplace {
+                .text {
+                    &.rus {
+                        &::before {
+                            content: "место работы";
+                        }
+                    }
+
+                    &:before {
+                        content: "place of work";
+                        font-size: 12px;
+                        color: $gray;
+                        display: block;
+                    }
+                }
+
+                .icon {
+                    &:after {
+                        content: "";
+                        background: url($icon+"placeholder_gray.svg");
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        display: block;
+                        width: 30px;
+                        height: 100%;
+                        background-position-y: center;
+                        margin: auto;
+                    }
+                }
+
+                .text {
+                    &:before {
+                        content: "place of work";
+                        font-size: 12px;
+                        color: $gray;
+                        display: block;
+                    }
+                }
+
+                .icon {
+                    &:after {
+                        content: "";
+                        background: url($icon+"mortarboard_gray.svg");
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        display: block;
+                        width: 30px;
+                        height: 100%;
+                        background-position-y: center;
+                        margin: auto;
+                    }
+                }
+            }
+
+            &-birthday {
+                .text {
+                    &.rus {
+                        &::before {
+                            content: "день рождения";
+                        }
+                    }
+
+                    &:before {
+                        content: "birthdate";
+                        font-size: 12px;
+                        color: $gray;
+                        display: block;
+                    }
+                }
+
+                .icon {
+                    &:after {
+                        content: "";
+                        background: url($icon+"balloons_gray.svg");
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        display: block;
+                        width: 30px;
+                        height: 100%;
+                        background-position-x: center;
+                        margin: auto;
+                    }
+                }
+            }
+
+            &-status {
+                li:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+                &-title {
+                    font-weight: 500;
+                    font-size: 15px;
+                    color: $darkgray;
+                }
+
+                & a {
+                    color: $darkgray;
+                }
+
+                &-content {
+
+                    border-radius: 10px;
+                    padding: 20px 30px;
+                    font-size: 15px;
+                    @media (max-width:$lg) {
+                        font-size: 12px;
+                    }
+
+                    &-item {
+                        line-height: 16px;
+
+                        
+
+                        display: flex;
+
+                        &.work {
+                            &:before {
+
+                                background-image: url($icon+"check__blue.svg");
+
+
+                            }
+                        }
+
+                        &:before {
+
+                            padding-right: 10px;
+                            content: "";
+                            background: url($icon+"star_yellow.svg");
+                            display: inline-block;
+                            width: 25px;
+                            height: 15px;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+
+
+
+
+                        }
+                    }
+                }
+            }
+
+            &-photo {
+               
+                width: 86px;
+                height: 86px;
+
+                &.status__label {
+
+                    &::after {
+                        top: 0px;
+                        right: 0px;
+
+                        @media (max-width:$lg) {
+                            top: 3px;
+                            right: 3px;
+                        }
+                    }
+                }
+
+            }
+
+            &-text {
+                .name {
+                    font-weight: 500;
+                }
+
+
+                color:$darkgray;
+                font-size: 22px;
+                line-height: 24px;
+                padding: 0px 20px;
+
+                @media (max-width:$lg) {
+                    text-align: center;
+                    width: 100%;
+                    font-size: 18px;
+                    line-height: 20px;
+
+                }
+            }
+        }
+    }
+}

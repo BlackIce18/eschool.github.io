@@ -1,0 +1,1062 @@
+@import "../../variables.scss";
+
+.gradebook {
+
+    .table__content {
+        &-header-filters {
+            &-item {
+                &.pupils {
+                    .inputWrapper {
+                        .input__dropdown {
+                            &.withImage {
+                                padding-left: 65px;
+                            }
+                        }
+
+                        .user_photo {
+                            width: 34px;
+                            height: 34px;
+                            position: absolute;
+                            top: 50%;
+                            left: 25px;
+                            transform: translateY(-50%);
+
+                            img {
+                                width: 34px;
+                                height: 34px;
+                            }
+                        }
+
+                        .dropdown__itemsWithImage {
+                            .user_photo {
+                                position: static;
+                                transform: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-main {
+            &-table {
+                &-col {
+                    $centralBlockWidth: 730px;
+                    $firstRowHeight: 75px;
+
+                    .table-row {
+                        &.table-header-row .header-item-col {
+                            $width: 55px;
+                            width: 100%;
+                            border: none;
+                            min-width: $width;
+                            //width: ($width / $centralBlockWidth) * 100%;
+                            background: none;
+                            height: $firstRowHeight;
+                            position: relative;
+                            margin-right: 0;
+
+                            .innerCell {
+                                padding: 0;
+
+                                .dayOfWeek {
+                                    font-size: 12px;
+                                    line-height: 12px;
+                                    height: 12px;
+                                    font-weight: normal;
+                                    color: $gray;
+                                    margin-bottom: 5px;
+                                    position: relative;
+
+                                    &.active {
+                                        color: $blue;
+                                    }
+
+                                    &.future {
+                                        color: $darkgray;
+                                    }
+
+                                    .lesson-status {
+                                        top: 50%;
+                                        right: 50%;
+                                        transform: translate(calc(-50% + 8px), calc(-50%));
+                                    }
+                                }
+
+                                .date {
+                                    border: 2px solid transparent;
+                                    padding: 12px 0;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    background: $lightgray;
+                                    border-radius: 10px;
+
+                                    &_number {
+                                        font-size: 15px;
+                                        line-height: 15px;
+                                        font-weight: 500;
+                                        color: $gray;
+                                        margin-bottom: 5px;
+                                    }
+
+                                    &_month {
+                                        font-size: 10px;
+                                        line-height: 10px;
+                                        font-weight: 500;
+                                        color: $gray;
+                                        margin-bottom: 0px;
+                                        text-transform: uppercase;
+                                    }
+                                }
+                            }
+
+                            &.hovered {
+                                border: none;
+                            }
+
+                            &:hover, &.hovered {
+                                .innerCell {
+                                    .date {
+                                        border: 2px solid $menugray;
+
+                                        &_number, &_month {
+                                            color: $blue;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.clicked {
+                                .innerCell {
+                                    .date {
+                                        border: 2px solid $darkyellow;
+
+                                        &_number, &_month {
+                                            color: $blue;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.future {
+                                .innerCell {
+                                    .date {
+                                        &_number, &_month {
+                                            color: green;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.active {
+                                padding: 0;
+                                box-shadow: none;
+                                background: none;
+                                margin-right: 0;
+                                border: none;
+
+                                .innerCell {
+                                    background: none;
+                                    border-radius: 0;
+                                    margin: 0;
+
+                                    .date {
+                                        box-shadow: 0px 5px 16px rgb(68,68,68,0.25); //$darkgray
+                                        border: 2px solid $white;
+                                        background: $blue;
+
+                                        &_number, &_month {
+                                            color: $white;
+                                        }
+                                    }
+                                }
+
+                                &:hover {
+                                    .innerCell {
+                                        .date {
+                                            border: 2px solid $white;
+
+                                            &_number, &_month {
+                                                color: $white;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &.hovered {
+                                    border: none;
+                                }
+                            }
+                        }
+                    }
+
+                    &.first-col {
+                        $allTableWidth: 1120px;
+                        $thisColWidth: 315px;
+
+                        width: ($thisColWidth / $allTableWidth) * 100%;
+                        min-width: 315px;
+
+                        .table-row {
+                            width: 100%;
+                            min-width: 215px;
+                            height: 70px;
+                            padding: 20px;
+                            border-radius: 10px;
+                            border: 1px solid $menugray;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: flex-start;
+                            position: relative;
+
+                            &:first-child {
+                                height: 75px;
+                            }
+
+                            &.users-item, &.lesson-item {
+                                padding: 19px 25px;
+
+                                &.active {
+                                    border: 2px solid $menugray;
+                                    background: $lightgray;
+                                    padding: 18px 24px;
+
+                                    .user-block {
+                                        .user_name {
+                                            color: $blue;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.lesson-item {
+                                position: relative;
+                                padding: 19px 35px 19px 25px;
+
+                                .lesson-name {
+                                    @include threeDotsInText;
+
+                                    margin: 0;
+                                    font-size: 15px;
+                                    font-weight: 500;
+                                    color: $darkgray;
+                                    width: 245px;
+                                }
+
+                                .lesson-status {
+                                    right: 30px;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                }
+                            }
+
+
+                            &:first-child {
+                                align-items: center;
+                            }
+
+                            .filterName-sm {
+                                display: none;
+                            }
+
+                            .user-block {
+                                display: flex;
+                                align-items: center;
+
+
+                                .user_photo {
+                                    img {
+                                        width: 50px;
+                                        height: 50px;
+                                    }
+                                }
+
+                                .user_name {
+                                    @include threeDotsInText;
+
+                                    width: 175px;
+                                    margin: 0;
+                                    margin-left: 20px;
+                                    font-size: 15px;
+                                    font-weight: 500;
+                                    color: $darkgray;
+                                }
+                            }
+
+                            &.users-item.user-with-year {
+                                padding-right: 45px;
+
+                                .user-block {
+                                    .user_name {
+                                        $width: 175px;
+
+                                        width: 100%;
+                                        min-width: $width;
+                                        .year {
+                                            color: $green;
+                                            font-size: 12px;
+                                            font-weight: 300;
+                                            line-height: 12px;
+                                            display: block;
+                                        }
+                                    }
+
+                                    .lesson-status {
+                                        right: 30px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.central-col {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        overflow: hidden;
+
+                        .table-row {
+                            min-width: 55px;
+                            margin-bottom: 10px;
+                            height: 70px;
+
+                            &.table-header-row {
+                                height: $firstRowHeight;
+                                position: relative;
+                            }
+
+                            .lesson {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+
+                                .grade {
+                                    font-size: 15px;
+                                    font-weight: 500;
+                                    line-height: 15px;
+                                    color: $blue;
+
+                                    &.preliminary {
+                                        color: $gray;
+                                    }
+                                }
+
+                                &.withNote {
+                                    background: $lightgray;
+
+                                    .note {
+                                        svg {
+                                            width: 18px;
+                                            height: 22px;
+                                            fill: $blue;
+                                        }
+                                    }
+                                }
+
+                                .attendance-plus {
+                                    cursor: pointer;
+
+                                    svg {
+                                        width: 17px;
+                                        height: 17px;
+                                        fill: $menugray;
+                                    }
+                                }
+
+                                .attendance-red, .attendance-blue {
+                                    width: 17px;
+                                    height: 2px;
+                                }
+
+                                .attendance-red {
+                                    background: $red;
+                                }
+
+                                .attendance-blue {
+                                    background: $blue;
+                                }
+                            }
+                        }
+
+                        .central-first-col, .central-last-col {
+                            width: 35px;
+                            float: left;
+                            min-height: 100%;
+
+                            .table-row {
+                                min-width: 20px;
+                                width: 35px;
+                                height: $firstRowHeight;
+
+                                .button__navigation {
+                                    height: $firstRowHeight;
+                                }
+                            }
+
+                            .central-border {
+                                width: 1px;
+                                height: 100%;
+                                background: $menugray;
+                                margin: 0 auto;
+                            }
+                        }
+
+                        .central-first-col {
+                            margin-right: 10px;
+                        }
+
+                        .central-col-table {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            overflow-x: auto;
+                            overflow-y: hidden;
+
+
+                            .table-row {
+                                .lesson {
+                                    $width: 55px;
+                                    width: 100%;
+                                    min-width: $width;
+                                    height: 70px;
+                                    padding: 0;
+                                }
+                            }
+
+                            .table-center {
+                                min-width: 730px;
+                                width: 100%;
+                                overflow-x: auto;
+                                overflow-y: hidden;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+
+                                .table-col {
+                                    $width: 55px;
+                                    width: ($width / $centralBlockWidth) * 100%;
+                                    margin-right: 10px;
+
+                                    .table-row {
+                                        width: 100%;
+
+                                        .lesson__info-block {
+                                            &.future-lesson.hover-on-date {
+                                                $height: 280px;
+                                                min-height: $height;
+                                                top: auto;
+                                                bottom: - $height - 6px;
+                                                left: 0;
+
+                                                &:before {
+                                                    top: -12px;
+                                                    bottom: auto;
+                                                }
+
+                                                &:after {
+                                                    top: -8px;
+                                                    bottom: auto;
+                                                }
+
+                                                .lesson__info {
+                                                    &.title, &.main {
+                                                        border-bottom: none;
+                                                    }
+
+                                                    &.main {
+                                                        padding: 20px 25px 15px;
+
+                                                        .title {
+                                                            margin-bottom: 15px;
+                                                        }
+
+                                                        .workName {
+                                                            font-size: 12px;
+                                                            line-height: 12px;
+                                                        }
+                                                    }
+
+                                                    &.field {
+                                                        border-bottom: 1px solid $menugray;
+                                                        padding: 25px;
+                                                        padding-top: 0;
+
+                                                        .note_text {
+                                                            font-size: 12px;
+                                                            line-height: 12px;
+                                                            font-weight: 300;
+                                                            color: $gray;
+                                                            margin-bottom: 0;
+
+                                                            span.note_text-no_note {
+                                                                display: block;
+                                                                margin-top: 5px;
+                                                                font-size: 15px;
+                                                                line-height: 15px;
+                                                            }
+                                                        }
+
+                                                        textarea {
+                                                            &.hide {
+                                                                display: none;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                    }
+
+                                    &:nth-last-child(-n+2) {
+                                        margin-right: 0;
+                                    }
+                                }
+
+
+                            }
+                        }
+
+                        .central-last-col {
+                            margin-left: 10px;
+                        }
+                    }
+
+                    &.last-col {
+                        width: 55px;
+
+                        .table-row:first-child {
+                            height: $firstRowHeight;
+
+                            .lesson {
+                                width: 55px;
+                                height: $firstRowHeight;
+                                padding: 0;
+                                border: 0;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+
+                                .grade {
+                                    height: $firstRowHeight;
+                                    padding: 19px 15px;
+                                    background: $blue;
+                                    border-radius: 10px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+
+                                    span {
+                                        text-align: center;
+                                        font-size: 12px;
+                                        font-weight: 500;
+                                        line-height: 16px;
+                                        color: $white;
+                                    }
+                                }
+                            }
+                        }
+
+                        .table-row {
+                            height: 70px;
+
+                            .lesson {
+                                width: 55px;
+                                height: 70px;
+                                padding: 0;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: 15px;
+                                font-weight: 500;
+                                line-height: 12px;
+                                color: $blue;
+
+                                .grade {
+                                    font-size: 15px;
+                                    font-weight: 500;
+                                    line-height: 12px;
+                                    color: $blue;
+                                }
+
+                                .attendance-count {
+                                    font-size: 15px;
+                                    font-weight: 500;
+                                    line-height: 15px;
+                                    color: $menugray;
+
+                                    &.two-rows {
+                                        display: flex;
+                                        flex-direction: column;
+                                        width: 100%;
+                                        padding: 0 15px;
+                                        text-align: center;
+
+                                        .attendance-count__first-row, .attendance-count__second-row {
+                                            padding: 7px 0;
+                                        }
+
+                                        .attendance-count__first-row {
+                                            border-bottom: 1px solid $menugray;
+                                        }
+
+                                        .attendance-count__second-row {}
+                                    }
+
+                                    &.red {
+                                        color: $red;
+                                    }
+
+                                    &.blue {
+                                        color: $blue;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.central-col, &.last-col {
+                        .table-row {
+                            .lesson {
+                                &:hover, &.hovered, &.clicked {
+                                    background: $lightgray;
+                                    border: 2px solid $darkyellow;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .nothingSelected-block {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+
+                &.hide {
+                    display: none;
+                }
+
+                .nothingSelected {
+                    &-image {
+                        svg {
+                            width: 71px;
+                            height: 63px;
+                            fill: $blue;
+                            display: block;
+                            margin: 0 auto;
+                        }
+                    }
+
+                    &-text {
+                        font-size: 15px;
+                        font-weight: 300;
+                        line-height: 12px;
+                        color: $darkgray;
+                        margin-top: 20px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .evaluation_and_sort {
+        margin-top: 0;
+    }
+
+    .save_and_checkbox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        ul {
+            list-style: none;
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .gradebook {
+        .center__header__action_buttons {
+            float: right;
+            margin-top: -10px;
+        }
+
+        .table__content-main-table-col.first-col {
+            min-width: 250px;
+        }
+
+        .table__content-main-table-col.first-col .table-row.lesson-item .lesson-name {
+            width: 185px;
+        }
+
+        .table__content-main-table-col.first-col .table-row.user-with-year .user-block .user_name {
+            $width: 175px;
+            $thisColWidth: 315px;
+
+            width: ($width / $thisColWidth) * 100%;
+        }
+
+        .table__content-main-table-col.first-col .table-row.users-item.user-with-year .user-block .user_name {
+            min-width: auto;
+            $width: 175px;
+            $thisColWidth: 315px;
+
+            width: ($width / $thisColWidth) * 100%;
+        }
+    }
+}
+
+@media (max-width: $lg) {
+    .gradebook {
+        .center__header__action_buttons {
+            margin-top: 5px;
+            float: right;
+            align-items: center;
+            align-content: center;
+
+            .center__header__action_buttons-save {
+                display: none;
+            }
+        }
+
+        .table__content {
+            &-main {
+                &-table {
+                    &-col {
+                        &.central-col {
+                            .central-first-col, .central-last-col {
+                                display: none;
+                            }
+                        }
+                        &.first-col {
+                            .table-row {
+                                &:first-child {
+                                    padding: 20px 10px;
+
+
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $sm) {
+    .gradebook {
+        .center__header__action_buttons {
+            margin-top: 5px;
+            float: right;
+            align-items: center;
+            align-content: center;
+
+            .center__header__action_buttons-save {
+                display: none;
+            }
+        }
+
+        .table__content {
+            &-main {
+                &-table {
+                    &-col {
+                        .table-row {
+                            &.table-header-row .header-item-col {
+                                min-width: 42px;
+                                height: 58px;
+
+
+                                .innerCell {
+                                    justify-content: flex-start;
+
+                                    .dayOfWeek {
+                                        font-size: 10px;
+                                        line-height: 8px;
+                                        margin-bottom: 2px;
+                                        height: 10px;
+
+                                        .lesson-status {
+                                            width: 6px;
+                                            height: 6px;
+                                            top: 50%;
+                                            transform: translate(calc(-50% + 6px), calc(-50%));
+                                        }
+                                    }
+
+                                    .date {
+                                        padding: 6px 0;
+
+                                        .date_number {
+                                            font-size: 15px;
+                                            margin-bottom: 5px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &.central-col {
+                            $parentWidth: 240px;
+                            $width: 140px;
+                            width: ($width / $parentWidth) * 100%;
+                            min-width: 140px;
+
+                            .table-center {
+                                .central-first-col, .central-last-col {
+                                    display: none;
+                                }
+
+                                .table-col {
+                                    .table-row {
+
+                                    }
+                                }
+                            }
+
+                            .central-col-table {
+                                width: 100%;
+                                //min-width: 300px;
+                                padding-right: 5px;
+
+                                .table-center {
+                                    min-width: auto;
+
+                                    .table-col {
+                                        width: 42px;
+                                        margin-right: 5px;
+                                    }
+                                }
+
+                                .table-row .lesson {
+                                    min-width: 42px;
+                                    height: 52px;
+
+                                    .grade {
+                                        font-size: 12px;
+                                        font-weight: 500;
+                                        line-height: 12px;
+                                    }
+
+                                    .note {
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+
+                                        svg {
+                                            width: 15px;
+                                            height: 19px;
+                                        }
+                                    }
+
+                                    .attendance-plus {
+                                        svg {
+                                            width: 14px;
+                                            height: 14px;
+                                        }
+                                    }
+
+                                    .attendance-red, .attendance-blue {
+                                        width: 14px;
+                                    }
+                                }
+                            }
+
+                            .table-row {
+                                min-width: 42px;
+                                height: 52px;
+                                margin-bottom: 5px;
+
+                                &.table-header-row {
+                                    width: 42px;
+                                    height: 58px;
+                                }
+
+                                .table-header-row .header-item-col {
+                                    min-width: 42px;
+                                }
+                            }
+                        }
+
+                        &.first-col {
+                            $parentWidth: 280px;
+                            $width: 86px;
+
+                            width: ($width / $parentWidth) * 100%;
+                            min-width: $width;
+                            margin-right: 6px;
+
+                            .table-row {
+                                min-width: $width;
+                                height: 52px;
+                                margin-bottom: 5px;
+
+                                &:first-child {
+                                    padding: 10px;
+                                    background: $lightgray;
+                                    height: 46px;
+                                    margin-top: 12px;
+
+                                    .sort {
+                                        display: none;
+                                    }
+
+                                    .filterName-sm {
+                                        display: block;
+                                        text-align: center;
+                                        font-size: 12px;
+                                        font-weight: 500;
+                                        color: $gray;
+                                    }
+
+
+                                }
+
+                                &.users-item, &.lesson-item {
+                                    min-width: $width;
+                                    padding: 15px;
+
+                                    .user-block, .lesson-block {
+                                        .user {
+                                            display: none;
+                                        }
+
+                                        .user_name, .lesson-name {
+                                            width: 100%;
+                                            margin-left: 0;
+                                            white-space: normal;
+                                            font-size: 10px;
+                                            font-weight: 500;
+                                            color: $darkgray;
+                                            line-height: 12px;
+                                        }
+                                    }
+
+                                    &.user-with-year {
+                                        padding-right: 15px;
+
+                                        .user-block {
+                                            .user_name {
+                                                $width: 56px;
+
+                                                width: 100%;
+                                                min-width: $width;
+
+                                                .year {
+                                                    color: $green;
+                                                    font-size: 10px;
+                                                    font-weight: 300;
+                                                    line-height: 12px;
+                                                    display: block;
+                                                }
+                                            }
+
+                                            .lesson-status {
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+
+
+
+                                &.lesson-item {
+                                    padding: 15px 20px 15px 15px;
+
+                                    .lesson-block {
+                                        .lesson-status {
+                                            width: 6px;
+                                            height: 6px;
+                                            transform: translate(calc(-50% + 6px), -50%);
+                                            right: 15px;
+                                            top: 50%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &.last-col {
+                            width: 47px;
+                            padding-left: 4px;
+                            border-left: 1px solid $menugray;
+                            margin-left: 0;
+
+                            .table-row {
+                                width: 42px;
+                                height: 52px;
+                                margin-bottom: 5px;
+
+                                .lesson {
+                                    width: 42px;
+                                    height: 52px;
+
+                                    .grade {
+                                        font-size: 12px;
+                                        font-weight: 500;
+                                        line-height: 12px;
+                                    }
+
+                                    .attendance-count{
+                                        font-size: 12px;
+
+                                        &.two-rows {
+                                            padding: 0 10px;
+
+                                            .attendance-count__first-row, .attendance-count__second-row {
+                                                padding: 2px 0;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &:first-child {
+                                    height: 58px;
+
+                                    .lesson {
+                                        width: 42px;
+                                        height: 58px;
+
+                                        .grade {
+                                            width: 42px;
+                                            height: 58px;
+                                            font-size: 10px;
+                                            font-weight: 500;
+                                            line-height: 12px;
+                                            padding: 19px 5px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .nothingSelected-block {
+                    .nothingSelected-image svg {
+                        width: 52px;
+                        height: 46px;
+                    }
+
+                    .nothingSelected-text {
+                        font-size: 12px;
+                        line-height: 12px;
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+
+    }
+}

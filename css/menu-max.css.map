@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "ACCA,AAAA,QAAQ,CAAA;EACJ,UAAU,EAAE,qDAAyC;CACxD",
+    "sources": [
+        "../styles_elements/menu-max.scss",
+        "../styles_elements/menu-eSchool.scss",
+        "../scss/variables.scss"
+    ],
+    "names": [],
+    "file": "menu-max.css"
+}

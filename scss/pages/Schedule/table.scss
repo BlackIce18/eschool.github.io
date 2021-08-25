@@ -1,0 +1,1509 @@
+@import "../../variables.scss";
+$centralBlockWidth: 1130px;
+.border_bottom {
+    border-bottom: 1px solid $menugray;
+}
+
+.table__content {
+    position: relative;
+
+    &-header-filters {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        &-item{
+            margin-right: 5px;
+
+            &:last-child {
+                margin-top: auto;
+                margin-right: 0;
+            }
+
+            &-calendarIcon {
+                margin: 0 15px;
+                cursor: pointer;
+
+                svg {
+                    width: 15px;
+                    height: 15px;
+                    fill: $darkgray;
+                }
+            }
+
+            .inputWrapper {
+                display: block;
+
+                input {
+                    width: 100%;
+                }
+            }
+
+            &.classlines {
+                $width: 160px;
+
+                width: ($width/$centralBlockWidth)*100%;
+
+                .inputWrapper {
+                    input {
+
+                    }
+                }
+            }
+
+            &.subject {
+                $width: 210px;
+                width: ($width/$centralBlockWidth)*100%;
+
+                .inputWrapper {
+                    input {
+
+                    }
+                }
+            }
+
+            &.pupils {
+                $width: 250px;
+                width: ($width/$centralBlockWidth)*100%;
+
+                .inputWrapper {
+                    input {
+
+                    }
+                }
+            }
+
+            &.calendar {
+                $width: 365px + 50px;
+                width: ($width/$centralBlockWidth)*100%;
+                margin-right: 0;
+
+                .inputWrapper {
+                    width: calc(100% - 50px);
+                    display: inline-block;
+                    position: relative;
+
+                    input.withTerm {
+                        padding-left: 90px;
+                    }
+
+                    .term {
+                        content: "2nd term:";
+                        color: $blue;
+                        font-size: 15px;
+                        line-height: 25px;
+                        font-weight: 300;
+                        position: absolute;
+                        left: 25px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+    }
+
+    &-main {
+        height: 500px;
+        overflow-y: auto;
+        padding-bottom: 50px;
+
+        &-table {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+
+            &.hide {
+                display: none;
+            }
+
+            &-col {
+
+                &.first-col, &.last-col {
+                    margin-right: 10px;
+
+                    .table-row {
+                        display: flex;
+                        height: 96px;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        &:first-child {
+                            height: 70px;
+                        }
+                    }
+                }
+
+                &.last-col {
+                    margin-left: 10px;
+                    margin-right: 0;
+                    background: $white;
+                    z-index: 10;
+                }
+
+                .table-row {
+                    margin-bottom: 10px;
+                    $centralColWidth: 1050px;
+                    $colWidth: 165px;
+
+                    &.table-header-row  {
+                        height: 70px;
+
+                        .header-item-col {
+                            min-width: ($colWidth / $centralColWidth) * 100%;
+                            height: 70px;
+                            text-align: center;
+                            background: $lightgray;
+                            border-radius: 10px;
+                            padding: 0;
+                            float: left;
+                            border: 2px solid transparent;
+                            margin-right: 8px;
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
+
+                            .innerCell {
+                                display: flex;
+                                flex-direction: column;
+                                //padding: 19px 50px;
+                                padding: 19px 0;
+                            }
+
+                            p.dayOfWeek {
+                                font-size: 15px;
+                                line-height: 15px;
+                                font-weight: 500;
+                                color: $gray;
+                                margin-bottom: 5px;
+                            }
+
+                            span.date {
+                                font-size: 12px;
+                                line-height: 12px;
+                                font-weight: 300;
+                                color: $gray;
+                            }
+
+                            &.completed {
+                                p.dayOfWeek {
+                                    color: $gray;
+                                }
+
+                                span.date {
+                                    color: $gray;
+                                }
+                            }
+
+                            &.active {
+                                margin: 0;
+                                margin-right: 8px;
+                                border: 3px solid $white;
+                                box-shadow: 0px 5px 16px rgba(68, 68, 68, 0.25); // $darkgray
+
+                                .innerCell {
+                                    background: $blue;
+                                    border-radius: 7px;
+                                    padding: 15px 0; // 18 38
+                                    margin: 1px;
+                                }
+
+                                p.dayOfWeek {
+                                    color: $white;
+                                }
+
+                                span.date {
+                                    color: $darkyellow;
+                                }
+
+                                &.hovered {
+                                    border: 3px solid $white;
+                                }
+                            }
+
+                            &.hovered {
+                                border: 2px solid $menugray;
+
+                                /*.innerCell {
+                                    padding: 17px 49px;
+                                }*/
+                            }
+
+                            &.future {
+                                p.dayOfWeek {
+                                    color: $darkgray;
+                                }
+
+                                span.date {
+                                    color: $blue;
+                                }
+                            }
+                        }
+                    }
+
+                    .button__navigation {
+                        width: 35px;
+                        height: 70px;
+                        margin: 0;
+                        padding: 0;
+                        background: $lightgray;
+                        border-radius: 10px;
+
+                        &:hover {
+                            background: $menugray;
+                        }
+
+                        svg {
+                            width: 6px;
+                            height: 10px;
+                            fill: $blue;
+
+                            &:hover {
+                                fill: $blue;
+                            }
+                        }
+
+                        &-previous {
+                            svg {
+                                transform: rotate(90deg);
+                            }
+                        }
+
+                        &-next {
+                            svg {
+                                transform: rotate(-90deg);
+                            }
+                        }
+                    }
+
+                    .lesson-time {
+                        width: 18px;
+                        writing-mode: vertical-rl;
+                        float: left;
+                        font-size: 12px;
+                        font-weight: 300;
+                        color: $gray;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+
+                        p {
+                            margin: 0;
+                        }
+
+                        &.active {
+                            color: $blue;
+                        }
+                    }
+
+                    .lesson {
+                        width: ($colWidth / $centralColWidth) * 100%;
+                        height: 96px;
+                        border: 1px solid $menugray;
+                        border-radius: 10px;
+                        margin-right: 8px;
+                        float: left;
+                        padding: 20px 40px 20px 25px;
+                        position: relative;
+                        cursor: pointer;
+
+                        &:hover, &.clicked {
+                            border: 2px solid $darkyellow;
+                            padding: 19px 39px 19px 24px;
+
+                            .homework-status {
+                                top: 14px;
+                                right: 19px;
+                            }
+
+                            .lesson-note {
+                                bottom: 24px;
+                                right: 21px;
+                            }
+
+                            .lesson-status {
+                                right: 24px;
+                                bottom: 19px;
+                                transform: translateY(-50%);
+                            }
+                        }
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+
+                        &.clicked {
+                            background: $lightgray;
+                        }
+
+                        p {
+                            margin: 0;
+                            position: relative;
+                        }
+
+                        .lesson-name {
+                            font-size: 15px;
+                            line-height: 15px;
+                            font-weight: 300;
+                            margin-bottom: 5px;
+                            color: $darkgray;
+                            @include threeDotsInText;
+
+                            &.blue {
+                                color: $blue;
+                            }
+
+                            &.green {
+                                color: $green;
+                            }
+
+                            &.gray {
+                                color: $gray;
+                            }
+                        }
+
+                        .year {
+                            font-size: 15px;
+                            line-height: 15px;
+                            font-weight: 500;
+                            margin-bottom: 5px;
+                            color: $green;
+
+                            &.blue {
+                                color: $blue;
+                            }
+
+                            &.green {
+                                color: $green;
+                            }
+
+                            &.gray {
+                                color: $gray;
+                            }
+                        }
+
+                        .classroom {
+                            font-size: 12px;
+                            line-height: 12px;
+                            font-weight: 300;
+                            color: $gray;
+
+                            &-number {
+                                font-weight: 500;
+                                color: $blue;
+                            }
+                        }
+
+                        .homework-status {
+                            position: absolute;
+                            top: 15px;
+                            right: 20px;
+
+                            svg {
+                                width: 18px;
+                                height: 18px;
+                            }
+
+                            &.gray {
+                                svg {
+                                    fill: $gray;
+                                }
+                            }
+
+                            &.green {
+                                svg {
+                                    fill: $green;
+                                }
+                            }
+
+                            &.light-gray {
+                                svg {
+                                    fill: $menugray;
+                                }
+                            }
+                        }
+
+                        .lesson-status {
+                            bottom: 24px;
+                            right: 25px;
+                        }
+
+                        .lesson-note {
+                            width: 14px;
+                            height: 17px;
+                            line-height: 17px;
+                            position: absolute;
+                            bottom: 25px;
+                            right: 22px;
+                            cursor: pointer;
+
+                            svg {
+                                width: 14px;
+                                height: 17px;
+                                fill: $blue;
+                            }
+                        }
+
+                        &.finished {
+                            color: $gray;
+
+                            .lesson-name, .year, .classroom, .classroom-number {
+                                color: $gray;
+
+                                &.blue {
+                                    color: $blue;
+                                }
+
+                                &.green {
+                                    color: $green;
+                                }
+
+                                &.gray {
+                                    color: $gray;
+                                }
+                            }
+
+                            .lesson-note {
+                                svg {
+                                    fill: $gray;
+                                }
+                            }
+                        }
+                    }
+
+
+                }
+
+                &.central-col {
+                    width: calc(100% - 90px);
+                    height: 100%;
+                    overflow-x: auto;
+
+                    .table-row {
+                        display: flex;
+                        justify-content: space-between;
+                        min-width: 1030px;
+                    }
+                }
+            }
+        }
+    }
+
+    .lesson__info-block-sm {
+        display: none;
+    }
+}
+
+.lesson-status {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+
+    &.active {
+        background: $red;
+        animation: 1s ease-in-out recordAnimation reverse infinite;
+    }
+}
+
+@keyframes recordAnimation {
+    0% {
+        opacity: 40%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 40%;
+    }
+}
+
+.lesson__info-block {
+    .lesson__info {
+
+        &.title, &.main, &.gradebook{
+            padding: 20px 25px;
+            border-bottom: 1px solid $menugray;
+        }
+
+        &.visit {
+            padding: 0;
+            display: flex;
+            border-bottom: 0px;
+
+            .status {
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 12px;
+                color: $green;
+                margin: 0;
+                text-align: left;
+                display: inline-block;
+                margin-right: auto;
+            }
+
+            .assessment {
+                font-size: 22px;
+                font-weight: 500;
+                line-height: 12px;
+                color: $blue;
+                margin: 0;
+                text-align: right;
+                display: inline-block;
+                margin-left: auto;
+            }
+        }
+
+        &.title {
+            .date {
+                text-transform: uppercase;
+                color: $blue;
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 12px;
+                margin-bottom: 10px;
+
+                span.year {
+                    font-size: 12px;
+                    font-weight: 300;
+                    color: $green;
+                    text-transform: none;
+                    float: right;
+                }
+            }
+
+            .time {
+                font-size: 12px;
+                line-height: 12px;
+                font-weight: 300;
+                color: $gray;
+                margin-bottom: 10px;
+            }
+
+            .lesson__info-name {
+                font-size: 12px;
+                line-height: 12px;
+                font-weight: 300;
+                color: $darkgray;
+                margin-bottom: 0;
+
+                .teacher {
+                    font-size: 12px;
+                    font-weight: 300;
+                    color: $gray;
+                    float: right;
+
+                    &-name {
+                        color: $darkgray;
+                    }
+                }
+            }
+        }
+
+        &.main {
+            .title {
+                color: $blue;
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 15px;
+                margin-bottom: 10px;
+            }
+
+            .workName {
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 15px;
+                color: $gray;
+                margin-bottom: 5px;
+            }
+
+            .main-text {
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 25px;
+                color: $darkgray;
+                margin-bottom: 0;
+            }
+        }
+
+        &.gradebook {
+            a {
+                display: block;
+                text-align: center;
+                color: $blue;
+                font-size: 12px;
+                line-height: 12px;
+                font-weight: 300;
+
+                span.arrowRight {
+                    width: 6px;
+                    height: 12px;
+                    line-height: 12px;
+                    position: relative;
+
+                    svg {
+                        width: 6px;
+                        height: 4px;
+                        line-height: 12px;
+                        fill: $blue;
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+        }
+
+        &.field {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+
+            textarea {
+                width: 290px;
+                height: 70px;
+                border-radius: 10px;
+                background: $menugray;
+                padding: 15px 20px;
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 25px;
+                color: $darkgray;
+                resize: none;
+                outline: none;
+                border: none;
+                margin-bottom: 15px;
+            }
+
+            .button-save {
+                width: 88px;
+            }
+        }
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -12px;
+        left: -2px;
+        border: 12px solid transparent;
+        border-right: 12px solid $menugray;
+        transform: rotate(-180deg);
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -8px;
+        left: 0px;
+        border: 10px solid transparent;
+        border-right: 10px solid $lightgray;
+        transform: rotate(-180deg);
+    }
+
+    &-sm {
+        display: none;
+    }
+
+    &.future-lesson, &.today-lesson, &.passed-lesson {
+        width: 345px;
+        min-height: 300px;
+        position: absolute;
+        top: -240px;
+        left: 687px;
+        border: 2px solid $menugray;
+        border-radius: 10px;
+        background: $lightgray;
+        z-index: 15;
+        box-shadow: 0px 20px 35px rgba(68, 68, 68, 0.25); // $darkgray
+
+        &.hide {
+            display: none;
+        }
+    }
+
+    &.today-lesson {
+        .lesson__info.field {
+            .save_and_gradebook {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .gradebook {
+                a {
+                    color: $blue;
+                    font-size: 12px;
+                    line-height: 12px;
+                    font-weight: 300;
+
+                    .arrowRight {
+                        svg {
+                            width: 4px;
+                            height: 7px;
+                            transform: rotate(-90deg);
+                            line-height: 12px;
+                            fill: $blue;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.hide {
+            display: none;
+        }
+    }
+
+    &.passed-lesson {
+
+        .lesson__info.field {
+            .gradebook {
+                a {
+                    color: $blue;
+                    font-size: 12px;
+                    line-height: 12px;
+                    font-weight: 300;
+                    float: right;
+
+                    .arrowRight {
+                        svg {
+                            width: 4px;
+                            height: 7px;
+                            transform: rotate(-90deg);
+                            line-height: 12px;
+                            fill: $blue;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.hide {
+            display: none;
+        }
+    }
+}
+
+.table-with-filter {
+    .filters-sm-block {
+        display: none;
+    }
+}
+
+@media (max-width: 1280px) {
+    .table-with-filter {
+        .center-header-wrapper {
+            .center__header {
+                .center__header__action_buttons {
+                    margin-top: -10px;
+                    float: right;
+
+                    .center__header__action_buttons-create {
+                        padding: 0 35px;
+                        width: 135px;
+                        height: 60px;
+                        font-size: 18px;
+                        font-weight: 500;
+                        line-height: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $lg) {
+
+    .table__content {
+        &-header-filters {
+            display: none;
+        }
+
+        &-main {
+            &-table {
+                &-col {
+                    $centralColWidth: 240px;
+                    $centralColHeight: 72px;
+                    $colWidth: 105px;
+                    $rowHeight: 50px;
+
+                    .table-row {
+                        .button__navigation {
+                            width: 20px;
+                        }
+
+                        &.table-header-row {
+                            height: $rowHeight;
+                        }
+
+                        .lesson {
+                            min-width: ($colWidth / $centralColWidth) * 100%;
+                            height: $centralColHeight;
+                            padding: 15px 30px 15px 15px;
+
+                            &:hover, &.clicked {
+                                border: 2px solid $darkyellow;
+                                padding: 14px 29px 14px 14px;
+
+                                .homework-status {
+                                    top: 12px;
+                                    right: 14px;
+                                }
+
+                                .lesson-status {
+                                    right: 17px;
+                                    //bottom: 14px;
+                                    bottom: 8px;
+                                }
+
+                                .lesson-note {
+                                    right: 14px;
+                                    bottom: 11px;
+                                }
+                            }
+
+                            .lesson-name, .year {
+                                font-size: 12px;
+                                line-height: 12px;
+                                margin-bottom: 5px;
+                            }
+
+                            .classroom {
+                                font-size: 8px;
+                            }
+
+                            .homework-status {
+                                height: 13px;
+                                line-height: 13px;
+                                top: 13px;
+                                right: 15px;
+
+                                svg {
+                                    width: 13px;
+                                    height: 13px;
+                                }
+                            }
+
+                            .lesson-status {
+                                width: 6px;
+                                height: 6px;
+                                bottom: 15px;
+                                right: 18px;
+
+                                transform: translateY(50%);
+                            }
+
+                            .lesson-note {
+                                width: 12px;
+                                height: 14px;
+                                line-height: 14px;
+                                right: 15px;
+                                bottom: 12px;
+
+                                svg {
+                                    width: 12px;
+                                    height: 14px;
+                                }
+                            }
+                        }
+
+                        .lesson-time {
+                            font-size: 8px;
+                        }
+                    }
+
+                    &.first-col, &.last-col {
+                        .table-row {
+                            height: $centralColHeight;
+
+                            &:first-child {
+                                height: $rowHeight;
+                            }
+                        }
+                    }
+
+                    &.central-col {
+                        width: 100%;
+
+                        .table-row {
+                            min-width: $centralColWidth;
+                        }
+                    }
+
+                    .table-row.table-header-row {
+                        .header-item-col {
+                            min-width: ($colWidth / $centralColWidth) * 100%;
+                            height: 50px;
+
+                            &.hovered {
+                                .innerCell {
+                                    padding: 11px 24px;
+                                }
+                            }
+
+                            .innerCell {
+                                padding: 11px 24px;
+                            }
+
+
+                            p.dayOfWeek {
+                                margin-bottom: 5px;
+                            }
+                            p.dayOfWeek, span.date {
+                                font-size: 10px;
+                                line-height: 10px;
+                            }
+
+                            &.active {
+                                .innerCell {
+                                    padding: 9px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .lesson__info-block.future-lesson {
+            display: none;
+        }
+    }
+
+    .table-with-filter {
+        .lesson__info-block-sm {
+            display: block;
+
+            &.hide {
+                display: none;
+            }
+
+            .center__header {
+                justify-content: normal;
+                align-items: center;
+                margin-bottom: 5px;
+                padding: 15px 0;
+                padding-top: 0;
+                border-bottom: 1px solid $menugray;
+
+                &__action_buttons {
+                    width: 72px;
+                    height: 40px;
+                    margin: 0;
+                    margin-left: auto;
+                    float: right;
+
+                    .button-save {
+                        width: 100%;
+                        height: 40px;
+                    }
+                }
+
+                .button__back {
+                    margin: 0;
+                    margin-right: 15px;
+                    width: 40px;
+                    height: 40px;
+
+                    &.button__svg-lightgray svg:first-child {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+
+                .center__header-title {
+                    font-size: 15px;
+                    line-height: 40px;
+                    font-weight: 500;
+                    color: $darkgray;
+                }
+            }
+
+            .lesson__info-block {
+                margin-bottom: 20px;
+
+                &:before, &:after {
+                    content: "";
+                    display: none;
+                    position: static;
+                    transform: rotate(0deg);
+                    border: none;
+                }
+
+                .lesson__info {
+                    &.title, &.main, &.gradebook, &.visit {
+                        padding: 20px 0;
+                    }
+
+                    &.visit {
+                        display: flex;
+                        border-bottom: 1px solid $menugray;
+
+                        .status {
+                            font-size: 12px;
+                            font-weight: 300;
+                            line-height: 12px;
+                            color: $green;
+                            margin: 0;
+                            text-align: left;
+                            display: inline-block;
+                            margin-right: auto;
+                        }
+
+                        .assessment {
+                            font-size: 15px;
+                            font-weight: 500;
+                            line-height: 12px;
+                            color: $blue;
+                            margin: 0;
+                            text-align: right;
+                            display: inline-block;
+                            margin-left: auto;
+                        }
+                    }
+
+                    &-sm {
+                        &.fields {
+                            .field-block {
+                                margin-top: 15px;
+                                height: auto;
+
+                                .field-title {
+                                    font-size: 10px;
+                                    font-weight: 300;
+                                    line-height: 10px;
+                                    color: $darkgray;
+                                    margin-bottom: 5px;
+                                }
+
+                                textarea {
+                                    width: 100%;
+                                    resize: none;
+                                    outline: none;
+                                    border: none;
+                                    border-radius: 10px;
+                                    padding: 20px;
+                                    background: $lightgray;
+                                    font-size: 12px;
+                                    font-weight: 300;
+                                    line-height: 20px;
+                                    color: $darkgray;
+                                }
+                            }
+
+                            .lesson__info-sm_topic {
+                                input {
+                                    border: none;
+                                    color: $darkgray;
+                                    border-radius: 10px;
+                                    padding: 15px 20px;
+                                    height: 40px;
+
+                                    &:focus {
+                                        border: none;
+                                    }
+                                }
+                            }
+
+                            .lesson__info-sm_work {
+                                height: 135px; // 120(textarea) + 10text+5margin-bottom
+                                textarea {
+                                    height: 120px;
+                                }
+                            }
+
+                            .lesson__info-sm_note {
+                                height: 95px; // 80(textarea) + 10text+5margin-bottom
+                                textarea {
+                                    height: 80px;
+                                }
+                            }
+
+                            .individual_note-block {
+                                margin: 20px 0;
+
+                                .individual_note-title {
+                                    font-size: 15px;
+                                    font-weight: 300;
+                                    line-height: 15px;
+                                    color: $darkgray;
+                                }
+
+                                .individual-note {
+                                    min-height: 70px;
+                                    background: $lightgray;
+                                    padding: 10px 15px;
+                                    border-radius: 10px;
+                                    position: relative;
+
+                                    .individual-note-dropdown {
+                                        $blockwidth: 250px;
+
+
+                                        .individual-note-wrapper {
+                                            position: relative;
+                                            margin-bottom: 25px;
+
+                                            .inputWrapper {
+                                                $width: 210px;
+                                                width: ($width/$blockwidth)*100%;
+                                                min-width: 210px;
+
+                                                .input__dropdown {
+                                                    width: 100%;
+                                                    background: $menugray;
+
+                                                    &.withImage {
+                                                        padding-left: 60px;
+                                                    }
+
+                                                    input {
+                                                        width: 100%;
+                                                        padding: 15px 20px;
+
+                                                        &::placeholder {
+                                                            font-size: 10px;
+                                                            font-weight: 300;
+                                                            color: $gray;
+                                                        }
+                                                    }
+                                                }
+
+                                                .user_photo {
+                                                    position: absolute;
+                                                    top: 50%;
+                                                    left: 20px;
+                                                    transform: translateY(-50%);
+
+                                                    img {
+                                                        width: 32px;
+                                                        height: 32px;
+                                                    }
+                                                }
+
+                                                .arrow_down_SVG {
+                                                    right: 15px;
+                                                }
+                                            }
+
+                                            button.crossButton {
+                                                right: 10px; // 15px padding + 10 = 25px(right)
+
+                                                &.disabled {
+                                                    svg.icon_cross {
+                                                        &.disabled {
+                                                            fill: $gray;
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            button.plusButton {
+                                                right: 8px;
+                                            }
+                                        }
+
+                                        .note-block {
+
+                                            padding-right: 55px;
+                                            position: relative;
+
+                                            .note-text {
+                                                font-size: 12px;
+                                                font-weight: 300;
+                                                line-height: 20px;
+                                                color: $darkgray;
+                                                margin-bottom: 0;
+                                            }
+
+                                            .button__blue-check {
+                                                width: 40px;
+                                                height: 40px;
+                                                position: absolute;
+                                                bottom: 0;
+                                                right: 0;
+                                            }
+                                        }
+                                    }
+
+                                    &.add {
+                                        min-height: 60px;
+                                        margin-top: 5px;
+                                        height: 60px;
+                                    }
+                                }
+                            }
+
+                            .lesson__info.main {
+                                .title {
+                                    font-size: 15px;
+                                    line-height: 16px;
+                                    font-weight: 500;
+                                    color: $blue;
+                                    @include threeDotsInText;
+                                }
+
+                                .workName {
+                                    font-size: 10px;
+                                    font-weight: 300;
+                                    color: $gray;
+                                }
+
+                                .main-text {
+                                    font-size: 12px;
+                                    font-weight: 300;
+                                    line-height: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.today-lesson, &.passed-lesson {
+                .lesson__info-block {
+                    .lesson__info {
+                        &-sm {
+                            &.fields {
+                                .lesson__info-sm_topic {
+                                    input {
+                                        color: $blue;
+                                        border-radius: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.student {
+                .lesson__info {
+                    &-sm {
+                        &.fields {
+                            .individual_note-block {
+                                .individual-note {
+                                    .individual-note-dropdown {
+                                        .note-block {
+                                            padding-right: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .center__header {
+            padding: 15px 0;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .center__header__action_buttons {
+            margin-top: 0;
+            /*width: 35px;*/
+
+            &-cancel, &-create {
+                display: none;
+            }
+
+            &-sm-filter {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        .filters-sm-block {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 15;
+
+            &.hide {
+                display: none;
+            }
+
+            &-back {
+                width: 20px;
+                height: 100%;
+                outline: none;
+                border: none;
+                background: rgba(68, 68, 68, 0.8);
+                padding: 0;
+                margin: 0;
+            }
+
+            .filters {
+                width: 100%;
+                height: 100%;
+                background: $lightgray;
+                padding: 20px 35px;
+
+                .filters-action_buttons {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 35px;
+
+                    .filter-save, .filter-hide {
+                        width: 110px;
+                        height: 32px;
+                        padding: 0px 25px;
+                        font-size: 12px;
+                        font-weight: 500;
+                        line-height: 32px;
+                        color: $darkgray;
+                    }
+
+                    .filter-hide {
+                        color: $blue;
+                    }
+                }
+
+                .table__content-header-filters {
+                    display: flex;
+                    flex-direction: column;
+
+                    .table__content-header-filters-item {
+                        width: 100%;
+                        margin-right: 0;
+                        margin-bottom: 30px;
+
+                        .dropdown-title {
+                            font-size: 12px;
+                            font-weight: 300;
+                            color: $darkgray;
+                            margin-bottom: 5px;
+                        }
+
+                        .inputWrapper {
+                            .input__dropdown {
+                                background: $menugray;
+                                padding: 8px 20px;
+                            }
+
+                            .arrow_down_SVG {
+                                right: 15px;
+                            }
+                        }
+
+                        &-calendarIcon {
+                            margin-right: auto;
+                        }
+
+                        &.calendar {
+                            margin-bottom: 0;
+
+                            .inputWrapper {
+                                width: calc(100% - 40px);
+                            }
+
+                            .filter-term {
+                                font-size: 10px;
+                                font-weight: 300;
+                                color: $gray;
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+
+                    .table__content-header-filters-accept {
+                        position: absolute;
+                        bottom: 20px;
+                        left: 50%;
+                        transform: translateX(-50%);
+
+                        .filter-accept {
+                            min-width: 230px;
+                            height: 50px;
+
+                            font-size: 15px;
+                            font-weight: 500;
+                            color: $white;
+                            border-radius: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+    .evaluation_and_sort {
+        margin: 20px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .sort-block {
+            .sort {
+                border: none;
+
+                .sort-item {
+                    font-size: 10px;
+                }
+
+                .sort-switch {
+                    margin: 0 5px;
+                }
+            }
+
+            .custom-checkboxes-list {
+                margin-top: 10px;
+                position: relative;
+                list-style: none;
+
+                &__item {
+                    margin-top: 20px;
+                    position: relative;
+
+                    &:first-child {
+                        margin-top: 0px;
+                    }
+
+                    .checkbox__custom.checkbox__gray + label::before {
+                        margin-right: 10px;
+                    }
+
+                    .label__comment {
+                        font-size: 12px;
+                        font-weight: 300;
+                        color: $darkgray;
+                    }
+                }
+            }
+        }
+
+        .evaluation-block {
+            min-width: 55px;
+            height: 64px;
+            margin-left: 10px;
+            border: 1px solid $menugray;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .grade {
+                color: $blue;
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 64px;
+
+                &.gray {
+                    color: $gray;
+                }
+            }
+        }
+    }
