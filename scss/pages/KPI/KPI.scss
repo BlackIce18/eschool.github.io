@@ -10,6 +10,18 @@
                     height: 60px;
                     display: flex;
                     align-items: center;
+
+                    .sort-item.attendance-active:after {
+                        display: none;
+                    }
+
+                    .sort-switch .slider:before {
+                        background-color: $menugray;
+                    }
+
+                    .sort-switch input:checked + .slider:before {
+                        background-color: $blue;
+                    }
                 }
             }
 
@@ -26,6 +38,178 @@
 
     .table__content {
         position: relative;
+
+        .lesson__info-block {
+            &.only__averageRating {
+                min-height: 75px;
+
+                .lesson__info.field {
+                    padding: 31px 25px;
+                }
+            }
+        }
+
+        .attended_lists-block {
+            width: 345px;
+            min-height: 170px;
+            position: absolute;
+            top: 0px;
+            left: 687px;
+            border: 2px solid $menugray;
+            border-radius: 10px;
+            background: $lightgray;
+            z-index: 15;
+            box-shadow: 0px 20px 35px rgba(68, 68, 68, 0.25); // $darkgray
+
+            &.hide {
+                display: none;
+            }
+        }
+    }
+
+    .attended_lists {
+        padding: 20px 25px;
+
+        .attended_lists-item {
+            margin-bottom: 15px;
+
+            .attended_lists-item-wrapper {
+                height: 15px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                &.withList {
+                    margin-bottom: 15px;
+                }
+
+                .wrapper {
+                    width: 100%;
+                    position: relative;
+
+                    .arrow_down_SVG {
+                        left: 0;
+                    }
+
+                    .attended_lists-item-text {
+                        font-size: 12px;
+                        font-weight: 300;
+                        line-height: 15px;
+                        color: $darkgray;
+                        margin-left: 15px;
+                        display: block;
+                    }
+                }
+
+                .attended_lists-item-number {
+                    font-size: 15px;
+                    font-weight: 500;
+                    line-height: 15px;
+                    color: $darkgray;
+
+                    &.red {
+                        color: $red;
+                    }
+
+                    &.green {
+                        color: $green;
+                    }
+
+                    &.blue {
+                        color: $blue;
+                    }
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+
+            .students_list {
+                width: 100%;
+                list-style: none;
+                overflow-y: scroll;
+                max-height: 165px;
+
+                &.hide {
+                    display: none;
+                }
+
+                li {
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .item_wrapper {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        .user_photo {
+                            min-width: 33px;
+                            width: 33px;
+                            height: 33px;
+                            margin-right: 10px;
+                        }
+
+                        $parentWidth: 290px;
+
+                        .userName_and_lesson {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+
+                            .user_name {
+                                max-width: 100%;
+                                font-size: 15px;
+                                font-weight: 300;
+                                line-height: 15px;
+                            }
+
+                            .lesson {
+                                max-width: 100%;
+                                display: block;
+                                font-size: 12px;
+                                line-height: 15px;
+                                font-weight: 300;
+                                color: $gray;
+                            }
+                        }
+
+                        .user_name {
+                            $width: 175px;
+
+                            max-width: ($width / $parentWidth) * 100%;
+                            margin-bottom: 0;
+                            font-size: 15px;
+                            font-weight: 300;
+                            line-height: 15px;
+                            color: $darkgray;
+                            margin-right: 10px;
+
+                            @include threeDotsInText;
+                        }
+
+                        .lesson {
+                            $width: 65px;
+
+                            max-width: ($width / $parentWidth) * 100%;
+                            font-size: 12px;
+                            line-height: 15px;
+                            font-weight: 300;
+                            color: $gray;
+
+                            @include threeDotsInText;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .KPI__chart-wrapper {
@@ -38,7 +222,19 @@
         .KPI__chart {
             width: 5000px;
             height: 470px;
-            position: absolute;
+            //position: absolute;
+
+            &.KPI__chart_two {
+                height: 300px;
+
+                .KPI__charts {
+                    height: 150px;
+
+                    canvas:last-child {
+                        transform: scale(1, -1);
+                    }
+                }
+            }
         }
 
         .lesson__info-block {
@@ -49,35 +245,254 @@
         }
     }
 
+    .legends {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0;
+
+        &-item {
+            width: 100%;
+            border: 1px solid $menugray;
+            border-radius: 10px;
+            padding: 25px 30px;
+            font-size: 12px;
+            line-height: 15px;
+            font-weight: 300;
+            color: $darkgray;
+            margin-right: 10px;
+            display: flex;
+            justify-content: space-between;
+
+            &:last-child {margin-right: 0;}
+
+            .number {
+                font-size: 15px;
+                line-height: 15px;
+                font-weight: 500;
+
+                &.blue {color: $blue;}
+                &.green {color: $green;}
+                &.red {color: $red;}
+            }
+        }
+    }
+
     .inputWrapper-sm {
         display: none;
     }
 
     .tabs-block {
         border-bottom: none;
+        height: 80px;
+        margin-bottom: 0;
 
-        &.users .tabs .tabs__item {
+        .tabs {
+            height: 80px;
+        }
+
+        &.users .tabs .tabs__item, &.kpi_textAndCross .tabs .tabs__item {
+            height: 60px;
             border: 1px solid $menugray;
             border-radius: 10px;
+
+            &.active {
+                box-shadow: 0px 5px 15px rgb(68,68,68,0.2); //$darkgray
+            }
+        }
+
+        &.kpi_textAndCross {
+
+            .tabs__item {
+                padding: 14px 35px;
+                position: relative;
+
+                .item_wrapper {
+                    position: static;
+                }
+
+                &.active {
+                    background: $lightgray;
+
+                    .item_wrapper {
+                        color: $darkgray;
+                    }
+                }
+            }
+
+
+            .lesson-name {
+                width: calc(100%);
+                line-height: 18px;
+                margin-right: 10px;
+                @include threeDotsInText;
+            }
+        }
+    }
+
+    .lesson__info-block-sm.passed-lesson.student {
+        .lesson__info-block {
+            .lesson__info.user-block {
+                background-color: $lightgray;
+                border: 1px solid $menugray;
+                border-radius: 10px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                margin-top: 20px;
+
+                .item_wrapper {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 10px 15px;
+
+                    .user_photo {
+                        width: 35px;
+                        height: 35px;
+                        min-width: 35px;
+                        margin-right: 10px;
+                    }
+
+                    .user_name {
+                        width: 100%;
+                        font-size: 12px;
+                        font-weight: 300;
+                        line-height: 12px;
+                        color: $darkgray;
+                        margin: 5px 0;
+
+                        @include threeDotsInText;
+
+                        .year {
+                            width: 100%;
+                            display: block;
+                            font-size: 10px;
+                            line-height: 10px;
+                            font-weight: 300;
+                            color: $green;
+
+                            @include threeDotsInText;
+                        }
+                    }
+
+                    .onlyText {
+                        width: 100%;
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: $darkgray;
+                        line-height: 15px;
+                        margin-bottom: 0;
+
+                        @include threeDotsInText;
+                    }
+                }
+            }
+
+            .lesson__info.visit {
+                .status.gray {
+                    color: $gray;
+                }
+            }
+
+            .lesson__info.attended_lists {
+                padding: 20px 0;
+            }
         }
     }
 }
 
+@media (max-width: 1500px) {
+    .KPI {
+        .center__header-title {
+            font-size: 24px;
+        }
+
+        .center__header__action_buttons .sort-wrapper {
+            margin-right: 10px;
+        }
+
+        .center__header__action_buttons .inputWrapper input {
+            width: 200px;
+        }
+
+        .sort-switch {
+            width: 42px;
+            height: 28px;
+
+            .switch {
+                width: 42px;
+                height: 28px;
+            }
+
+            .slider:before {
+                width: 20px;
+                height: 20px;
+                bottom: 2px;
+            }
+
+            input:checked + .slider:before {
+                -webkit-transform: translateX(10px);
+                -ms-transform: translateX(10px);
+                transform: translateX(10px);
+            }
+        }
+    }
+}
 
 @media (max-width: 1280px) {
 .KPI {
+    .center__header {
+        height: 200px;
+    }
 
+    .table-with-filter .center-header-wrapper .center__header .center__header__action_buttons {
+        margin: 10px 0;
+        float: left;
+    }
+
+    .center__header-title {
+        display: block;
+    }
+
+    .center__header__action_buttons-cancel, .center__header__action_buttons-create, .center__header__action_buttons-save {
+        min-width: 100px;
+        font-size: 15px;
+        padding: 0 15px;
+    }
 }
 }
 
 @media (max-width: $lg) {
 .KPI {
+    .center__header {
+        height: 60px;
+        margin-bottom: 15px;
+    }
 
+    .table-with-filter .center-header-wrapper .center__header .center__header__action_buttons {
+        margin: 5px 0;
+    }
+
+    .center__header__action_buttons .sort-wrapper,
+    .center__header__action_buttons .inputWrapper,
+    .center__header__action_buttons-cancel,.center__header__action_buttons-create, .center__header__action_buttons-save{
+        display: none;
+    }
+
+    .tabs-block, .tabs-block .tabs, .tabs-block.users .tabs .tabs__item, .tabs-block.kpi_textAndCross .tabs .tabs__item {
+        height: 50px;
+    }
 }
 }
 
 @media (max-width: $sm) {
 .KPI {
+    .center__header {
+        height: auto;
+        margin-bottom: 15px;
+    }
+
     .table-with-filter .center__header {
         align-items: flex-start;
 
@@ -107,13 +522,45 @@
         margin-bottom: 5px;
         padding-bottom: 0;
     }
+
     .KPI__chart-wrapper {
         height: 350px;
         margin-bottom: 20px;
 
+        &.KPI__chart_two-block {
+            height: 200px;
+        }
+
         .KPI__chart {
             width: 1500px;
             height: 350px;
+
+            &.KPI__chart_two {
+                margin-top: 20px;
+                height: 150px;
+
+                .KPI__charts {
+                    height: 75px;
+                }
+            }
+        }
+    }
+
+    .legends {
+        margin: 20px 0;
+        flex-direction: column;
+
+        .legends-item {
+            margin-bottom: 5px;
+            padding: 10px 20px;
+            font-size: 10px;
+            line-height: 12px;
+
+
+            .number {
+                font-size: 12px;
+                line-height: 12px;
+            }
         }
     }
 }

@@ -340,7 +340,7 @@
                 </div>
             </nav>
         </div>
-		<div class="block-center ">
+		<div class="block-center KPI">
 			<div class="header ">
                 <div class="content justify-content-xl-between justify-content-end">
                     <div class="input__search_block d-none d-lg-block p-0">
@@ -428,217 +428,204 @@
                     </div>
                 </div>
             </div>
-            <div class="table__content">
+        <div class="block-center-content table-with-filter">
 
-                <!--Блок отображающийся при нажатии на ячейку таблицы-->
-                <!--lesson__info-block future-lesson hide-->
-                <div class="lesson__info-block future-lesson" style="top:100px; left: 0;">
-                    <div class="lesson__info title">
-                        <p class="date">09 nov <span class="year">Year 9</span></p>
-                        <p class="time">lesson 5 12:00 - 12:45</p>
-                        <p class="lesson__info-name">Mathematics<span class="teacher">teacher <span class="teacher-name">Melnik K.L.</span></span></p>
-                    </div>
-                    <div class="lesson__info main">
-                        <p class="title">Title of the lesson topic</p>
-                        <p class="workName">home work</p>
-                        <p class="main-text">Lorem ipsum dolor sit amet, conse ctetuer adipiscing elit. Aenean commodo ligula </p>
-                    </div>
-                    <div class="lesson__info field ">
-                        <textarea></textarea>
-                        <button class="button button-standartSize button__yellow button-save ml-auto">
-                            Save
-                        </button>
-                    </div>
-                </div>
+			<div class="lesson__info-block-sm passed-lesson student">
+				<div class="center__header border_bottom">
 
-                <div class="lesson__info-block today-lesson"  style="top:100px; left: 350px;">
-                    <div class="lesson__info title">
-                        <p class="date">09 nov <span class="year">Year 9</span></p>
-                        <p class="time">lesson 5 12:00 - 12:45</p>
-                        <p class="lesson__info-name">Mathematics<span class="teacher">teacher <span class="teacher-name">Melnik K.L.</span></span></p>
+					<button class="button button__svg button__svg-lightgray button__back">
+
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60">
+							<path fill-rule="evenodd" d="M54.219,54.219 C51.525,58.114 41.942,61.000 30.500,61.000 C19.057,61.000 9.475,58.114 6.781,54.219 C2.886,51.525 -0.000,41.943 -0.000,30.500 C-0.000,19.057 2.886,9.475 6.781,6.781 C9.475,2.886 19.057,-0.000 30.500,-0.000 C41.942,-0.000 51.525,2.886 54.219,6.781 C58.114,9.475 61.000,19.057 61.000,30.500 C61.000,41.943 58.114,51.525 54.219,54.219 Z" />
+						</svg>
+
+						<svg class="button__back_innerSVG" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+								<g>
+									<path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+										c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+										c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/>
+								</g>
+							</svg>
+
+					</button>
+
+					<h3 class="center__header-title">Back</h3>
+				</div>
+
+				<div class="lesson__info-block">
+
+                    <div class="lesson__info user-block">
+                        <div class="item_wrapper">
+                            <p class="onlyText">Year 9</p>
+                        </div>
                     </div>
-                    <div class="lesson__info main">
-                        <p class="title">Title of the lesson topic</p>
-                        <p class="workName">home work</p>
-                        <p class="main-text">Lorem ipsum dolor sit amet, conse ctetuer adipiscing elit. Aenean commodo ligula </p>
-                    </div>
-                    <div class="lesson__info field">
-                        <textarea></textarea>
-                        <div class="save_and_gradebook">
-                            <div class="gradebook">
-                                <a href="#">
-                                    Gradebook
-                                    <span class="arrowRight">
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 451.847 451.847;"  xml:space="preserve">
+
+					<div class="lesson__info title">
+						<p class="date">09 nov <span class="year">Year 9</span></p>
+					</div>
+
+                    <div class="lesson__info attended_lists">
+                        <div class="attended_lists-item">
+                            <div class="attended_lists-item-wrapper">
+                                <div class="wrapper">
+                                    <svg class="arrow_down_SVG" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
                                             <g>
                                                 <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
-                                                    c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
-                                                    c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/>
+                                                        c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                                        c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"></path>
                                             </g>
                                         </svg>
-                                    </span>
-                                </a>
-                            </div>
-                            <button class="button button-standartSize button__yellow button-save ml-auto">
-                                Save
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lesson__info-block passed-lesson"  style="top:100px; left: 700px;">
-                    <div class="lesson__info title">
-                        <p class="date">09 nov <span class="year">Year 9</span></p>
-                        <p class="time">lesson 5 12:00 - 12:45</p>
-                        <p class="lesson__info-name">Mathematics<span class="teacher">teacher <span class="teacher-name">Melnik K.L.</span></span></p>
-                    </div>
-                    <div class="lesson__info main">
-                        <p class="title">Title of the lesson topic</p>
-                        <p class="workName">home work</p>
-                        <p class="main-text">Lorem ipsum dolor sit amet, conse ctetuer adipiscing elit. Aenean commodo ligula </p>
-                    </div>
-                    <div class="lesson__info field">
-                        <div class="gradebook">
-                            <a href="#">
-                                Gradebook
-                                <span class="arrowRight">
-									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 451.847 451.847;"  xml:space="preserve">
-										<g>
-											<path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
-                                            	c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
-                                                c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/>
-										</g>
-									</svg>
-								</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lesson__info-block passed-lesson student" style="top:525px; left: 0px;">
-                    <div class="lesson__info title">
-                        <p class="date">09 nov <span class="year">Year 9</span></p>
-                        <p class="time">lesson 5 12:00 - 12:45</p>
-                        <p class="lesson__info-name">Mathematics<span class="teacher">teacher <span class="teacher-name">Melnik K.L.</span></span></p>
-                    </div>
-                    <div class="lesson__info main">
-                        <p class="title">Title of the lesson topic</p>
-                        <p class="workName">home work</p>
-                        <p class="main-text">Lorem ipsum dolor sit amet, conse ctetuer adipiscing elit. Aenean commodo ligula </p>
-                    </div>
-                    <div class="lesson__info field">
-                        <div class="lesson__info visit">
-                            <p class="status">attended</p>
-                            <p class="assessment">325</p>
-                        </div>
-                    </div>
-                </div>
-                <!---->
-
-                <!--Блок отображающийся при нажатии на ячейку таблицы-->
-                <!--lesson__info-block passed-lesson hide-->
-                <div class="lesson__info-block passed-lesson" style="top:525px; left: 350px;">
-                    <div class="lesson__info title">
-                        <p class="date">09 nov <span class="year">Year 9</span></p>
-                        <p class="time">lesson 5 12:00 - 12:45</p>
-                        <p class="lesson__info-name">Mathematics<span class="teacher">teacher <span class="teacher-name">Melnik K.L.</span></span></p>
-                    </div>
-                    <div class="lesson__info main">
-                        <p class="title">Title of the lesson topic</p>
-                        <p class="workName">home work</p>
-                        <p class="main-text">Lorem ipsum dolor sit amet, conse ctetuer adipiscing elit. Aenean commodo ligula </p>
-                    </div>
-                    <div class="lesson__info field">
-                        <div class="evaluation_and_sort">
-                            <div class="sort-block">
-                                <div class="sort">
-                                    <span class="sort-item active">progress</span>
-                                    <span class="sort-switch">
-								<label class="switch">
-									<input type="checkbox">
-									<span class="slider round"></span>
-								</label>
-							</span>
-                                    <span class="sort-item">attendance</span>
+                                    <span class="attended_lists-item-text">attended</span>
                                 </div>
-                                <ul class="custom-checkboxes-list">
-                                    <li class="custom-checkboxes-list__item">
-                                        <input type="checkbox" class="checkbox checkbox__custom checkbox__gray checkbox-blue" id="sort-custom-checkbox-1">
-                                        <label for="sort-custom-checkbox-1" class="label__comment my-auto position-relative gray">was absent for good reason</label>
-                                    </li>
-                                </ul>
+                                <span class="attended_lists-item-number green">39</span>
                             </div>
-                            <div class="evaluation-block">
-                                <div class="grade">
-                                    321
-                                </div>
-                            </div>
-                        </div>
-                        <textarea></textarea>
-
-                        <div class="save_and_checkbox">
-                            <ul class="custom-checkboxes-list advanced-button mr-auto">
-                                <li class="custom-checkboxes-list__item">
-                                    <input type="checkbox" class="checkbox checkbox__custom checkbox__gray checkbox-blue" id="sort-custom-checkbox-2">
-                                    <label for="sort-custom-checkbox-2" class="label__comment my-auto position-relative">In advance</label>
+                            <ul class="students_list hide">
+                                <li>
+                                    <div class="item_wrapper">
+                                        <div class="user_photo">
+                                            <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+                                        </div>
+                                        <div class="userName_and_lesson">
+                                            <p class="user_name">Petrov Nikolay</p>
+                                            <span class="lesson">biology</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_wrapper">
+                                        <div class="user_photo">
+                                            <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+                                        </div>
+                                        <div class="userName_and_lesson">
+                                            <p class="user_name">Petrov Nikolay</p>
+                                            <span class="lesson">biology</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_wrapper">
+                                        <div class="user_photo">
+                                            <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+                                        </div>
+                                        <div class="userName_and_lesson">
+                                            <p class="user_name">Petrov Nikolay</p>
+                                            <span class="lesson">biology</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_wrapper">
+                                        <div class="user_photo">
+                                            <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+                                        </div>
+                                        <div class="userName_and_lesson">
+                                            <p class="user_name">Petrov Nikolay</p>
+                                            <span class="lesson">biology</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_wrapper">
+                                        <div class="user_photo">
+                                            <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+                                        </div>
+                                        <div class="userName_and_lesson">
+                                            <p class="user_name">Petrov Nikolay</p>
+                                            <span class="lesson">biology</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_wrapper">
+                                        <div class="user_photo">
+                                            <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+                                        </div>
+                                        <div class="userName_and_lesson">
+                                            <p class="user_name">Petrov Nikolay</p>
+                                            <span class="lesson">biology</span>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
-                            <button class="button button-standartSize button__yellow button-save ml-auto">
-                                Save
-                            </button>
                         </div>
-                    </div>
-                </div>
-
-                <!--lesson__info-block future-lesson hide-->
-                <div class="lesson__info-block future-lesson" style="top:525px; left: 700px;">
-                    <div class="lesson__info title">
-                        <p class="date">09 nov <span class="year">Year 9</span></p>
-                        <p class="time">lesson 5 12:00 - 12:45</p>
-                        <p class="lesson__info-name">Mathematics<span class="teacher">teacher <span class="teacher-name">Melnik K.L.</span></span></p>
-                    </div>
-                    <div class="lesson__info field">
-                        <div class="evaluation_and_sort">
-                            <div class="sort-block">
-                                <div class="sort">
-                                    <span class="sort-item">progress</span>
-                                    <span class="sort-switch">
-								<label class="switch">
-									<input type="checkbox">
-									<span class="slider round disabled"></span>
-								</label>
-							</span>
-                                    <span class="sort-item">attendance</span>
+                        <div class="attended_lists-item">
+                            <div class="attended_lists-item-wrapper">
+                                <div class="wrapper">
+                                    <svg class="arrow_down_SVG" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                            <g>
+                                                <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                                        c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                                        c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"></path>
+                                            </g>
+                                        </svg>
+                                    <span class="attended_lists-item-text">no attended</span>
                                 </div>
-                                <ul class="custom-checkboxes-list">
-                                    <li class="custom-checkboxes-list__item">
-                                        <input type="checkbox" class="checkbox checkbox__custom checkbox__gray checkbox-blue" id="sort-custom-checkbox-3" disabled>
-                                        <label for="sort-custom-checkbox-3" class="label__comment my-auto position-relative gray">was absent for good reason</label>
-                                    </li>
-                                </ul>
+                                <span class="attended_lists-item-number red">39</span>
                             </div>
-                            <div class="evaluation-block">
-                                <div class="grade">
-
-                                </div>
-                            </div>
-                        </div>
-                        <textarea></textarea>
-
-                        <div class="save_and_checkbox">
-                            <ul class="custom-checkboxes-list advanced-button mr-auto">
-                                <li class="custom-checkboxes-list__item">
-                                    <input type="checkbox" class="checkbox checkbox__custom checkbox__gray checkbox-blue" id="sort-custom-checkbox-4" disabled>
-                                    <label for="sort-custom-checkbox-4" class="label__comment my-auto position-relative gray">In advance</label>
+                            <ul class="students_list hide">
+                                <li>
+                                    <div class="item_wrapper">
+                                        <div class="user_photo">
+                                            <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+                                        </div>
+                                        <div class="userName_and_lesson">
+                                            <p class="user_name">Petrov Nikolay</p>
+                                            <span class="lesson">biology</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_wrapper">
+                                        <div class="user_photo">
+                                            <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+                                        </div>
+                                        <div class="userName_and_lesson">
+                                            <p class="user_name">Petrov Nikolay</p>
+                                            <span class="lesson">biology</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_wrapper">
+                                        <div class="user_photo">
+                                            <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+                                        </div>
+                                        <div class="userName_and_lesson">
+                                            <p class="user_name">Petrov Nikolay</p>
+                                            <span class="lesson">biology</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_wrapper">
+                                        <div class="user_photo">
+                                            <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+                                        </div>
+                                        <div class="userName_and_lesson">
+                                            <p class="user_name">Petrov Nikolay</p>
+                                            <span class="lesson">biology</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_wrapper">
+                                        <div class="user_photo">
+                                            <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+                                        </div>
+                                        <div class="userName_and_lesson">
+                                            <p class="user_name">Petrov Nikolay</p>
+                                            <span class="lesson">biology</span>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
-                            <button class="button button-standartSize button__yellow button-save ml-auto">
-                                Save
-                            </button>
                         </div>
                     </div>
-                </div>
-            </div>
+				</div>
+
+			</div>
+
+        </div>
     </div>
 
 </div>
@@ -651,10 +638,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
 </script>
-<script src="./js/main.js"></script>
-
-<script src="js/teacherPage.js"></script>
-
+    <script src="./js/main.js"></script>
+    <script src="./js/KPI_attendanceList.js"></script>
 </body>
 </html>
 </body>

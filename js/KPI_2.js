@@ -115,35 +115,21 @@ $(document).ready(function () {
     }
     days.push('jul');
 
+
     var myChart = new Chart(ctx, {
-        type: 'line',
+        type: 'bar',
         			data: {
                         labels: ['1', '2', '3', '4', '5', '6', 'jul', '7','5','5','5','5','5','5','5','5','5','5','5', '5','5','5','5','5','5','5','5','5','5','5','5'],
-                        //labels: ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20'],
-                        //labels: days,
                         datasets: [
                             {
-                                ///label: '',
-                                /*data: [
-                                    { x: "1", y: 10 },
-                                    { x: "7", y: 20 },
-                                    { x: "10", y: 150 },
-                                    { x: "11", y: 160 },
-                                    { x: "16", y: 60 },
-                                    null,
-                                    null,
-                                    { x: "18", y: 100 },
-                                    { x: "20", y: 150 }
-                                ],*/
                                 data: data,
                                 backgroundColor: [
-                                    'rgba(255, 255, 255, 1)',
+                                    colors["darkyellow"],
                                 ],
                                 borderColor: [
                                     colors["darkyellow"],
                                 ],
                                 pointStyle: ['circle'],
-                                borderWidth: 2,
                                 pointRadius: 9,
                                 pointBackgroundColor: '#ffffff',
                                 pointBackgroundColorOpacity: 1,
@@ -153,18 +139,23 @@ $(document).ready(function () {
                                 pointHoverRadius: 9,
                                 pointHoverBackgroundColor: '#ffffff',
                                 fill: false,
+
+                                borderRadius: 2,
+                                barPercentage: 0.5,
+                                barThickness: 6,
+                                maxBarThickness: 3,
+                                minBarLength: 3,
                             },
                             {
                                 label: '',
                                 data: [null, 270, null, null, null, null, null, 140, 200],
                                 backgroundColor: [
-                                    'rgba(255, 255, 255, 1)',
+                                    colors["lightblue"],
                                 ],
                                 borderColor: [
                                     colors["lightblue"],
                                 ],
                                 pointStyle: ['circle'],
-                                borderWidth: 2,
                                 pointRadius: 9,
                                 pointBackgroundColor: '#ffffff',
                                 pointBackgroundColorOpacity: 1,
@@ -174,18 +165,23 @@ $(document).ready(function () {
                                 pointHoverRadius: 9,
                                 pointHoverBackgroundColor: '#ffffff',
                                 fill: false,
+
+                                borderRadius: 2,
+                                barPercentage: 0.5,
+                                barThickness: 6,
+                                maxBarThickness: 3,
+                                minBarLength: 3,
                             },
                             {
                                 label: '',
-                                data: [null, 150, null, null, null, null, 30, null, 60],
+                                data: [null, 20, null, null, null, null, 30, null, 60],
                                 backgroundColor: [
-                                    'rgba(255, 255, 255, 1)',
+                                    colors["purple"],
                                 ],
                                 borderColor: [
                                     colors["purple"],
                                 ],
                                 pointStyle: ['circle'],
-                                borderWidth: 2,
                                 pointRadius: 9,
                                 pointBackgroundColor: '#ffffff',
                                 pointBackgroundColorOpacity: 1,
@@ -195,34 +191,21 @@ $(document).ready(function () {
                                 pointHoverRadius: 9,
                                 pointHoverBackgroundColor: '#ffffff',
                                 fill: false,
-/*
+
                                 borderRadius: 2,
                                 barPercentage: 0.5,
                                 barThickness: 6,
                                 maxBarThickness: 3,
-                                minBarLength: 3,*/
+                                minBarLength: 3,
 
                             },
                         ],
-                        /*datasets: [{
-                            data: [
-                                { x: "2020-03-22", y: 300 },
-                                { x: "2020-04-01", y: 0 },
-                                { x: "2020-04-02", y: 0 },
-                                { x: "2020-04-03", y: 0 },
-                                { x: "2020-04-08", y: 0 },
-                                { x: "2020-04-12", y: 0 },
-                                { x: "2020-04-15", y: 0 }
-                            ],
-                        }],*/
                         xAxes: [{
                             type: 'time',
                             barThickness: 3,
                             maxBarThickness: 3,
                             time: {
                                 unit: 'day',
-                               /* unitStepSize: 1,
-                                tooltipFormat: 'DD/MM'*/
                             },
 
                         }],
@@ -253,6 +236,18 @@ $(document).ready(function () {
                     external: externalTooltipHandler,
                 }
             },
+            //Default: false; if true, this would round all corners of final box;
+            fullCornerRadius: false,
+            //Default: false; if true, this rounds each box in the stack instead of only final box;
+            stackedRounded: false,
+            elements: {
+                point: {
+                    radius: 25,
+                    hoverRadius: 35,
+                    pointStyle: 'rectRounded',
+
+                }
+            },
             scales: {
                 x: {
                     ticks: {
@@ -260,7 +255,9 @@ $(document).ready(function () {
                         fontWeight: 300,
                         color: colors['gray'],
                         display: true,
+                        beginAtZero: true
                     },
+                    stacked: true,
                 },
                 y: {
                     ticks: {
@@ -268,11 +265,14 @@ $(document).ready(function () {
                         fontWeight: 300,
                         color: colors['gray'],
                         display: true,
-                        stepSize: 30
+                        stepSize: 30,
+                        beginAtZero: true
                     },
                     min: 0,
                     max: 300,
                     beginAtZero: true,
+                    stacked: true,
+                    radius: 25
                 },
 
             },
@@ -335,7 +335,7 @@ $(document).ready(function () {
         chart.update();
     }
 
-    function AddNewDataSet(data, borderColor) {
+    function AddNewDataSet(data, borderColor, backgroundColor = ['rgba(255, 255, 255, 1)']) {
         // В поступающие данные (data количество элементов, должно быть равно максимальному числу элементов на графике)
         //data = [1,1,1,1,1,50,50,50,50,50];
 
@@ -346,9 +346,7 @@ $(document).ready(function () {
             {
                 label: '',
                 data: data,
-                backgroundColor: [
-                    'rgba(255, 255, 255, 1)',
-                ],
+                backgroundColor: backgroundColor,
                 borderColor: borderColor,
                 pointStyle: ['circle'],
                 borderWidth: 2,
@@ -392,8 +390,8 @@ $(document).ready(function () {
 
             for(let j = 0; j < borderPointsCount; j++) {
                 myChart.data.datasets[i].pointBorderColor[j] = newColorPoint;
-                myChart.data.datasets[i].backgroundColor[j] = newColorLine;
                 myChart.data.datasets[i].borderColor[j] = newColorLine;
+                myChart.data.datasets[i].backgroundColor[j] = newColorLine;
             }
         }
         myChart.update();
@@ -405,8 +403,8 @@ $(document).ready(function () {
 
         for(let i = 0; i < borderPointsCount; i++) {
             myChart.data.datasets[index].pointBorderColor[i] = colors['blue'];
-            myChart.data.datasets[index].backgroundColor[i] = newColor;
             myChart.data.datasets[index].borderColor[i] = newColor;
+            myChart.data.datasets[index].backgroundColor[i] = newColor;
         }
         myChart.update();
     }

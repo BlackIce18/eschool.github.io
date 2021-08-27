@@ -95,6 +95,27 @@ $(document).ready(function () {
         }
     });
 
+    var ctx2 = $('#myChart2');
+
+    $(ctx2).click(function (evt) {
+        $(customToolTip).addClass('hide');
+
+        const points = myChart.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, true);
+
+
+        if (points.length) {
+            const firstPoint = points[0];
+
+            let borderPointsCount = myChart.data.datasets[firstPoint.datasetIndex].pointBorderColor.length;
+
+            for(let i = 0; i < borderPointsCount; i++) {
+                myChart.data.datasets[firstPoint.datasetIndex].pointBorderColor[i] = colors['blue'];
+            }
+
+            myChart.update();
+        }
+    });
+
     const data = [{}];
     let date = Date.parse('2020-01-01');
     for (let day = 1; day <= 20; day++) {
@@ -115,56 +136,22 @@ $(document).ready(function () {
     }
     days.push('jul');
 
+
     var myChart = new Chart(ctx, {
-        type: 'line',
+        type: 'bar',
         			data: {
                         labels: ['1', '2', '3', '4', '5', '6', 'jul', '7','5','5','5','5','5','5','5','5','5','5','5', '5','5','5','5','5','5','5','5','5','5','5','5'],
-                        //labels: ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20'],
-                        //labels: days,
                         datasets: [
                             {
-                                ///label: '',
-                                /*data: [
-                                    { x: "1", y: 10 },
-                                    { x: "7", y: 20 },
-                                    { x: "10", y: 150 },
-                                    { x: "11", y: 160 },
-                                    { x: "16", y: 60 },
-                                    null,
-                                    null,
-                                    { x: "18", y: 100 },
-                                    { x: "20", y: 150 }
-                                ],*/
-                                data: data,
-                                backgroundColor: [
-                                    'rgba(255, 255, 255, 1)',
-                                ],
-                                borderColor: [
-                                    colors["darkyellow"],
-                                ],
-                                pointStyle: ['circle'],
-                                borderWidth: 2,
-                                pointRadius: 9,
-                                pointBackgroundColor: '#ffffff',
-                                pointBackgroundColorOpacity: 1,
-                                pointBorderColor: [colors['blue'], colors['blue'], colors['blue'], colors['blue'], colors['blue'], colors['blue'], colors['blue'],colors['blue'],colors['blue']],
-                                pointBorderWidth: 5,
-                                pointHoverBorderWidth: 5,
-                                pointHoverRadius: 9,
-                                pointHoverBackgroundColor: '#ffffff',
-                                fill: false,
-                            },
-                            {
                                 label: '',
-                                data: [null, 270, null, null, null, null, null, 140, 200],
+                                data: [null, 10, null, null, null, null, null, 10, 10],
                                 backgroundColor: [
-                                    'rgba(255, 255, 255, 1)',
+                                    colors["lightblue"],
                                 ],
                                 borderColor: [
                                     colors["lightblue"],
                                 ],
                                 pointStyle: ['circle'],
-                                borderWidth: 2,
                                 pointRadius: 9,
                                 pointBackgroundColor: '#ffffff',
                                 pointBackgroundColorOpacity: 1,
@@ -174,18 +161,23 @@ $(document).ready(function () {
                                 pointHoverRadius: 9,
                                 pointHoverBackgroundColor: '#ffffff',
                                 fill: false,
+
+                                borderRadius: 2,
+                                barPercentage: 0.5,
+                                barThickness: 6,
+                                maxBarThickness: 3,
+                                minBarLength: 3,
                             },
                             {
                                 label: '',
-                                data: [null, 150, null, null, null, null, 30, null, 60],
+                                data: [null, 10, null, null, null, null, 10, null, 10],
                                 backgroundColor: [
-                                    'rgba(255, 255, 255, 1)',
+                                    colors["purple"],
                                 ],
                                 borderColor: [
                                     colors["purple"],
                                 ],
                                 pointStyle: ['circle'],
-                                borderWidth: 2,
                                 pointRadius: 9,
                                 pointBackgroundColor: '#ffffff',
                                 pointBackgroundColorOpacity: 1,
@@ -195,34 +187,21 @@ $(document).ready(function () {
                                 pointHoverRadius: 9,
                                 pointHoverBackgroundColor: '#ffffff',
                                 fill: false,
-/*
+
                                 borderRadius: 2,
                                 barPercentage: 0.5,
                                 barThickness: 6,
                                 maxBarThickness: 3,
-                                minBarLength: 3,*/
+                                minBarLength: 3,
 
                             },
                         ],
-                        /*datasets: [{
-                            data: [
-                                { x: "2020-03-22", y: 300 },
-                                { x: "2020-04-01", y: 0 },
-                                { x: "2020-04-02", y: 0 },
-                                { x: "2020-04-03", y: 0 },
-                                { x: "2020-04-08", y: 0 },
-                                { x: "2020-04-12", y: 0 },
-                                { x: "2020-04-15", y: 0 }
-                            ],
-                        }],*/
                         xAxes: [{
                             type: 'time',
                             barThickness: 3,
                             maxBarThickness: 3,
                             time: {
                                 unit: 'day',
-                               /* unitStepSize: 1,
-                                tooltipFormat: 'DD/MM'*/
                             },
 
                         }],
@@ -253,6 +232,18 @@ $(document).ready(function () {
                     external: externalTooltipHandler,
                 }
             },
+            //Default: false; if true, this would round all corners of final box;
+            fullCornerRadius: false,
+            //Default: false; if true, this rounds each box in the stack instead of only final box;
+            stackedRounded: false,
+            elements: {
+                point: {
+                    radius: 25,
+                    hoverRadius: 35,
+                    pointStyle: 'rectRounded',
+
+                }
+            },
             scales: {
                 x: {
                     ticks: {
@@ -260,6 +251,12 @@ $(document).ready(function () {
                         fontWeight: 300,
                         color: colors['gray'],
                         display: true,
+                        beginAtZero: true
+                    },
+                    stacked: true,
+                    grid: {
+                        display: false,
+
                     },
                 },
                 y: {
@@ -267,33 +264,170 @@ $(document).ready(function () {
                         fontSize: 12,
                         fontWeight: 300,
                         color: colors['gray'],
-                        display: true,
-                        stepSize: 30
+                        display: false,
+                        stepSize: 30,
+                        beginAtZero: true
                     },
                     min: 0,
-                    max: 300,
+                    max: 20,
                     beginAtZero: true,
+                    stacked: true,
+                    radius: 25,
+                    grid: {
+                        display: false,
+                        drawBorder: false,
+                    },
                 },
 
             },
             onClick: clickHandler
         }
     });
+    var myChart2 = new Chart(ctx2, {
+        type: 'bar',
+        data: {
+            labels: ['1', '2', '3', '4', '5', '6', 'jul', '7','5','5','5','5','5','5','5','5','5','5','5', '5','5','5','5','5','5','5','5','5','5','5','5'],
+            datasets: [
+                {
+                    label: '',
+                    data: [null, 10, null, null, null, null, null, 10, 10],
+                    backgroundColor: [
+                        colors["lightblue"],
+                    ],
+                    borderColor: [
+                        colors["lightblue"],
+                    ],
+                    pointStyle: ['circle'],
+                    pointRadius: 9,
+                    pointBackgroundColor: '#ffffff',
+                    pointBackgroundColorOpacity: 1,
+                    pointBorderColor: [colors['blue'], colors['blue'], colors['blue'], colors['blue'], colors['blue'], colors['blue'], colors['blue'],colors['blue'],colors['blue']],
+                    pointBorderWidth: 5,
+                    pointHoverBorderWidth: 5,
+                    pointHoverRadius: 9,
+                    pointHoverBackgroundColor: '#ffffff',
+                    fill: false,
 
-    $('button.crossButton').click(function (e) {
-        if((!$(this).is(e.target)  && $(this).has(e.target).length === 0)) {}
+                    borderRadius: 2,
+                    barPercentage: 0.5,
+                    barThickness: 6,
+                    maxBarThickness: 3,
+                    minBarLength: 3,
+                },
+                {
+                    label: '',
+                    data: [null, 10, null, null, null, null, 10, null, 10],
+                    backgroundColor: [
+                        colors["purple"],
+                    ],
+                    borderColor: [
+                        colors["purple"],
+                    ],
+                    pointStyle: ['circle'],
+                    pointRadius: 9,
+                    pointBackgroundColor: '#ffffff',
+                    pointBackgroundColorOpacity: 1,
+                    pointBorderColor: [colors['blue'], colors['blue'], colors['blue'], colors['blue'], colors['blue'], colors['blue'], colors['blue'],colors['blue'],colors['blue']],
+                    pointBorderWidth: 5,
+                    pointHoverBorderWidth: 5,
+                    pointHoverRadius: 9,
+                    pointHoverBackgroundColor: '#ffffff',
+                    fill: false,
 
-        let tabs__item = $(this).parents('.tabs__item');
-        let index = $(tabs__item).parent().children().index($(tabs__item));
-        RemoveItemFromChart(myChart, index);
-        tabsColor.splice(index, 1);
-        $(this).parents('.tabs__item').remove();
+                    borderRadius: 2,
+                    barPercentage: 0.5,
+                    barThickness: 6,
+                    maxBarThickness: 3,
+                    minBarLength: 3,
+
+                },
+            ],
+            xAxes: [{
+                type: 'time',
+                barThickness: 3,
+                maxBarThickness: 3,
+                time: {
+                    unit: 'day',
+                },
+
+            }],
+            yAxes: [{
+                min: 0,
+                max: 300,
+                beginAtZero: true,
+            }],
+        },
+        options: {
+            animation: true,
+            // Растяжение по x
+            responsive: true,
+            maintainAspectRatio: false,
+            showScale: false,
+
+            spanGaps: true, // разрешает null значения для пропуска
+
+            events: ['click'], // tooltip только по click
+
+            plugins: {
+                legend: {
+                    display: false, // надпись обозначающая цвет
+                },
+                tooltip: {
+                    enabled: false,
+                    position: 'nearest',
+                    external: externalTooltipHandler,
+                }
+            },
+            //Default: false; if true, this would round all corners of final box;
+            fullCornerRadius: false,
+            //Default: false; if true, this rounds each box in the stack instead of only final box;
+            stackedRounded: false,
+            elements: {
+                point: {
+                    radius: 25,
+                    hoverRadius: 35,
+                    pointStyle: 'rectRounded',
+
+                }
+            },
+            scales: {
+                x: {
+                    ticks: {
+                        fontSize: 12,
+                        fontWeight: 300,
+                        color: colors['gray'],
+                        display: false,
+                        beginAtZero: true
+                    },
+                    stacked: true,
+                    grid: {
+                        display: false,
+                    },
+                },
+                y: {
+                    ticks: {
+                        fontSize: 12,
+                        fontWeight: 300,
+                        color: colors['gray'],
+                        display: false,
+                        stepSize: 30,
+                        beginAtZero: true
+                    },
+                    min: 0,
+                    max: 20,
+                    beginAtZero: true,
+                    stacked: true,
+                    radius: 25,
+                    grid: {
+                        display: false,
+                        drawBorder: false,
+                    },
+                },
+
+            },
+            onClick: clickHandler
+        }
     });
-
-    function RemoveItemFromChart(chart, index) {
-        chart.data.datasets.splice(index, 1);
-        chart.update();
-    }
 
     function AddNewTab(userImage, name, year) {
 
@@ -335,20 +469,18 @@ $(document).ready(function () {
         chart.update();
     }
 
-    function AddNewDataSet(data, borderColor) {
+    function AddNewDataSet(chart, data, borderColor, backgroundColor = ['rgba(255, 255, 255, 1)']) {
         // В поступающие данные (data количество элементов, должно быть равно максимальному числу элементов на графике)
         //data = [1,1,1,1,1,50,50,50,50,50];
 
         //цвет рамки в массиве
         //borderColor = ['#ff0000'];
 
-        addData(myChart, "",
+        addData(chart, "",
             {
                 label: '',
                 data: data,
-                backgroundColor: [
-                    'rgba(255, 255, 255, 1)',
-                ],
+                backgroundColor: backgroundColor,
                 borderColor: borderColor,
                 pointStyle: ['circle'],
                 borderWidth: 2,
@@ -369,7 +501,7 @@ $(document).ready(function () {
         $($('.tabs-block > .tabs > .tabs__item')[index]).css({"border":"1px solid "+newColor});
     }
 
-    const tabsColor = [];
+    let tabsColor = [];
 
     (function() { // Добавление цветных рамок для табов
         let borderColor;
@@ -386,29 +518,29 @@ $(document).ready(function () {
         }
     }
 
-    function setColorPointsAndLine(newColorPoint, newColorLine) {
-        for(let i = 0; i < myChart.data.datasets.length; i++) {
-            let borderPointsCount = myChart.data.datasets[i].pointBorderColor.length;
+    function setColorPointsAndLine(chart, newColorPoint, newColorLine) {
+        for(let i = 0; i < chart.data.datasets.length; i++) {
+            let borderPointsCount = chart.data.datasets[i].pointBorderColor.length;
 
             for(let j = 0; j < borderPointsCount; j++) {
-                myChart.data.datasets[i].pointBorderColor[j] = newColorPoint;
-                myChart.data.datasets[i].backgroundColor[j] = newColorLine;
-                myChart.data.datasets[i].borderColor[j] = newColorLine;
+                chart.data.datasets[i].pointBorderColor[j] = newColorPoint;
+                chart.data.datasets[i].borderColor[j] = newColorLine;
+                chart.data.datasets[i].backgroundColor[j] = newColorLine;
             }
         }
-        myChart.update();
+        chart.update();
     }
 
     // Установить цвет точек синий и заменить цвет соединяющей линии по индексу
-    function setBluePointsAndNewColorLine_byIndex(index, newColor) {
-        let borderPointsCount = myChart.data.datasets[index].pointBorderColor.length;
+    function setBluePointsAndNewColorLine_byIndex(chart, index, newColor) {
+        let borderPointsCount = chart.data.datasets[index].pointBorderColor.length;
 
         for(let i = 0; i < borderPointsCount; i++) {
-            myChart.data.datasets[index].pointBorderColor[i] = colors['blue'];
-            myChart.data.datasets[index].backgroundColor[i] = newColor;
-            myChart.data.datasets[index].borderColor[i] = newColor;
+            chart.data.datasets[index].pointBorderColor[i] = colors['blue'];
+            chart.data.datasets[index].borderColor[i] = newColor;
+            chart.data.datasets[index].backgroundColor[i] = newColor;
         }
-        myChart.update();
+        chart.update();
     }
 
     $('.tabs__item').click(function () {
@@ -419,21 +551,54 @@ $(document).ready(function () {
 
         let tabIndex = $(this).parent().children().index($(this));
         AddBorderToTab(tabIndex, tabsColor[tabIndex]);
-        setColorPointsAndLine(colors['menugray'], colors['menugray']);
-        setBluePointsAndNewColorLine_byIndex(tabIndex, tabsColor[tabIndex]);
+
+        setColorPointsAndLine(myChart, colors['menugray'], colors['menugray']);
+        setColorPointsAndLine(myChart2, colors['menugray'], colors['menugray']);
+
+        setBluePointsAndNewColorLine_byIndex(myChart, tabIndex, tabsColor[tabIndex]);
+        setBluePointsAndNewColorLine_byIndex(myChart2, tabIndex, tabsColor[tabIndex]);
     });
+
+    $('button.crossButton').click(function (e) {
+        if((!$(this).is(e.target)  && $(this).has(e.target).length === 0)) {}
+
+        let tabs__item = $(this).parents('.tabs__item');
+        let index = $(tabs__item).parent().children().index($(tabs__item));
+        console.log(index);
+        console.log(myChart);
+        console.log(myChart2);
+        RemoveItemFromChart(myChart, index);
+        RemoveItemFromChart(myChart2, index);
+        console.log(myChart);
+        console.log(myChart2);
+        tabsColor.splice(index, 1);
+        $(this).parents('.tabs__item').remove();
+    });
+
+    function RemoveItemFromChart(chart, index) {
+        chart.data.datasets.splice(index, 1);
+        chart.update();
+    }
 
     // Вернуть цвета при нажатии за пределами табов
     $(document).mouseup(function (e){
         let tabs__item = $(".tabs__item");
-        if (!tabs__item.is(e.target)  && tabs__item.has(e.target).length === 0) {
+        let tooltip = $(customToolTip);
+        if ((!tabs__item.is(e.target)  && tabs__item.has(e.target).length === 0)) {
             for (let i = 0; i < myChart.data.datasets.length; i++) {
-                setBluePointsAndNewColorLine_byIndex(i, tabsColor[i]);
+                setBluePointsAndNewColorLine_byIndex(myChart, i, tabsColor[i]);
+                AddBorderToTab(i, tabsColor[i]);
+            }
+            
+            for (let i = 0; i < myChart2.data.datasets.length; i++) {
+                setBluePointsAndNewColorLine_byIndex(myChart2, i, tabsColor[i]);
                 AddBorderToTab(i, tabsColor[i]);
             }
         }
         $('.tabs__item').removeClass('active');
 
-        $(customToolTip).addClass('hide');
+        if(!tooltip.is(e.target) && tooltip.has(e.target).length === 0) {
+            $(customToolTip).addClass('hide');
+        }
     });
 });

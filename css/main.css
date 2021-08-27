@@ -4283,6 +4283,9 @@ svg.icon_plus {
   display: inline-block;
   margin-right: auto;
 }
+.lesson__info-block .lesson__info.visit .status.gray {
+  color: #c5c5c5;
+}
 .lesson__info-block .lesson__info.visit .assessment {
   font-size: 22px;
   font-weight: 500;
@@ -5486,12 +5489,13 @@ svg.icon_plus {
 .gradebook .evaluation_and_sort {
   margin-top: 0;
 }
-.gradebook .save_and_checkbox {
+
+.save_and_checkbox {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.gradebook .save_and_checkbox ul {
+.save_and_checkbox ul {
   list-style: none;
 }
 
@@ -6010,6 +6014,15 @@ svg.icon_plus {
   display: flex;
   align-items: center;
 }
+.KPI .center__header__action_buttons .sort-wrapper .sort .sort-item.attendance-active:after {
+  display: none;
+}
+.KPI .center__header__action_buttons .sort-wrapper .sort .sort-switch .slider:before {
+  background-color: #eef1f8;
+}
+.KPI .center__header__action_buttons .sort-wrapper .sort .sort-switch input:checked + .slider:before {
+  background-color: #3f59b7;
+}
 .KPI .center__header__action_buttons .inputWrapper {
   margin-right: 10px;
 }
@@ -6019,6 +6032,144 @@ svg.icon_plus {
 }
 .KPI .table__content {
   position: relative;
+}
+.KPI .table__content .lesson__info-block.only__averageRating {
+  min-height: 75px;
+}
+.KPI .table__content .lesson__info-block.only__averageRating .lesson__info.field {
+  padding: 31px 25px;
+}
+.KPI .table__content .attended_lists-block {
+  width: 345px;
+  min-height: 170px;
+  position: absolute;
+  top: 0px;
+  left: 687px;
+  border: 2px solid #eef1f8;
+  border-radius: 10px;
+  background: #f5f7fb;
+  z-index: 15;
+  box-shadow: 0px 20px 35px rgba(68, 68, 68, 0.25);
+}
+.KPI .table__content .attended_lists-block.hide {
+  display: none;
+}
+.KPI .attended_lists {
+  padding: 20px 25px;
+}
+.KPI .attended_lists .attended_lists-item {
+  margin-bottom: 15px;
+}
+.KPI .attended_lists .attended_lists-item .attended_lists-item-wrapper {
+  height: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.KPI .attended_lists .attended_lists-item .attended_lists-item-wrapper.withList {
+  margin-bottom: 15px;
+}
+.KPI .attended_lists .attended_lists-item .attended_lists-item-wrapper .wrapper {
+  width: 100%;
+  position: relative;
+}
+.KPI .attended_lists .attended_lists-item .attended_lists-item-wrapper .wrapper .arrow_down_SVG {
+  left: 0;
+}
+.KPI .attended_lists .attended_lists-item .attended_lists-item-wrapper .wrapper .attended_lists-item-text {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 15px;
+  color: #444444;
+  margin-left: 15px;
+  display: block;
+}
+.KPI .attended_lists .attended_lists-item .attended_lists-item-wrapper .attended_lists-item-number {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 15px;
+  color: #444444;
+}
+.KPI .attended_lists .attended_lists-item .attended_lists-item-wrapper .attended_lists-item-number.red {
+  color: #ce1818;
+}
+.KPI .attended_lists .attended_lists-item .attended_lists-item-wrapper .attended_lists-item-number.green {
+  color: #37aa50;
+}
+.KPI .attended_lists .attended_lists-item .attended_lists-item-wrapper .attended_lists-item-number.blue {
+  color: #3f59b7;
+}
+.KPI .attended_lists .attended_lists-item:last-child {
+  margin-bottom: 0;
+}
+.KPI .attended_lists .attended_lists-item .students_list {
+  width: 100%;
+  list-style: none;
+  overflow-y: scroll;
+  max-height: 165px;
+}
+.KPI .attended_lists .attended_lists-item .students_list.hide {
+  display: none;
+}
+.KPI .attended_lists .attended_lists-item .students_list li {
+  margin-bottom: 10px;
+}
+.KPI .attended_lists .attended_lists-item .students_list li:last-child {
+  margin-bottom: 0;
+}
+.KPI .attended_lists .attended_lists-item .students_list li .item_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.KPI .attended_lists .attended_lists-item .students_list li .item_wrapper .user_photo {
+  min-width: 33px;
+  width: 33px;
+  height: 33px;
+  margin-right: 10px;
+}
+.KPI .attended_lists .attended_lists-item .students_list li .item_wrapper .userName_and_lesson {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.KPI .attended_lists .attended_lists-item .students_list li .item_wrapper .userName_and_lesson .user_name {
+  max-width: 100%;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 15px;
+}
+.KPI .attended_lists .attended_lists-item .students_list li .item_wrapper .userName_and_lesson .lesson {
+  max-width: 100%;
+  display: block;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 300;
+  color: #c5c5c5;
+}
+.KPI .attended_lists .attended_lists-item .students_list li .item_wrapper .user_name {
+  max-width: 60.3448275862%;
+  margin-bottom: 0;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 15px;
+  color: #444444;
+  margin-right: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.KPI .attended_lists .attended_lists-item .students_list li .item_wrapper .lesson {
+  max-width: 22.4137931034%;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 300;
+  color: #c5c5c5;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .KPI .KPI__chart-wrapper {
   width: 100%;
@@ -6030,7 +6181,15 @@ svg.icon_plus {
 .KPI .KPI__chart-wrapper .KPI__chart {
   width: 5000px;
   height: 470px;
-  position: absolute;
+}
+.KPI .KPI__chart-wrapper .KPI__chart.KPI__chart_two {
+  height: 300px;
+}
+.KPI .KPI__chart-wrapper .KPI__chart.KPI__chart_two .KPI__charts {
+  height: 150px;
+}
+.KPI .KPI__chart-wrapper .KPI__chart.KPI__chart_two .KPI__charts canvas:last-child {
+  transform: scale(1, -1);
 }
 .KPI .KPI__chart-wrapper .lesson__info-block {
   left: auto;
@@ -6038,18 +6197,211 @@ svg.icon_plus {
   bottom: auto;
   right: auto;
 }
+.KPI .legends {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+}
+.KPI .legends-item {
+  width: 100%;
+  border: 1px solid #eef1f8;
+  border-radius: 10px;
+  padding: 25px 30px;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 300;
+  color: #444444;
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.KPI .legends-item:last-child {
+  margin-right: 0;
+}
+.KPI .legends-item .number {
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 500;
+}
+.KPI .legends-item .number.blue {
+  color: #3f59b7;
+}
+.KPI .legends-item .number.green {
+  color: #37aa50;
+}
+.KPI .legends-item .number.red {
+  color: #ce1818;
+}
 .KPI .inputWrapper-sm {
   display: none;
 }
 .KPI .tabs-block {
   border-bottom: none;
+  height: 80px;
+  margin-bottom: 0;
 }
-.KPI .tabs-block.users .tabs .tabs__item {
+.KPI .tabs-block .tabs {
+  height: 80px;
+}
+.KPI .tabs-block.users .tabs .tabs__item, .KPI .tabs-block.kpi_textAndCross .tabs .tabs__item {
+  height: 60px;
   border: 1px solid #eef1f8;
   border-radius: 10px;
 }
+.KPI .tabs-block.users .tabs .tabs__item.active, .KPI .tabs-block.kpi_textAndCross .tabs .tabs__item.active {
+  box-shadow: 0px 5px 15px rgba(68, 68, 68, 0.2);
+}
+.KPI .tabs-block.kpi_textAndCross .tabs__item {
+  padding: 14px 35px;
+  position: relative;
+}
+.KPI .tabs-block.kpi_textAndCross .tabs__item .item_wrapper {
+  position: static;
+}
+.KPI .tabs-block.kpi_textAndCross .tabs__item.active {
+  background: #f5f7fb;
+}
+.KPI .tabs-block.kpi_textAndCross .tabs__item.active .item_wrapper {
+  color: #444444;
+}
+.KPI .tabs-block.kpi_textAndCross .lesson-name {
+  width: calc(100%);
+  line-height: 18px;
+  margin-right: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.KPI .lesson__info-block-sm.passed-lesson.student .lesson__info-block .lesson__info.user-block {
+  background-color: #f5f7fb;
+  border: 1px solid #eef1f8;
+  border-radius: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.KPI .lesson__info-block-sm.passed-lesson.student .lesson__info-block .lesson__info.user-block .item_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 15px;
+}
+.KPI .lesson__info-block-sm.passed-lesson.student .lesson__info-block .lesson__info.user-block .item_wrapper .user_photo {
+  width: 35px;
+  height: 35px;
+  min-width: 35px;
+  margin-right: 10px;
+}
+.KPI .lesson__info-block-sm.passed-lesson.student .lesson__info-block .lesson__info.user-block .item_wrapper .user_name {
+  width: 100%;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 12px;
+  color: #444444;
+  margin: 5px 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.KPI .lesson__info-block-sm.passed-lesson.student .lesson__info-block .lesson__info.user-block .item_wrapper .user_name .year {
+  width: 100%;
+  display: block;
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 300;
+  color: #37aa50;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.KPI .lesson__info-block-sm.passed-lesson.student .lesson__info-block .lesson__info.user-block .item_wrapper .onlyText {
+  width: 100%;
+  font-size: 15px;
+  font-weight: 500;
+  color: #444444;
+  line-height: 15px;
+  margin-bottom: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.KPI .lesson__info-block-sm.passed-lesson.student .lesson__info-block .lesson__info.visit .status.gray {
+  color: #c5c5c5;
+}
+.KPI .lesson__info-block-sm.passed-lesson.student .lesson__info-block .lesson__info.attended_lists {
+  padding: 20px 0;
+}
 
+@media (max-width: 1500px) {
+  .KPI .center__header-title {
+    font-size: 24px;
+  }
+  .KPI .center__header__action_buttons .sort-wrapper {
+    margin-right: 10px;
+  }
+  .KPI .center__header__action_buttons .inputWrapper input {
+    width: 200px;
+  }
+  .KPI .sort-switch {
+    width: 42px;
+    height: 28px;
+  }
+  .KPI .sort-switch .switch {
+    width: 42px;
+    height: 28px;
+  }
+  .KPI .sort-switch .slider:before {
+    width: 20px;
+    height: 20px;
+    bottom: 2px;
+  }
+  .KPI .sort-switch input:checked + .slider:before {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+@media (max-width: 1280px) {
+  .KPI .center__header {
+    height: 200px;
+  }
+  .KPI .table-with-filter .center-header-wrapper .center__header .center__header__action_buttons {
+    margin: 10px 0;
+    float: left;
+  }
+  .KPI .center__header-title {
+    display: block;
+  }
+  .KPI .center__header__action_buttons-cancel, .KPI .center__header__action_buttons-create, .KPI .center__header__action_buttons-save {
+    min-width: 100px;
+    font-size: 15px;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 991px) {
+  .KPI .center__header {
+    height: 60px;
+    margin-bottom: 15px;
+  }
+  .KPI .table-with-filter .center-header-wrapper .center__header .center__header__action_buttons {
+    margin: 5px 0;
+  }
+  .KPI .center__header__action_buttons .sort-wrapper,
+.KPI .center__header__action_buttons .inputWrapper,
+.KPI .center__header__action_buttons-cancel, .KPI .center__header__action_buttons-create, .KPI .center__header__action_buttons-save {
+    display: none;
+  }
+  .KPI .tabs-block, .KPI .tabs-block .tabs, .KPI .tabs-block.users .tabs .tabs__item, .KPI .tabs-block.kpi_textAndCross .tabs .tabs__item {
+    height: 50px;
+  }
+}
 @media (max-width: 539px) {
+  .KPI .center__header {
+    height: auto;
+    margin-bottom: 15px;
+  }
   .KPI .table-with-filter .center__header {
     align-items: flex-start;
   }
@@ -6078,9 +6430,33 @@ svg.icon_plus {
     height: 350px;
     margin-bottom: 20px;
   }
+  .KPI .KPI__chart-wrapper.KPI__chart_two-block {
+    height: 200px;
+  }
   .KPI .KPI__chart-wrapper .KPI__chart {
     width: 1500px;
     height: 350px;
+  }
+  .KPI .KPI__chart-wrapper .KPI__chart.KPI__chart_two {
+    margin-top: 20px;
+    height: 150px;
+  }
+  .KPI .KPI__chart-wrapper .KPI__chart.KPI__chart_two .KPI__charts {
+    height: 75px;
+  }
+  .KPI .legends {
+    margin: 20px 0;
+    flex-direction: column;
+  }
+  .KPI .legends .legends-item {
+    margin-bottom: 5px;
+    padding: 10px 20px;
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .KPI .legends .legends-item .number {
+    font-size: 12px;
+    line-height: 12px;
   }
 }
 * {

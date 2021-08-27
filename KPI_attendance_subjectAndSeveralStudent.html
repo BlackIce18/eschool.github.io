@@ -771,7 +771,7 @@
 							</ul>
 						</span>
                 </div>
-                <div class="table__content hide">
+                <div class="table__content">
 
                     <div class="table__content-header-filters">
                         <div class="table__content-header-filters-item classlines">
@@ -1040,7 +1040,7 @@
 
                     <div class="tabs-block users">
                         <ul class="tabs">
-                            <li class="tabs__item active">
+                            <li class="tabs__item" style="border: 1px solid rgb(253, 223, 59);">
                                 <div class="item_wrapper">
                                     <div class="user_photo">
                                         <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
@@ -1057,24 +1057,7 @@
                                 </div>
 
                             </li>
-                            <li class="tabs__item">
-                                <div class="item_wrapper">
-                                    <div class="user_photo">
-                                        <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
-                                    </div>
-
-                                    <p class="user_name">Petrov Nikolay <span class="year">Year 9</span></p>
-
-
-                                    <button class="crossButton">
-                                        <svg class="icon_cross" viewBox="0 0 329.26933 329" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-
-                            </li>
-                            <li class="tabs__item">
+                            <li class="tabs__item" style="border: 1px solid rgb(24, 129, 210);">
                                 <div class="item_wrapper">
                                     <div class="user_photo">
                                         <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
@@ -1094,13 +1077,29 @@
                         </ul>
                     </div>
 
-                    <div class="KPI__chart-wrapper">
-                        <div class="KPI__chart">
-                            <canvas id="myChart" width="400" height="150">
-                                <p>Chart can't be showed</p>
-                            </canvas>
+                    <div class="KPI__chart-wrapper KPI__chart_two-block">
+                        <div class="KPI__chart KPI__chart_two">
+                            <div class="KPI__charts">
+                                <canvas id="myChart" width="400" height="150">
+                                    <p>Chart can't be showed</p>
+                                </canvas>
+                                <canvas id="myChart2" width="400" height="150">
+                                    <p>Chart can't be showed</p>
+                                </canvas>
+                            </div>
                         </div>
                     </div>
+                        <div class="legends">
+                            <div class="legends-item legend_1">
+                                all lessons <span class="number blue">41</span>
+                            </div>
+                            <div class="legends-item legend_2">
+                                attended <span class="number green">38</span>
+                            </div>
+                            <div class="legends-item legend_3">
+                                no attended <span class="number red">3</span>
+                            </div>
+                        </div>
                     <div class="lesson__info-block passed-lesson student hide">
                         <div class="lesson__info title">
                             <p class="date">09 nov <span class="year">Year 9</span></p>
@@ -1135,7 +1134,7 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
 <script src="./js/main.js"></script>
-<script src="./js/KPI.js"></script>
+<script src="./js/KPI_3_1.js"></script>
 
 
 </body>

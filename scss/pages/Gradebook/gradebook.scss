@@ -670,15 +670,15 @@
     .evaluation_and_sort {
         margin-top: 0;
     }
+}
 
-    .save_and_checkbox {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+.save_and_checkbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-        ul {
-            list-style: none;
-        }
+    ul {
+        list-style: none;
     }
 }
 

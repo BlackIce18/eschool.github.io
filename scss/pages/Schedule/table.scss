@@ -543,6 +543,10 @@ $centralBlockWidth: 1130px;
                 text-align: left;
                 display: inline-block;
                 margin-right: auto;
+
+                &.gray {
+                    color: $gray;
+                }
             }
 
             .assessment {

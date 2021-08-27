@@ -771,7 +771,7 @@
 							</ul>
 						</span>
                 </div>
-                <div class="table__content hide">
+                <div class="table__content">
 
                     <div class="table__content-header-filters">
                         <div class="table__content-header-filters-item classlines">
@@ -1038,84 +1038,194 @@
                         </div>
                     </div>
 
-                    <div class="tabs-block users">
+                    <div class="tabs-block kpi_textAndCross">
                         <ul class="tabs">
-                            <li class="tabs__item active">
-                                <div class="item_wrapper">
-                                    <div class="user_photo">
-                                        <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
-                                    </div>
-
-                                    <p class="user_name">Petrov Nikolay <span class="year">Year 9</span></p>
-
-
-                                    <button class="crossButton">
-                                        <svg class="icon_cross" viewBox="0 0 329.26933 329" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-
-                            </li>
                             <li class="tabs__item">
                                 <div class="item_wrapper">
-                                    <div class="user_photo">
-                                        <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
-                                    </div>
-
-                                    <p class="user_name">Petrov Nikolay <span class="year">Year 9</span></p>
-
-
+                                    <span class="lesson-name">Subject</span>
                                     <button class="crossButton">
                                         <svg class="icon_cross" viewBox="0 0 329.26933 329" xmlns="http://www.w3.org/2000/svg">
                                             <path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"></path>
                                         </svg>
                                     </button>
                                 </div>
-
                             </li>
-                            <li class="tabs__item">
+                            <li class="tabs__item ">
                                 <div class="item_wrapper">
-                                    <div class="user_photo">
-                                        <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
-                                    </div>
-
-                                    <p class="user_name">Petrov Nikolay <span class="year">Year 9</span></p>
-
-
+                                    <span class="lesson-name">или</span>
                                     <button class="crossButton">
                                         <svg class="icon_cross" viewBox="0 0 329.26933 329" xmlns="http://www.w3.org/2000/svg">
                                             <path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"></path>
                                         </svg>
                                     </button>
                                 </div>
-
                             </li>
                         </ul>
                     </div>
 
-                    <div class="KPI__chart-wrapper">
-                        <div class="KPI__chart">
-                            <canvas id="myChart" width="400" height="150">
-                                <p>Chart can't be showed</p>
-                            </canvas>
+                    <div class="KPI__chart-wrapper KPI__chart_two-block">
+                        <div class="KPI__chart KPI__chart_two">
+                            <div class="KPI__charts">
+                                <canvas id="myChart" width="400" height="150">
+                                    <p>Chart can't be showed</p>
+                                </canvas>
+                                <canvas id="myChart2" width="400" height="150">
+                                    <p>Chart can't be showed</p>
+                                </canvas>
+                            </div>
                         </div>
                     </div>
-                    <div class="lesson__info-block passed-lesson student hide">
+                        <div class="legends">
+                            <div class="legends-item legend_1">
+                                all lessons <span class="number blue">41</span>
+                            </div>
+                            <div class="legends-item legend_2">
+                                attended <span class="number green">38</span>
+                            </div>
+                            <div class="legends-item legend_3">
+                                no attended <span class="number red">3</span>
+                            </div>
+                        </div>
+                    <div class="lesson__info-block attended_lists-block hide">
                         <div class="lesson__info title">
                             <p class="date">09 nov <span class="year">Year 9</span></p>
                             <p class="time">lesson 5 12:00 - 12:45</p>
                             <p class="lesson__info-name">Mathematics<span class="teacher">teacher <span class="teacher-name">Melnik K.L.</span></span></p>
                         </div>
-                        <div class="lesson__info main">
-                            <p class="title">Title of the lesson topic</p>
-                            <p class="workName">home work</p>
-                            <p class="main-text">Lorem ipsum dolor sit amet, conse ctetuer adipiscing elit. Aenean commodo ligula </p>
-                        </div>
-                        <div class="lesson__info field">
-                            <div class="lesson__info visit">
-                                <p class="status">attended</p>
-                                <p class="assessment">325</p>
+                        <div class="attended_lists">
+                            <div class="attended_lists-item">
+                                <div class="attended_lists-item-wrapper">
+                                    <div class="wrapper">
+                                        <svg class="arrow_down_SVG" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                            <g>
+                                                <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                                        c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                                        c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="attended_lists-item-text">attended</span>
+                                    </div>
+                                    <span class="attended_lists-item-number green">39</span>
+                                </div>
+                                <ul class="students_list hide">
+                                    <li>
+                                        <div class="item_wrapper">
+                                            <div class="user_photo">
+                                                <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+                                            </div>
+
+                                            <p class="user_name">Petrov Nikolay</p>
+                                            <span class="lesson">biology</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item_wrapper">
+                                            <div class="user_photo">
+                                                <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+                                            </div>
+
+                                            <p class="user_name">Petrov Nikolay</p>
+                                            <span class="lesson">biology</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item_wrapper">
+                                            <div class="user_photo">
+                                                <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+                                            </div>
+
+                                            <p class="user_name">Petrov Nikolay</p>
+                                            <span class="lesson">biology</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item_wrapper">
+                                            <div class="user_photo">
+                                                <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+                                            </div>
+
+                                            <p class="user_name">Petrov Nikolay</p>
+                                            <span class="lesson">biology</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item_wrapper">
+                                            <div class="user_photo">
+                                                <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+                                            </div>
+
+                                            <p class="user_name">Petrov Nikolay</p>
+                                            <span class="lesson">biology</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="attended_lists-item">
+                                <div class="attended_lists-item-wrapper">
+                                    <div class="wrapper">
+                                        <svg class="arrow_down_SVG" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                                            <g>
+                                                <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                                        c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                                        c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"></path>
+                                            </g>
+                                        </svg>
+                                        <span class="attended_lists-item-text">no attended</span>
+                                    </div>
+                                    <span class="attended_lists-item-number red">39</span>
+                                </div>
+                                <ul class="students_list hide">
+                                    <li>
+                                        <div class="item_wrapper">
+                                            <div class="user_photo">
+                                                <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+                                            </div>
+
+                                            <p class="user_name">Petrov Nikolay</p>
+                                            <span class="lesson">biology</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item_wrapper">
+                                            <div class="user_photo">
+                                                <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+                                            </div>
+
+                                            <p class="user_name">Petrov Nikolay</p>
+                                            <span class="lesson">biology</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item_wrapper">
+                                            <div class="user_photo">
+                                                <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+                                            </div>
+
+                                            <p class="user_name">Petrov Nikolay</p>
+                                            <span class="lesson">biology</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item_wrapper">
+                                            <div class="user_photo">
+                                                <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+                                            </div>
+
+                                            <p class="user_name">Petrov Nikolay</p>
+                                            <span class="lesson">biology</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item_wrapper">
+                                            <div class="user_photo">
+                                                <img class="clip-svg image" src="./resource/images/studentImage.jpg" alt="">
+                                            </div>
+
+                                            <p class="user_name">Petrov Nikolay</p>
+                                            <span class="lesson">biology</span>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -1135,7 +1245,8 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
 <script src="./js/main.js"></script>
-<script src="./js/KPI.js"></script>
+<script src="./js/KPI_3_1.js"></script>
+<script src="./js/KPI_attendanceList.js"></script>
 
 
 </body>
