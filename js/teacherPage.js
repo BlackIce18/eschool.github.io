@@ -30,12 +30,15 @@ $(document).ready(function () {
     $('.lesson').click(function () {
         $('.lesson').removeClass('clicked');
         $(this).addClass('clicked');
-
         let left = $(this).offset().left - $('.first-col').offset().left;
         let top = $(this).offset().top - $('.table__content').offset().top - $('.table__content > .lesson__info-block').height();
-        console.log(top);
-        console.log($('.table__content').offset().top);
-        console.log($(this).offset().top);
         $('.table__content > .lesson__info-block').removeClass('hide').css({'left' : left +"px",'top' : top+"px"});
-    })
+    });
+
+    $(document).mouseup(function (e){
+        let tooltip = $('.table__content > .lesson__info-block');
+        if (!tooltip.is(e.target)  && tooltip.has(e.target).length === 0) {
+            $('.table__content > .lesson__info-block').addClass('hide')
+        }
+    });
 });
