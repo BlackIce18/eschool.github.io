@@ -5656,7 +5656,13 @@ svg.icon_plus {
   }
   .gradebook .table__content-main-table-col.first-col .table-row.users-item, .gradebook .table__content-main-table-col.first-col .table-row.lesson-item {
     min-width: 86px;
-    padding: 15px;
+    padding: 10px 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .gradebook .table__content-main-table-col.first-col .table-row.users-item.active, .gradebook .table__content-main-table-col.first-col .table-row.lesson-item.active {
+    padding: 10px 15px;
   }
   .gradebook .table__content-main-table-col.first-col .table-row.users-item .user-block .user, .gradebook .table__content-main-table-col.first-col .table-row.users-item .lesson-block .user, .gradebook .table__content-main-table-col.first-col .table-row.lesson-item .user-block .user, .gradebook .table__content-main-table-col.first-col .table-row.lesson-item .lesson-block .user {
     display: none;
@@ -5664,11 +5670,14 @@ svg.icon_plus {
   .gradebook .table__content-main-table-col.first-col .table-row.users-item .user-block .user_name, .gradebook .table__content-main-table-col.first-col .table-row.users-item .user-block .lesson-name, .gradebook .table__content-main-table-col.first-col .table-row.users-item .lesson-block .user_name, .gradebook .table__content-main-table-col.first-col .table-row.users-item .lesson-block .lesson-name, .gradebook .table__content-main-table-col.first-col .table-row.lesson-item .user-block .user_name, .gradebook .table__content-main-table-col.first-col .table-row.lesson-item .user-block .lesson-name, .gradebook .table__content-main-table-col.first-col .table-row.lesson-item .lesson-block .user_name, .gradebook .table__content-main-table-col.first-col .table-row.lesson-item .lesson-block .lesson-name {
     width: 100%;
     margin-left: 0;
-    white-space: normal;
     font-size: 10px;
     font-weight: 500;
     color: #444444;
     line-height: 12px;
+    white-space: normal;
+  }
+  .gradebook .table__content-main-table-col.first-col .table-row.users-item .user-block .lesson-name, .gradebook .table__content-main-table-col.first-col .table-row.users-item .lesson-block .lesson-name, .gradebook .table__content-main-table-col.first-col .table-row.lesson-item .user-block .lesson-name, .gradebook .table__content-main-table-col.first-col .table-row.lesson-item .lesson-block .lesson-name {
+    padding-right: 10px;
   }
   .gradebook .table__content-main-table-col.first-col .table-row.users-item.user-with-year, .gradebook .table__content-main-table-col.first-col .table-row.lesson-item.user-with-year {
     padding-right: 15px;
@@ -5688,7 +5697,21 @@ svg.icon_plus {
     display: none;
   }
   .gradebook .table__content-main-table-col.first-col .table-row.lesson-item {
-    padding: 15px 20px 15px 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 10px 20px 10px 15px;
+  }
+  .gradebook .table__content-main-table-col.first-col .table-row.lesson-item.active {
+    padding: 10px 20px 10px 15px;
+  }
+  .gradebook .table__content-main-table-col.first-col .table-row.lesson-item .lesson-block {
+    width: 100%;
+    height: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    overflow: hidden;
   }
   .gradebook .table__content-main-table-col.first-col .table-row.lesson-item .lesson-block .lesson-status {
     width: 6px;

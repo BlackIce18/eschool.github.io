@@ -13,7 +13,7 @@ $(document).ready(function () {
         $('.table-row').parent().children('.table-header-row').children('.header-item-col').removeClass('hovered');
         $(this).parent().children('.table-header-row').children('.header-item-col').addClass('hovered');
 
-        let firstCol_row = $('.users-item');
+        let firstCol_row = $('.first-col > .table-row').not(':first-child');
         firstCol_row.removeClass('active');
         $(firstCol_row[index]).addClass('active');
 

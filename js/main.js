@@ -17,9 +17,17 @@ $(document).ready(function () {
     });
 
     $('.dropdown__itemsBlock>li').click(function(){
-        console.log($(this).closest('.inputWrapper'));
         $(this).closest('.inputWrapper').children('.input__dropdown').val($(this).children('.dropdown__itemWithImage_text').text());
-    })
+    });
+
+    $(document).mouseup(function (e){
+        let input__dropdown = $('.input__dropdown').parent();
+
+        if (!input__dropdown.is(e.target)  && input__dropdown.has(e.target).length === 0) {
+            $(input__dropdown).children('.dropdown__itemsBlock').addClass('hide');
+            $(input__dropdown).children('.arrow_down_SVG').removeClass('arrow_down_SVG_inverted');
+        }
+    });
 
 /*    $('.input__dropdown').blur(function(){
         $('.input__dropdown').parent().children('.dropdown__itemsBlock').each(function (i, elem) {

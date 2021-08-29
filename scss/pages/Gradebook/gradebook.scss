@@ -925,7 +925,12 @@
 
                                 &.users-item, &.lesson-item {
                                     min-width: $width;
-                                    padding: 15px;
+                                    padding: 10px 15px;
+                                    @include threeDotsInText;
+
+                                    &.active {
+                                        padding: 10px 15px;
+                                    }
 
                                     .user-block, .lesson-block {
                                         .user {
@@ -935,11 +940,16 @@
                                         .user_name, .lesson-name {
                                             width: 100%;
                                             margin-left: 0;
-                                            white-space: normal;
                                             font-size: 10px;
                                             font-weight: 500;
                                             color: $darkgray;
                                             line-height: 12px;
+                                            white-space: normal;
+
+                                        }
+
+                                        .lesson-name {
+                                            padding-right: 10px;
                                         }
                                     }
 
@@ -969,12 +979,20 @@
                                     }
                                 }
 
-
-
                                 &.lesson-item {
-                                    padding: 15px 20px 15px 15px;
+                                    @include threeDotsInText;
+                                    padding: 10px 20px 10px 15px;
+
+                                    &.active {
+                                        padding: 10px 20px 10px 15px;
+                                    }
 
                                     .lesson-block {
+                                        width: 100%;
+                                        height: 100%;
+                                        @include threeDotsInText;
+                                        overflow: hidden;
+
                                         .lesson-status {
                                             width: 6px;
                                             height: 6px;
